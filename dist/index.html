@@ -1,0 +1,1001 @@
+<!doctype html>
+<html class="p-0 m-0 box-border">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ************CDN GOOGLE FONTS************** -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- ************CDN AWESOME ICON************** -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <!-- ************FILE CSS************* -->
+    <link href="output.css" rel="stylesheet">
+    <!-- ************FILE JAVASCRIPT************* -->
+    <script src="./main.js" defer></script>
+    <title>Home Page</title>
+    <style>
+        * {
+            padding: 0 !important;
+            margin: 0 !important;
+            box-sizing: border-box !important;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .shadowHeader {
+            position: sticky;
+            background-color: rgba(0, 0, 0, 0.2);
+            transition: 0.5s;
+        }
+
+        .shadow {
+            box-shadow: 0px 6px 20px 0px rgba(000000, 6%);
+        }
+
+        #header {
+            z-index: 100000;
+        }
+
+        .logoMobile {
+            font-family: "Oleo Script Swash Caps", system-ui !important;
+        }
+
+        .group a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #ffffff;
+            transition: width 0.3s ease;
+        }
+
+        .group:hover a::before {
+            width: 100%;
+        }
+ 
+        #mainPage {
+
+            padding: 2% !important;
+            margin: 0 auto 0 auto !important;
+        }
+
+        .choosing,
+        .card,
+        .rightAboutUs,
+        .statistical,
+        .topCustomers,
+        footer
+        {
+            padding: 2% !important;
+        }
+
+        select>option {
+            padding: 2% 1% !important;
+            ;
+        }
+
+        .year {
+            padding: 6px 25px !important;
+        }
+
+        .image {
+            margin: 15px auto 0 auto !important;
+        }
+
+        .custom-span {
+            margin-bottom: 15px !important;
+        }
+
+        .letter {
+            padding: 3px 20px !important;
+        }
+
+        .button {
+            padding: 10px 30px !important;
+            
+        }
+
+        .bottomCard {
+            margin-top: 15px !important;
+        }
+        #CustomersReviews{
+            padding: 2% 0!important;
+        }
+        #CustomersReviews,
+        .dots {
+            margin-top: 40px !important;
+        }
+        .dots{
+            
+            margin-bottom: 40px !important;
+        }
+
+        .arrows i {
+            padding: 10px 15px !important;
+        }
+        .arrowsIcon{
+            padding: 1%!important;
+        }
+    </style>
+
+</head>
+
+<body class="min-h-screen relative w-full  bg-[#F4F4F4] overflow-x-hidden">
+
+
+    <!-- *************************** HEADER + HERO SECTION START ******************************************** -->
+
+
+    <!-- ************MOBILE************ -->
+    <section
+        class=" w-full min-h-screen  bg-[url('../images/road.png')]  bg-no-repeat bg-center bg-cover  flex flex-col gap-[80px] relative z-[1]">
+
+        <div
+            class="bg-bl bg-[url('../images/bg-bla.png')]  bg-no-repeat bg-center bg-cover  absolute  w-full h-[100%] z-[-1]">
+        </div>
+        <header class=" w-full h-[70px] fixed top-0 " id="header">
+            <!-- ***********MOBILE SCREEN********* -->
+            <div class="mobile w-full h-[70px] flex items-center justify-around px-3 cursor-pointer md:hidden " style="background-color: rgba(0, 0, 0, 0.2)">
+                <!-- *****Search ICON****** -->
+                <i class="fa-solid fa-magnifying-glass text-xl text-slate-50 searchIcon rotate-90  md:hidden "></i>
+
+                <!-- *****LOGO****** -->
+                <div class="logoMobile  text-red-600 text-[2em] md:hidden">
+                    Logo
+                </div>
+                <!-- *****BARS ICON****** -->
+                <div class="icons md:hidden">
+
+
+                    <i class="openNav fa-solid fa-bars-staggered text-xl text-slate-50 cursor-pointer  "></i>
+
+                    <i class="closeNav fa-solid fa-xmark text-xl text-slate-50 cursor-pointer hidden "></i>
+                </div>
+
+            </div>
+
+            <nav
+                class="navbarLinks w-full h-[200px] bg-slate-50 absolute  left-0  z-10  flex items-center justify-center translate-x-[-100%] transition-all md:hidden">
+                <ul class="flex flex-col items-start gap-3 capitalize font-semibold ml-[20px]">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">about us</a></li>
+                    <li><a href="search.html">search</a></li>
+                    <li><a href="contact.html">contact us</a></li>
+                </ul>
+            </nav>
+
+            <!-- ***********DESKTOP NAVBAR************ -->
+            <div class="desktopHeader  h-full hidden md:flex md:items-center md:justify-around  "  style="background-color: rgba(0, 0, 0, 0.2); ">
+
+                <div class="logoDesktop  md:flex md:items-center md:justify-center gap-7 ">
+                    <img src="../images/logo.png" alt="logoDesktop" class="object-cover">
+                    <nav>
+                        <ul class="flex items-center justify-center gap-10 capitalize text-slate-100">
+                            <li class="relative group">
+                                <a class="hover:border-none transition-all" href="index.html">Home</a>
+                            </li>
+                            <li class="relative group">
+                                <a class="hover:border-none transition-all" href="aboutus.html">about
+                                    us</a>
+                            </li>
+                            <li class="relative group">
+                                <a class="hover:border-none transition-all" href="search.html">search</a>
+                            </li>
+                            <li class="relative group">
+                                <a class="hover:border-none transition-all" href="contact.html">contact us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <a href="#button"
+                    class=" bg-slate-100 text-red-500 rounded-[50px] w-[150px] h-[30px] flex items-center justify-center gap-2 font-semibold">
+                    <i class="fa-solid fa-phone mr-2"></i> Contact Us
+                </a>
+
+            </div>
+
+        </header>
+
+        <div
+            class="content relative z-0 overflow-hidden w-full h-screen flex flex-col items-center justify-center sm:flex-col md:flex-col lg:flex-row lg:flex-wrap">
+            <div
+                class="contentText h-[400px] w-[600px]   flex flex-col items-center justify-center  lg:items-start lg:justify-center relative">
+                <h1
+                    class="w-full text-[2em] font-semibold text-slate-50 text-center lg:text-[3em] lg:absolute lg:top-1  lg:text-start ">
+                    Explore the <br> World of Cars
+                </h1>
+                <p class="w-full  leading-8 text-slate-50 text-center lg:text-start">
+                    Discover the latest models and <br> specifications, compare offers, <br> and get the best deal.
+                </p>
+            </div>
+
+            <div class="w-[300px] h-[300px] lg:w-[400px] lg:h-[400px] ">
+                <img src="../images/car5.png" alt="car5" class="w-full object-cover ">
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- *************************** HEADER + HERO SECTION START ******************************************** -->
+
+    <section id="mainPage"
+        class="w-full relative top-0 rounded-none md:w-[85%]  md:top-[-20px] z-[50000] md:rounded-[12px] md:flex-wrap flex flex-col items-center justify-center gap-8 p-[50px] bg-slate-50 shadow-xl overflow-hidden">
+        <!-- **************PRIMARY TITLE**************** -->
+        <h1 class="w-full text-2xl font-bold capitalize text-center md:text-start">Explore New Cars</h1>
+        <!-- **************CHOOSING WITH BUTTON SELECT ALL**************** -->
+        <div class="choosing rounded-[12px] md:shadow  md:w-[100%] md:flex md:justify-between md:items-center ">
+
+            <div
+                class=" md:w-[70%] h-[80px] flex flex-wrap items-center justify-center md:justify-start gap-2 text-base font-semibold  capitalize md:flex-row  rounded-[12px]  shadow-custom" >
+                <select class="outline-none border-none focus:outline-none focus:border-none bg-[#f8fafc]">
+                    <option class="bg-[#f8fafc]" value="New Cars">New Cars</option>
+                </select>
+                <select class="outline-none border-none focus:outline-none focus:border-none">
+                    <option class="bg-[#f8fafc]" value="Model">Model</option>
+                </select>
+
+                <span class="w-[80%] h-[2px] bg-slate-600/15 md:hidden"></span>
+
+                <select class="outline-none border-none focus:outline-none focus:border-none">
+                    <option class="bg-[#f8fafc]" value="Car Band">Car Band</option>
+                    <option class="bg-[#f8fafc]" value="Audi">Audi</option>
+                    <option class="bg-[#f8fafc]" value="Dacia">Dacia</option>
+                    <option class="bg-[#f8fafc]" value="KIA">KIA</option>
+                    <option class="bg-[#f8fafc]" value="Hyundai">Hyundai</option>
+                </select>
+
+                <select class="outline-none border-none focus:outline-none focus:border-none">
+                    <option class="bg-[#f8fafc]" value="Price">Price</option>
+                    <option class="bg-[#f8fafc]" value="1000USD">10000USD</option>
+                    <option class="bg-[#f8fafc]" value="1000USD">5000USD</option>
+                    <option class="bg-[#f8fafc]" value="1000USD">1000USD</option>
+                </select>
+            </div>
+
+            <a href="#SelectAll"
+                class=" hidden decoration-solid  md:w-[20%] md:h-[100px] md:flex md:items-center md:justify-end underline ">Select
+                All</a>
+
+        </div>
+        <i class="arrowsIcon fa-solid fa-arrow-left absolute left-0  z-30 bg-red-600  text-[1em] text-white cursor-pointer rounded-[50%]" id="left"></i>
+        <i class="arrowsIcon fa-solid fa-arrow-right absolute right-0  z-30 bg-red-600  text-[1em] text-white cursor-pointer rounded-[50%]" id="right"></i>
+
+        <!-- **************ALL CARDS**************** -->
+        <div class="cards w-full h-[1000px] flex overflow-hidden gap-8 cursor-pointer relative scroll-smooth">
+           
+            <div class="card w-[400px] h-[700px] rounded-[12px] shadow-custom m-4" >
+
+                <div class="topCard  flex justify-between items-center">
+                    <span class="year bg-red-600 text-white rounded-[12px] ">2024</span>
+                    <div>
+                        <i class="fa-regular fa-heart text-xl text-black cursor-pointer "></i>
+                        &nbsp; &nbsp;
+                        <i class="fa-solid fa-share-nodes text-xl text-black cursor-pointer"></i>
+                    </div>
+                </div>
+
+                <div class="image h-[220px] w-[90%]  overflow-hidden flex items-center justify-center">
+                    <img class="w-[100%] h-[100%] object-contain bg-no-repeat" src="../images/car4.png" alt="car4">
+                </div>
+                <div class="custom-span flex items-center justify-center gap-3 ">
+                    <span class=" flex w-[70px] h-1 bg-red-600 rounded-[20px]"></span>
+                    <span class="flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
+                    <span class=" flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
+                </div>
+
+
+                <div class="descriptionCard custom-span flex flex-col items-start gap-2">
+                    <h1 class="custom-span text-xl font-bold">Toyota Camry New</h1>
+                    <h4 class="custom-span text-md font-[400] text-gray-400">05.2024 | 10K | 150 KW | 204 PS</h4>
+
+                    <div
+                        class=" detailsOne text-[14px] font-[400] w-full h-[50%]  flex flex-wrap items-start justify-between">
+                        <p>CO2 eff </p>
+                        <span class="letter bg-green-600 text-white rounded-[20px]">A</span>
+                        <p>Schadstoffklasse</p>
+                        <p class="font-[300] text-gray-400">l / 100km</p>
+                    </div>
+                    <div
+                        class="detailsTwo w-full h-[50%] text-[14px] font-[400] flex flex-wrap items-start justify-between">
+                        <p>Außerorts </p>
+                        <p class="font-[300] text-gray-400">l / 100km</p>
+                        <p>Emission</p>
+                        <p class="font-[300] text-gray-400">EURO6</p>
+                    </div>
+                    <div
+                        class="detailsThree custom-span w-full h-[50%] text-[12px] font-[400] flex flex-wrap items-start justify-between">
+                        <p>Schadstoff <br> klasse</p>
+                        <p class="font-[300] text-gray-400">4 (Grün)</p>
+                        <p>kombiniert</p>
+                        <p class="font-[300] text-gray-400">l / 100km</p>
+                    </div>
+                    <button class="button curstom-span bg-red-600 text-white rounded-[20px] w-full text-center text-[13px]">50990.00
+                        INKL 19% Mwst</button>
+                </div>
+                <div class="bottomCard border-solid border-gray/20 border-t-2 flex items-center justify-between">
+                    <span class="bottomCard text-black font-bold">$40,000</span>
+                    <a href="" class="bottomCard text-[15px] text-red-600">View Details &nbsp; <i
+                            class="fa-solid fa-arrow-up rotate-[45deg]"></i></a>
+                </div>
+            </div>
+            <div class="card w-[400px] h-[700px] rounded-[12px] shadow-custom m-4" >
+
+                <div class="topCard  flex justify-between items-center">
+                    <span class="year bg-red-600 text-white rounded-[12px] ">2024</span>
+                    <div>
+                        <i class="fa-regular fa-heart text-xl text-black cursor-pointer "></i>
+                        &nbsp; &nbsp;
+                        <i class="fa-solid fa-share-nodes text-xl text-black cursor-pointer"></i>
+                    </div>
+                </div>
+
+                <div class="image h-[220px] w-[90%]  overflow-hidden flex items-center justify-center">
+                    <img class="w-[100%] h-[100%] object-contain bg-no-repeat" src="../images/car2.png" alt="car2">
+                </div>
+                <div class="custom-span flex items-center justify-center gap-3 ">
+                    <span class=" flex w-[70px] h-1 bg-red-600 rounded-[20px]"></span>
+                    <span class="flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
+                    <span class=" flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
+                </div>
+
+
+                <div class="descriptionCard custom-span flex flex-col items-start gap-2">
+                    <h1 class="custom-span text-xl font-bold">Toyota Camry New</h1>
+                    <h4 class="custom-span text-md font-[400] text-gray-400">05.2024 | 10K | 150 KW | 204 PS</h4>
+
+                    <div
+                        class=" detailsOne text-[14px] font-[400] w-full h-[50%]  flex flex-wrap items-start justify-between">
+                        <p>CO2 eff </p>
+                        <span class="letter bg-green-600 text-white rounded-[20px]">A</span>
+                        <p>Schadstoffklasse</p>
+                        <p class="font-[300] text-gray-400">l / 100km</p>
+                    </div>
+                    <div
+                        class="detailsTwo w-full h-[50%] text-[14px] font-[400] flex flex-wrap items-start justify-between">
+                        <p>Außerorts </p>
+                        <p class="font-[300] text-gray-400">l / 100km</p>
+                        <p>Emission</p>
+                        <p class="font-[300] text-gray-400">EURO6</p>
+                    </div>
+                    <div
+                        class="detailsThree custom-span w-full h-[50%] text-[12px] font-[400] flex flex-wrap items-start justify-between">
+                        <p>Schadstoff <br> klasse</p>
+                        <p class="font-[300] text-gray-400">4 (Grün)</p>
+                        <p>kombiniert</p>
+                        <p class="font-[300] text-gray-400">l / 100km</p>
+                    </div>
+                    <button class="button curstom-span bg-red-600 text-white rounded-[20px] w-full text-center text-[13px] ">50990.00
+                        INKL 19% Mwst</button>
+                </div>
+                <div class="bottomCard border-solid border-gray/20 border-t-2 flex items-center justify-between">
+                    <span class="bottomCard text-black font-bold">$40,000</span>
+                    <a href="" class="bottomCard text-[15px] text-red-600">View Details &nbsp; <i
+                            class="fa-solid fa-arrow-up rotate-[45deg]"></i></a>
+                </div>
+            </div>
+
+
+            <div class="card w-[400px] h-[700px] rounded-[12px] shadow-custom m-4" >
+
+                <div class="topCard  flex justify-between items-center">
+                    <span class="year bg-red-600 text-white rounded-[12px] ">2024</span>
+                    <div>
+                        <i class="fa-regular fa-heart text-xl text-black cursor-pointer "></i>
+                        &nbsp; &nbsp;
+                        <i class="fa-solid fa-share-nodes text-xl text-black cursor-pointer"></i>
+                    </div>
+                </div>
+
+                <div class="image h-[220px] w-[90%]  overflow-hidden flex items-center justify-center">
+                    <img class="w-[100%] h-[100%] object-contain bg-no-repeat" src="../images/car7.png" alt="car7">
+                </div>
+                <div class="custom-span flex items-center justify-center gap-3 ">
+                    <span class=" flex w-[70px] h-1 bg-red-600 rounded-[20px]"></span>
+                    <span class="flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
+                    <span class=" flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
+                </div>
+
+
+                <div class="descriptionCard custom-span flex flex-col items-start gap-2">
+                    <h1 class="custom-span text-xl font-bold">Toyota Camry New</h1>
+                    <h4 class="custom-span text-md font-[400] text-gray-400">05.2024 | 10K | 150 KW | 204 PS</h4>
+
+                    <div
+                        class=" detailsOne text-[14px] font-[400] w-full h-[50%]  flex flex-wrap items-start justify-between">
+                        <p>CO2 eff </p>
+                        <span class="letter bg-green-600 text-white rounded-[20px]">A</span>
+                        <p>Schadstoffklasse</p>
+                        <p class="font-[300] text-gray-400">l / 100km</p>
+                    </div>
+                    <div
+                        class="detailsTwo w-full h-[50%] text-[14px] font-[400] flex flex-wrap items-start justify-between">
+                        <p>Außerorts </p>
+                        <p class="font-[300] text-gray-400">l / 100km</p>
+                        <p>Emission</p>
+                        <p class="font-[300] text-gray-400">EURO6</p>
+                    </div>
+                    <div
+                        class="detailsThree custom-span w-full h-[50%] text-[12px] font-[400] flex flex-wrap items-start justify-between">
+                        <p>Schadstoff <br> klasse</p>
+                        <p class="font-[300] text-gray-400">4 (Grün)</p>
+                        <p>kombiniert</p>
+                        <p class="font-[300] text-gray-400">l / 100km</p>
+                    </div>
+                    <button class="button curstom-span bg-red-600 text-white rounded-[20px] w-full text-center text-[13px] ">50990.00
+                        INKL 19% Mwst</button>
+                </div>
+                <div class="bottomCard border-solid border-gray/20 border-t-2 flex items-center justify-between">
+                    <span class="bottomCard text-black font-bold">$40,000</span>
+                    <a href="" class="bottomCard text-[15px] text-red-600">View Details &nbsp; <i
+                            class="fa-solid fa-arrow-up rotate-[45deg]"></i></a>
+                </div>
+            </div>
+
+            <div class="card w-[400px] h-[700px] rounded-[12px] shadow-custom m-4">
+
+                <div class="topCard  flex justify-between items-center">
+                    <span class="year bg-red-600 text-white rounded-[12px] ">2024</span>
+                    <div>
+                        <i class="fa-regular fa-heart text-xl text-black cursor-pointer "></i>
+                        &nbsp; &nbsp;
+                        <i class="fa-solid fa-share-nodes text-xl text-black cursor-pointer"></i>
+                    </div>
+                </div>
+
+                <div class="image h-[220px] w-[90%]  overflow-hidden flex items-center justify-center">
+                    <img class="w-[100%] h-[100%] object-contain bg-no-repeat" src="../images/car1.png" alt="car1">
+                </div>
+                <div class="custom-span flex items-center justify-center gap-3 ">
+                    <span class=" flex w-[70px] h-1 bg-red-600 rounded-[20px]"></span>
+                    <span class="flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
+                    <span class=" flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
+                </div>
+
+
+                <div class="descriptionCard custom-span flex flex-col items-start gap-2">
+                    <h1 class="custom-span text-xl font-bold">Toyota Camry New</h1>
+                    <h4 class="custom-span text-md font-[400] text-gray-400">05.2024 | 10K | 150 KW | 204 PS</h4>
+
+                    <div
+                        class=" detailsOne text-[14px] font-[400] w-full h-[50%]  flex flex-wrap items-start justify-between">
+                        <p>CO2 eff </p>
+                        <span class="letter bg-green-600 text-white rounded-[20px]">A</span>
+                        <p>Schadstoffklasse</p>
+                        <p class="font-[300] text-gray-400">l / 100km</p>
+                    </div>
+                    <div
+                        class="detailsTwo w-full h-[50%] text-[14px] font-[400] flex flex-wrap items-start justify-between">
+                        <p>Außerorts </p>
+                        <p class="font-[300] text-gray-400">l / 100km</p>
+                        <p>Emission</p>
+                        <p class="font-[300] text-gray-400">EURO6</p>
+                    </div>
+                    <div
+                        class="detailsThree custom-span w-full h-[50%] text-[12px] font-[400] flex flex-wrap items-start justify-between">
+                        <p>Schadstoff <br> klasse</p>
+                        <p class="font-[300] text-gray-400">4 (Grün)</p>
+                        <p>kombiniert</p>
+                        <p class="font-[300] text-gray-400">l / 100km</p>
+                    </div>
+                    <button class="button curstom-span bg-red-600 text-white rounded-[20px] w-full text-center text-[13px] ">50990.00
+                        INKL 19% Mwst</button>
+                </div>
+                <div class="bottomCard border-solid border-gray/20 border-t-2 flex items-center justify-between">
+                    <span class="bottomCard text-black font-bold">$40,000</span>
+                    <a href="" class="bottomCard text-[15px] text-red-600">View Details &nbsp; <i
+                            class="fa-solid fa-arrow-up rotate-[45deg]"></i></a>
+                </div>
+            </div>
+
+
+            <div class="card w-[400px] h-[700px] rounded-[12px] shadow-custom m-4">
+
+                <div class="topCard  flex justify-between items-center">
+                    <span class="year bg-red-600 text-white rounded-[12px] ">2024</span>
+                    <div>
+                        <i class="fa-regular fa-heart text-xl text-black cursor-pointer "></i>
+                        &nbsp; &nbsp;
+                        <i class="fa-solid fa-share-nodes text-xl text-black cursor-pointer"></i>
+                    </div>
+                </div>
+
+                <div class="image h-[220px] w-[90%]  overflow-hidden flex items-center justify-center">
+                    <img class="w-[100%] h-[100%] object-contain bg-no-repeat" src="../images/car6.png" alt="car6">
+                </div>
+                <div class="custom-span flex items-center justify-center gap-3 ">
+                    <span class=" flex w-[70px] h-1 bg-red-600 rounded-[20px]"></span>
+                    <span class="flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
+                    <span class=" flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
+                </div>
+
+
+                <div class="descriptionCard custom-span flex flex-col items-start gap-2">
+                    <h1 class="custom-span text-xl font-bold">Toyota Camry New</h1>
+                    <h4 class="custom-span text-md font-[400] text-gray-400">05.2024 | 10K | 150 KW | 204 PS</h4>
+
+                    <div
+                        class=" detailsOne text-[14px] font-[400] w-full h-[50%]  flex flex-wrap items-start justify-between">
+                        <p>CO2 eff </p>
+                        <span class="letter bg-green-600 text-white rounded-[20px]">A</span>
+                        <p>Schadstoffklasse</p>
+                        <p class="font-[300] text-gray-400">l / 100km</p>
+                    </div>
+                    <div
+                        class="detailsTwo w-full h-[50%] text-[14px] font-[400] flex flex-wrap items-start justify-between">
+                        <p>Außerorts </p>
+                        <p class="font-[300] text-gray-400">l / 100km</p>
+                        <p>Emission</p>
+                        <p class="font-[300] text-gray-400">EURO6</p>
+                    </div>
+                    <div
+                        class="detailsThree custom-span w-full h-[50%] text-[12px] font-[400] flex flex-wrap items-start justify-between">
+                        <p>Schadstoff <br> klasse</p>
+                        <p class="font-[300] text-gray-400">4 (Grün)</p>
+                        <p>kombiniert</p>
+                        <p class="font-[300] text-gray-400">l / 100km</p>
+                    </div>
+                    <button class="button curstom-span bg-red-600 text-white rounded-[20px] w-full text-center text-[13px]">50990.00
+                        INKL 19% Mwst</button>
+                </div>
+                <div class="bottomCard border-solid border-gray/20 border-t-2 flex items-center justify-between">
+                    <span class="bottomCard text-black font-bold">$40,000</span>
+                    <a href="" class="bottomCard text-[15px] text-red-600">View Details &nbsp; <i
+                            class="fa-solid fa-arrow-up rotate-[45deg]"></i></a>
+                </div>
+            </div>
+            <div class="card w-[400px] h-[700px] rounded-[12px] shadow-custom m-4">
+
+                <div class="topCard  flex justify-between items-center">
+                    <span class="year bg-red-600 text-white rounded-[12px] ">2024</span>
+                    <div>
+                        <i class="fa-regular fa-heart text-xl text-black cursor-pointer "></i>
+                        &nbsp; &nbsp;
+                        <i class="fa-solid fa-share-nodes text-xl text-black cursor-pointer"></i>
+                    </div>
+                </div>
+
+                <div class="image h-[220px] w-[90%]  overflow-hidden flex items-center justify-center">
+                    <img class="w-[100%] h-[100%] object-contain bg-no-repeat" src="../images/car6.png" alt="car6">
+                </div>
+                <div class="custom-span flex items-center justify-center gap-3 ">
+                    <span class=" flex w-[70px] h-1 bg-red-600 rounded-[20px]"></span>
+                    <span class="flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
+                    <span class=" flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
+                </div>
+
+
+                <div class="descriptionCard custom-span flex flex-col items-start gap-2">
+                    <h1 class="custom-span text-xl font-bold">Toyota Camry New</h1>
+                    <h4 class="custom-span text-md font-[400] text-gray-400">05.2024 | 10K | 150 KW | 204 PS</h4>
+
+                    <div
+                        class=" detailsOne text-[14px] font-[400] w-full h-[50%]  flex flex-wrap items-start justify-between">
+                        <p>CO2 eff </p>
+                        <span class="letter bg-green-600 text-white rounded-[20px]">A</span>
+                        <p>Schadstoffklasse</p>
+                        <p class="font-[300] text-gray-400">l / 100km</p>
+                    </div>
+                    <div
+                        class="detailsTwo w-full h-[50%] text-[14px] font-[400] flex flex-wrap items-start justify-between">
+                        <p>Außerorts </p>
+                        <p class="font-[300] text-gray-400">l / 100km</p>
+                        <p>Emission</p>
+                        <p class="font-[300] text-gray-400">EURO6</p>
+                    </div>
+                    <div
+                        class="detailsThree custom-span w-full h-[50%] text-[12px] font-[400] flex flex-wrap items-start justify-between">
+                        <p>Schadstoff <br> klasse</p>
+                        <p class="font-[300] text-gray-400">4 (Grün)</p>
+                        <p>kombiniert</p>
+                        <p class="font-[300] text-gray-400">l / 100km</p>
+                    </div>
+                    <button class="button curstom-span bg-red-600 text-white rounded-[20px] w-full text-center text-[13px]">50990.00
+                        INKL 19% Mwst</button>
+                </div>
+                <div class="bottomCard border-solid border-gray/20 border-t-2 flex items-center justify-between">
+                    <span class="bottomCard text-black font-bold">$40,000</span>
+                    <a href="" class="bottomCard text-[15px] text-red-600">View Details &nbsp; <i
+                            class="fa-solid fa-arrow-up rotate-[45deg]"></i></a>
+                </div>
+            </div>
+            <div class="card w-[400px] h-[700px] rounded-[12px] shadow-custom m-4">
+
+                <div class="topCard  flex justify-between items-center">
+                    <span class="year bg-red-600 text-white rounded-[12px] ">2024</span>
+                    <div>
+                        <i class="fa-regular fa-heart text-xl text-black cursor-pointer "></i>
+                        &nbsp; &nbsp;
+                        <i class="fa-solid fa-share-nodes text-xl text-black cursor-pointer"></i>
+                    </div>
+                </div>
+
+                <div class="image h-[220px] w-[90%]  overflow-hidden flex items-center justify-center">
+                    <img class="w-[100%] h-[100%] object-contain bg-no-repeat" src="../images/car6.png" alt="car6">
+                </div>
+                <div class="custom-span flex items-center justify-center gap-3 ">
+                    <span class=" flex w-[70px] h-1 bg-red-600 rounded-[20px]"></span>
+                    <span class="flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
+                    <span class=" flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
+                </div>
+
+
+                <div class="descriptionCard custom-span flex flex-col items-start gap-2">
+                    <h1 class="custom-span text-xl font-bold">Toyota Camry New</h1>
+                    <h4 class="custom-span text-md font-[400] text-gray-400">05.2024 | 10K | 150 KW | 204 PS</h4>
+
+                    <div
+                        class=" detailsOne text-[14px] font-[400] w-full h-[50%]  flex flex-wrap items-start justify-between">
+                        <p>CO2 eff </p>
+                        <span class="letter bg-green-600 text-white rounded-[20px]">A</span>
+                        <p>Schadstoffklasse</p>
+                        <p class="font-[300] text-gray-400">l / 100km</p>
+                    </div>
+                    <div
+                        class="detailsTwo w-full h-[50%] text-[14px] font-[400] flex flex-wrap items-start justify-between">
+                        <p>Außerorts </p>
+                        <p class="font-[300] text-gray-400">l / 100km</p>
+                        <p>Emission</p>
+                        <p class="font-[300] text-gray-400">EURO6</p>
+                    </div>
+                    <div
+                        class="detailsThree custom-span w-full h-[50%] text-[12px] font-[400] flex flex-wrap items-start justify-between">
+                        <p>Schadstoff <br> klasse</p>
+                        <p class="font-[300] text-gray-400">4 (Grün)</p>
+                        <p>kombiniert</p>
+                        <p class="font-[300] text-gray-400">l / 100km</p>
+                    </div>
+                    <button class="button curstom-span bg-red-600 text-white rounded-[20px] w-full text-center text-[13px]">50990.00
+                        INKL 19% Mwst</button>
+                </div>
+                <div class="bottomCard border-solid border-gray/20 border-t-2 flex items-center justify-between">
+                    <span class="bottomCard text-black font-bold">$40,000</span>
+                    <a href="" class="bottomCard text-[15px] text-red-600">View Details &nbsp; <i
+                            class="fa-solid fa-arrow-up rotate-[45deg]"></i></a>
+                </div>
+            </div>
+            <div class="card w-[400px] h-[700px] rounded-[12px] shadow-custom m-4">
+
+                <div class="topCard  flex justify-between items-center">
+                    <span class="year bg-red-600 text-white rounded-[12px] ">2024</span>
+                    <div>
+                        <i class="fa-regular fa-heart text-xl text-black cursor-pointer "></i>
+                        &nbsp; &nbsp;
+                        <i class="fa-solid fa-share-nodes text-xl text-black cursor-pointer"></i>
+                    </div>
+                </div>
+
+                <div class="image h-[220px] w-[90%]  overflow-hidden flex items-center justify-center">
+                    <img class="w-[100%] h-[100%] object-contain bg-no-repeat" src="../images/car6.png" alt="car6">
+                </div>
+                <div class="custom-span flex items-center justify-center gap-3 ">
+                    <span class=" flex w-[70px] h-1 bg-red-600 rounded-[20px]"></span>
+                    <span class="flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
+                    <span class=" flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
+                </div>
+
+
+                <div class="descriptionCard custom-span flex flex-col items-start gap-2">
+                    <h1 class="custom-span text-xl font-bold">Toyota Camry New</h1>
+                    <h4 class="custom-span text-md font-[400] text-gray-400">05.2024 | 10K | 150 KW | 204 PS</h4>
+
+                    <div
+                        class=" detailsOne text-[14px] font-[400] w-full h-[50%]  flex flex-wrap items-start justify-between">
+                        <p>CO2 eff </p>
+                        <span class="letter bg-green-600 text-white rounded-[20px]">A</span>
+                        <p>Schadstoffklasse</p>
+                        <p class="font-[300] text-gray-400">l / 100km</p>
+                    </div>
+                    <div
+                        class="detailsTwo w-full h-[50%] text-[14px] font-[400] flex flex-wrap items-start justify-between">
+                        <p>Außerorts </p>
+                        <p class="font-[300] text-gray-400">l / 100km</p>
+                        <p>Emission</p>
+                        <p class="font-[300] text-gray-400">EURO6</p>
+                    </div>
+                    <div
+                        class="detailsThree custom-span w-full h-[50%] text-[12px] font-[400] flex flex-wrap items-start justify-between">
+                        <p>Schadstoff <br> klasse</p>
+                        <p class="font-[300] text-gray-400">4 (Grün)</p>
+                        <p>kombiniert</p>
+                        <p class="font-[300] text-gray-400">l / 100km</p>
+                    </div>
+                    <button class="button curstom-span bg-red-600 text-white rounded-[20px] w-full text-center text-[13px]">50990.00
+                        INKL 19% Mwst</button>
+                </div>
+                <div class="bottomCard border-solid border-gray/20 border-t-2 flex items-center justify-between">
+                    <span class="bottomCard text-black font-bold">$40,000</span>
+                    <a href="" class="bottomCard text-[15px] text-red-600">View Details &nbsp; <i
+                            class="fa-solid fa-arrow-up rotate-[45deg]"></i></a>
+                </div>
+            </div>
+            
+            
+        </div>
+        <a href="#SelectAll"
+                class="  decoration-solid  w-[100%] h-[100px] flex items-center justify-center underline md:hidden">Select
+                All</a>
+
+    </section>
+    <!-- *************************** HEADER + HERO SECTION END ******************************************** -->
+
+
+
+    <!-- *************************** ABOUT US START ******************************************** -->
+
+    <section class="aboutUs w-[100%] h-screen md:h-[600px]  flex flex-col md:flex-row items-center   ">
+        <div class="leftAboutUs w-full h-[100%] md:w-[50%] ">
+            <img class="w-full h-full object-cover" src="../images/aboutus.png" alt="aboutus">
+        </div>
+        <div
+            class="rightAboutUs w-full h-full md:w-[50%] flex flex-col justify-evenly items-start bg-black text-white p-3">
+            <h1 class="text-[2em] capitalize font-[800] space-x-1">About Us</h1>
+            <p>We are an authorized dealer for the leading new car brands. We offer a wide range of the latest models,
+                designed with the latest technology and featuring high quality and performance. Enjoy an unparalleled
+                driving experience with the manufacturer's warranty and our exceptional after-sales service</p>
+            <button class="button bg-red-600 text-white rounded-[20px] text-center">Read More</button>
+        </div>
+
+
+    </section>
+
+
+    <!-- *************************** ABOUT US END ******************************************** -->
+
+    <!-- *************************** statistical Start ******************************************** -->
+    <div
+        class="statistical   w-full h-auto flex  flex-wrap items-center justify-evenly md:items-center md:justify-between gap-5 text-white bg-slate-50 ">
+
+        <div class="flex flex-col items-center justify-center gap-2">
+            <h1 class="text-xl font-bold text-black">238 k</h1>
+            <p class="text[16px] font-[400] text-black">Vehicle Sales</p>
+
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+            <h1 class="text-xl font-bold text-black">10 k</h1>
+            <p class="text[16px] font-[400] text-black">Customers</p>
+
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+            <h1 class="text-xl font-bold text-black">238</h1>
+            <p class="text[16px] font-[400] text-black">Visitors</p>
+
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+            <h1 class="text-xl font-bold text-black">400</h1>
+            <p class="text[16px] font-[400] text-black">car numbers</p>
+
+        </div>
+        <div class="flex flex-col items-center justify-center gap-2">
+            <h1 class="text-xl font-bold text-black">100%</h1>
+            <p class="text[16px] font-[400] text-black">Quality</p>
+
+        </div>
+
+    </div>
+
+    <!-- *************************** statistical END ******************************************** -->
+
+
+    <!-- *************************** Customers Reviews Start ******************************************** -->
+    
+    <!-- *************************** Customers Reviews Start ******************************************** -->
+    <section id="CustomersReviews"
+        class=" relative w-full h-screeen  text-black flex items-center justify-center overflow-hidden">
+        <div class="w-full flex-col flex justify-around items-center  bg-[#FFFFFF] md:w-[90%] md:rounded-[12px] shadow">
+
+            <div class="topCustomers w-full md:flex hidden  items-center justify-around ">
+
+                <h1 class="text-black text-[2em] font-[600]">Customers Reviews</h1>
+                <div class="arrows flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-arrow-left w-[50px] h-[50px] cursor-pointer bg-red-200 text-white rounded-[50%] flex items-center justify-center"></i>
+                    <i class="fa-solid fa-arrow-right w-[50px] h-[50px] cursor-pointer bg-red-600 text-white rounded-[50%] flex items-center justify-center"></i>
+                </div>
+            </div>
+
+            <div class="bottomCutomers bottomCutomers w-full h-full flex flex-col justify-center items-center lg:flex-row md:justify-center md:items-center gap-2  ">
+
+                <div
+                    class="bottomCard w-[350px]  h-[150px] lg:h-[400px] lg:bg-[#F9F9FA] text-center text-[1.2em] flex flex-col justify-around items-center rounded-[15px]">
+                    <h1>Excellent</h1>
+                    <div class="stars flex gap-3 items-center justify-center">
+                        <span class="w-[30px] h-[30px] bg-red-600 rounded-[5px]"><i
+                                class="fa-solid fa-star text-[12px] text-yellow-300 ml-4"></i></span>
+                        <span class="w-[30px] h-[30px] bg-red-600 rounded-[5px]"><i
+                                class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                        <span class="w-[30px] h-[30px] bg-red-600 rounded-[5px]"><i
+                                class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                        <span class="w-[30px] h-[30px] bg-red-600 rounded-[5px]"><i
+                                class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                        <span class="w-[30px] h-[30px] bg-red-600 rounded-[5px]"><i
+                                class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                    </div>
+                    <div class="logoMobile hidden text-red-600 text-[2em] md:block">
+                        Logo
+                    </div>
+                </div>
+                <span class="w-screen h-[20px] bg-[#F4F4F4] md:hidden"></span>
+
+                <div class="cardsReviews w-full h-full  flex items-center justify-around gap-6 md:w-full lg:w-[70%]">
+
+
+
+                    <div class="cardReview card w-[350px] h-[400px] bg-[#F9F9FA] flex flex-col items-start justify-evenly rounded-[15px] gap-5">
+                        <div class="stars flex gap-3 items-center justify-center">
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300 ml-4"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                        </div>
+                        <p class="text-start text-[14px]">A great little app that some of the big guns have clearly been taking their cue from. Looks
+                            like Incomee might actually be cleaner and simpler to use than competitors.</p>
+                        <div class="flex gap-[20px] items-center justify-center">
+                            <img src="../images/avatar.png" class="w-[80px] h-[80px] object-cover rounded-[50%]" alt="avatar">
+
+                            <p class="text-[14px]">Craig Vaccaro <br>
+                                Founder and co-CEO</p>
+                        </div>
+                    </div>
+                    <div class="cardReview hidden card w-[350px] h-[400px] bg-[#F9F9FA] md:flex flex-col items-start justify-evenly rounded-[15px] gap-5">
+                        <div class="stars flex gap-3 items-center justify-center">
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300 ml-4"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                        </div>
+                        <p class="text-start text-[14px]">A great little app that some of the big guns have clearly been taking their cue from. Looks
+                            like Incomee might actually be cleaner and simpler to use than competitors.</p>
+                        <div class="flex gap-[20px]">
+                            <img src="../images/avatar.png" class="w-[80px] h-[80px] object-cover rounded-[50%]" alt="avatar">
+
+                            <p class="text-[14px]">Craig Vaccaro <br>
+                                Founder and co-CEO</p>
+                        </div>
+                    </div>
+                    <div class="cardReview hidden card w-[350px] h-[400px] bg-[#F9F9FA] md:flex flex-col items-start justify-evenly rounded-[15px] gap-5">
+                        <div class="stars flex gap-3 items-center justify-center">
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300 ml-4"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                        </div>
+                        <p class="text-start text-[14px]">A great little app that some of the big guns have clearly been taking their cue from. Looks
+                            like Incomee might actually be cleaner and simpler to use than competitors.</p>
+                        <div class="flex gap-[20px]">
+                            <img src="../images/avatar.png" class="w-[80px] h-[80px] object-cover rounded-[50%]" alt="avatar">
+
+                            <p class="text-[14px]">Craig Vaccaro <br>
+                                Founder and co-CEO</p>
+                        </div>
+                    </div>
+
+                    
+                    
+
+                </div>
+                
+            </div>
+
+
+            <div class="dots hidden md:w-[80%] md:flex md:items-start justify-start md:gap-[20px]">
+                <i class="fa-solid fa-circle text-red-600  cursor-pointer"></i>
+                <i class="fa-solid fa-circle text-red-600  cursor-pointer"></i>
+                <i class="fa-solid fa-circle text-[#86898E] cursor-pointer"></i>
+                <i class="fa-solid fa-circle text-[#86898E] cursor-pointer"></i>
+            </div>
+        </div>
+        
+
+    </section>
+    <!-- *************************** Customers Reviews END ******************************************** -->
+
+   <!-- *************************** DISCOUNT AND OFFER START ******************************************** -->
+    <section class="w-full h-[600px] md:h-[500px] flex items-center justify-center overflow-hidden">
+        <div class="w-[100%] h-[400px] flex flex-col  justify-around items-center gap-[15px] lg:flex-wrap bg-[#FFFFFF] md:w-[90%] rounded-[12px] shadow bg-[url('../images/background.png')] bg-no-repeat bg-cover ">
+
+                  <div class="leftOffre w-full lg:w-[30%] h-full flex flex-col items-center justify-evenly  text-white capitalize">
+
+                    <h1 class="text-[3em] lg:text-[2em]">Best Selling Car</h1>
+
+                    <h3 class="text-[1.5em] md:text-[1em]">BMW Suburban 2021 mo</h3>
+
+                    <h5>From  <span class="text-red-600 font-bold text-[2em]">2400$</span></h5>
+
+                    <button class="button bg-red-600 text-center rounded-[50px]">View Details</button>
+                      
+                  </div>
+                  <div class="rightOffre relative w-full md:w-[800px] h-full   flex justify-center items-center overflow-hidden " >
+
+                    <div class="discount w-[80px] h-[80px] rounded-[50%] bg-red-600 flex items-center justify-center text-white text-xl absolute left-[2%] top-[2%] lg:top-2 lg:left-48 md:left-[4.25rem] ">
+                        30% <br> OFF
+                    </div>
+
+                    <div class="picture w-[50%] h-full md:w-[50%] lg:w-[50%] lg:h-[50%]">
+                        <img class="w-[100%] h-full bg-cover bg-no-repeat bg-center " src="../images/car3.png" alt="car3">
+                    </div>
+                      
+                  </div>
+           
+
+        </div>
+    </section>
+    <!-- *************************** DISCOUNT AND OFFER END******************************************** -->
+
+
+    <!-- *************************** FOOTER START ******************************************** -->
+
+    <footer  class="w-full h-[500px] bg-black text-white flex flex-col justify-evenly items-center gap-5">
+         <!-- *****LOGO****** -->
+         <div class="logoMobile  text-red-600 text-[2em] ">
+            Logo
+        </div>
+
+        <!-- ********QUICKLY LINKS********** -->
+        <div class="quicklyLinks w-full h-full flex flex-wrap justify-start  items-center md:justify-evenly gap-5">
+            <div class="linksOne capitalize w-[145px] h-[150px]  flex flex-col items-start gap-5 ">
+                <h1 class="text-xl font-[500]">Showrome</h1>
+                <a href="#" class="text-[14px] font-[300]">Rent and sell car</a>
+                <a href="#" class="text-[14px] font-[300]">Brand cars</a>
+                <a href="#" class="text-[14px] font-[300]">Login as Dealer</a>
+            </div>
+            <div class="linksTwo capitalize w-[145px] h-[150px]  flex flex-col items-start gap-5">
+                <h1 class="text-xl font-[500]">Support</h1>
+                <a href="#" class="text-[14px] font-[300]">Buying and selling</a>
+                <a href="#" class="text-[14px] font-[300]">services</a>
+                <a href="#" class="text-[14px] font-[300]">Used car</a>
+            </div>
+            <div class="linksThree capitalize w-[145px] h-[150px]  flex flex-col items-start gap-5">
+                <h1 class="text-xl font-[500]">why us?</h1>
+                <a href="#" class="text-[14px] font-[300]">Our features</a>
+                <a href="#" class="text-[14px] font-[300]">Testimony</a>
+            </div>
+            <div class="linksFour capitalize w-[145px] h-[150px]  flex flex-col items-start gap-5">
+                <h1 class="text-xl font-[500]">Contact us</h1>
+                <a href="#" class="text-[14px] font-[300]">Brand us</a>
+                <a href="#" class="text-[14px] font-[300]">Event</a>
+            </div>
+            <div class="socialLinks hidden md:hidden lg:flex flex-col">
+                
+                        <p>Contact us Social media</p>
+                        
+                 
+
+                     <div class="icons hidden md:flex  gap-5 items-center justify-center">
+                        <span><i class="fa-brands fa-instagram"></i></span>
+                        <span><i class="fa-brands fa-facebook"></i></span>
+                        <span><i class="fa-brands fa-x"></i></span>
+                     </div>
+            </div>
+        </div>
+
+        
+        <span class="w-[80%] h-[2px] bg-white md:w-screen "></span>
+        <div class="icons flex gap-5 items-center justify-center md:hidden ">
+            
+            <span><i class="fa-brands fa-instagram"></i></span>
+            <span><i class="fa-brands fa-facebook"></i></span>
+            <span><i class="fa-brands fa-x"></i></span>
+         </div>
+        
+         <div class="bottomFooter w-full flex items-center justify-center md:justify-between">
+            <p class="text-[14px] font-[300] flex "><span class="hidden md:flex">Copyright</span> &nbsp; 2023 Karen Rally Club</p>
+        <div class="  hidden text-[14px] font-[300] md:flex gap-4">
+            <a href="">Privacy Policy</a>
+            <a href="">Terms Of Services</a>
+        </div>
+         </div>
+       
+    </footer>
+</body>
+
+</html> 

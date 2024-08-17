@@ -1,0 +1,545 @@
+<!doctype html>
+<html class="p-0 m-0 box-border">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ************CDN GOOGLE FONTS************** -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- ************CDN AWESOME ICON************** -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <!-- ************FILE CSS************* -->
+    <link href="output.css" rel="stylesheet">
+    <!-- ************FILE JAVASCRIPT************* -->
+    <script src="./main.js" defer></script>
+    <style>
+        * {
+            padding: 0 !important;
+            margin: 0 !important;
+            box-sizing: border-box !important;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .shadowHeader {
+            position: sticky;
+            transition: 0.5s;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .showPage {
+            display: flex;
+        }
+
+        .shadow {
+            box-shadow: 0px 6px 20px 0px rgba(000000, 6%);
+        }
+
+        #header {
+            z-index: 100000;
+        }
+
+        .logoMobile {
+            font-family: "Oleo Script Swash Caps", system-ui !important;
+        }
+
+        .group a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #ffffff;
+            transition: width 0.3s ease;
+        }
+
+        .group:hover a::before {
+            width: 100%;
+        }
+
+        #mainPage {
+
+            padding: 2% !important;
+            margin: 0 auto 0 auto !important;
+        }
+
+        #searchCars {
+            padding: 2% !important;
+        }
+
+        .mr {
+            margin: 10px 0 !important;
+        }
+
+        .pd {
+            padding: 2% !important;
+        }
+
+        .wrapper {
+            width: 80%;
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px 25px 40px;
+        }
+
+
+
+        .price-input {
+            width: 100%;
+            display: flex;
+            margin: 30px 0 35px;
+
+        }
+
+        .price-input .field {
+            display: flex;
+            width: 100%;
+            height: 45px;
+            align-items: center;
+
+        }
+
+        .field input {
+            width: 100%;
+            height: 100%;
+            outline: none;
+            font-size: 19px;
+            margin-left: 12px;
+            border-radius: 5px;
+            text-align: center;
+            border: none;
+            -moz-appearance: textfield;
+            color: red;
+        }
+
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+
+
+
+        .slider {
+            height: 5px;
+            position: relative;
+            background: #ddd;
+            border-radius: 5px;
+        }
+
+        .slider .progress {
+            height: 100%;
+            left: 25%;
+            right: 25%;
+            position: absolute;
+            border-radius: 5px;
+            background: red;
+        }
+
+        .range-input {
+            position: relative;
+        }
+
+        .range-input input {
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            top: -5px;
+            background: none;
+            pointer-events: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            height: 17px;
+            width: 17px;
+            border-radius: 50%;
+            background: red;
+            pointer-events: auto;
+            -webkit-appearance: none;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            height: 17px;
+            width: 17px;
+            border: none;
+            border-radius: 50%;
+            background: #000;
+            pointer-events: auto;
+            -moz-appearance: none;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .button {
+            padding: 10px 30px !important;
+
+        }
+
+        .titlePrimary {
+            padding-right: 10px !important;
+        }
+
+        .custom-span {
+            margin-bottom: 15px !important;
+        }
+
+        .letter {
+            padding: 3px 20px !important;
+        }
+
+        .bottomCard {
+            margin-top: 15px !important;
+        }
+
+        #searchCars {
+            margin-bottom: 40px !important;
+        }
+
+        #cardsReviews {
+            padding: 2% 0 !important;
+        }
+    </style>
+    <title>Product Page</title>
+
+
+</head>
+
+<body class="min-h-screen relative w-full  bg-[#F4F4F4] overflow-x-hidden">
+
+
+    <!-- *************************** HEADER + HERO SECTION START ******************************************** -->
+    <!-- ************MOBILE************ -->
+    <section class="w-[100%] h-[400px]  relative z-[1] overflow-hidden">
+
+        <div>
+            <h1
+                class="w-full absolute top-[50%] left-[20%] z-[1000] font-[700] text-[2em] text-white capitalize hidden md:flex">
+                About us
+            </h1>
+        </div>
+
+        <div class="w-full h-full absolute top-0 left-0 -z-1">
+            <img class="w-full h-full  object-cover bg-center bg-cover" src="../images/img.png" alt="img">
+        </div>
+
+
+
+        <div
+            class="bg-bl bg-[url('../images/bg-bla.png')]  bg-no-repeat bg-center bg-cover w-full h-[100%]  absolute  top-0 left-0 z-1">
+        </div>
+        <header class=" w-full h-[70px] fixed top-0 " id="header">
+            <!-- ***********MOBILE SCREEN********* -->
+            <div class="mobile w-full h-[70px] flex items-center justify-around px-3 cursor-pointer md:hidden"
+                style="background-color: rgba(0, 0, 0, 0.2) ;">
+                <!-- *****Search ICON****** -->
+                <i class="fa-solid fa-magnifying-glass text-xl text-slate-50 searchIcon rotate-90  md:hidden "></i>
+
+                <!-- *****LOGO****** -->
+                <div class="logoMobile  text-red-600 text-[2em] md:hidden">
+                    Logo
+                </div>
+                <!-- *****BARS ICON****** -->
+                <div class="icons md:hidden">
+
+
+                    <i class="openNav fa-solid fa-bars-staggered text-xl text-slate-50 cursor-pointer  "></i>
+
+                    <i class="closeNav fa-solid fa-xmark text-xl text-slate-50 cursor-pointer hidden "></i>
+                </div>
+
+            </div>
+
+            <nav
+                class="navbarLinks w-full h-[200px] bg-slate-50 absolute  left-0  z-10  flex items-center justify-center translate-x-[-100%] transition-all md:hidden">
+                <ul class="flex flex-col items-start gap-3 capitalize font-semibold ml-[20px]">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutus.html">about us</a></li>
+                    <li><a href="search.html">search</a></li>
+                    <li><a href="contact.html">contact us</a></li>
+                </ul>
+            </nav>
+
+            <!-- ***********DESKTOP NAVBAR************ -->
+            <div class="desktopHeader h-full hidden md:flex md:items-center md:justify-around  "
+                style="background-color: rgba(0, 0, 0, 0.2); ">
+
+                <div class="logoDesktop  md:flex md:items-center md:justify-center gap-7 ">
+                    <img src="../images/logo.png" alt="logoDesktop" class="object-cover">
+                    <nav>
+                        <ul class="flex items-center justify-center gap-10 capitalize text-slate-100">
+                            <li class="relative group">
+                                <a class="hover:border-none transition-all" href="index.html">Home</a>
+                            </li>
+                            <li class="relative group">
+                                <a class="hover:border-none transition-all" href="aboutus.html">about
+                                    us</a>
+                            </li>
+                            <li class="relative group">
+                                <a class="hover:border-none transition-all" href="search.html">search</a>
+                            </li>
+                            <li class="relative group">
+                                <a class="hover:border-none transition-all" href="contact.html">contact us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <a href="#button"
+                    class=" bg-slate-100 text-red-500 rounded-[50px] w-[150px] h-[30px] flex items-center justify-center gap-2 font-semibold">
+                    <i class="fa-solid fa-phone mr-2"></i> Contact Us
+                </a>
+
+            </div>
+
+        </header>
+
+    </section>
+    <!-- *************************** HEADER + HERO SECTION END ******************************************** -->
+
+
+
+    <!-- *************************** TOP SECTION START ******************************************** -->
+    <section class="w-[100%] h-full flex flex-col gap-10 relative  pd ">
+        <h1 class="text-slate-400 font-[400]">Home &nbsp; / &nbsp;<span class="text-black font-[500]"> About us</span>
+        </h1>
+
+
+        <div
+            class="topProduct mr pd w-full flex flex-col items-center justify-between gap-8  bg-slate-50 rounded-[14px]">
+
+            <h1 class="md:hidden w-full block text-center text-black text-2xl font-[700]">About Us</h1>
+
+            <div class="paragraph w-full md:w-[80%] mr">
+                <p>We are an authorized dealer for the leading new car brands. We offer a wide range of the latest
+                    models, designed with the latest technology and featuring high quality and performance. Enjoy an
+                    unparalleled driving experience with the manufacturer's We are an authorized dealer for the leading
+                    new car brands. We offer a wide range of the latest models, designed with the latest technology and
+                    featuring high quality and performance. Enjoy an unparalleled driving experience with the
+                    manufacturer's
+                </p>
+            </div>
+
+            <div class="cards mr flex flex-col md:flex-row items-center justify-between gap-3 w-full md:w-[80%]">
+
+                <div class="card w-[300px] h-[550px]  flex flex-col gap-3 items-center justify-end pd">
+                    <h1 class="text-red-600 text-2xl capitalize font-[500]">What makes us different?</h1>
+
+                    <div>
+                        <img src="../images/01.png" alt="01">
+                    </div>
+                    <p class="text-black text-sm">We offer a wide range of cars to meet all needs and budgets. We also
+                        have extensive experience in the automotive field, which enables us to provide the best advice
+                        and guidance to our customers.</p>
+
+                </div>
+
+                <div class="card w-[300px] h-[550px]  flex flex-col gap-3 items-center justify-center pd">
+                    <h1 class="text-red-600 text-md capitalize font-[500] text-start w-full">Vision</h1>
+
+                    <div>
+                        <img src="../images/02.png" alt="02">
+                    </div>
+
+                    <div class="bottomCard w-full flex justify-center items-center gap-3">
+                        <span class="text-red-600 text-2xl font-[700]">01</span>
+                        <p class="text-black text-sm">Our vision is to strive to be the first destination for anyone
+                            looking for a suitable car.</p>
+                    </div>
+
+                </div>
+
+
+                <div class="card w-[300px] h-[550px]  flex flex-col gap-3 items-center justify-center pd">
+                    <h1 class="text-red-600 text-md capitalize font-[500] text-start w-full">Message</h1>
+
+                    <div>
+                        <img src="../images/03.png" alt="03">
+                    </div>
+
+                    <div class="bottomCard w-full flex justify-center items-center gap-3">
+                        <span class="text-red-600 text-2xl font-[700]">02</span>
+                        <p class="text-black text-sm">Our mission is to provide the best cars at the best prices, with
+                            high quality assurance and excellent customer service.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- *************************** TOP SECTION END ******************************************** -->
+
+
+
+
+    <!-- *************************** Team management START ******************************************** -->
+    <section class="teamManagement w-[100%] h-full  flex flex-col gap-10 relative  pd ">
+
+        <div
+            class="topteamManagement mr pd w-full h-full flex flex-col items-center justify-between gap-8 bg-slate-50 md:bg-none rounded-[14px] overflow-hidden">
+
+            <h1 class=" w-full  md:text-start text-center text-black text-2xl font-[700]">Team management</h1>
+
+            <div
+                class="cardsTeam mr flex flex-col md:flex-wrap md:flex-row items-center justify-start gap-3 w-full md:w-[80%] h-full">
+
+                <div class="cardTeam w-[300px] h-[400px]  flex flex-col gap-3 items-center justify-center pd ">
+                    <div class="w-full h-[80%] overflow-hidden rounded-[14px] ">
+                        <img class="w-full h-full object-cover" src="../images/team1.png" alt="team1">
+                    </div>
+
+                    <h1 class="uppercase text-black text-[1.3em] font-[700]">ALI ALQARNI</h1>
+                    <h3>FOUNDER & CEO</h3>
+                </div>
+                <div class="cardTeam w-[300px] h-[400px]  flex flex-col gap-3 items-center justify-center pd">
+                    <div class="w-full h-[80%]  overflow-hidden rounded-[14px]">
+                        <img class="w-full h-full object-cover" src="../images/team2.png" alt="team2">
+                    </div>
+
+                    <h1 class="uppercase text-black text-[1.3em] font-[700]">ZIYAD ATEEQ</h1>
+                    <h3>EXECUTIVE VICE PRESIDENT, GENERAL COUNSEL</h3>
+                </div>
+                <div class="cardTeam w-[300px] h-[400px]  flex flex-col gap-3 items-center justify-center pd">
+                    <div class="w-full h-[80%] overflow-hidden rounded-[14px]">
+                        <img class="w-full h-full object-cover" src="../images/team3.png" alt="team3">
+                    </div>
+
+                    <h1 class="uppercase text-black text-[1.3em] font-[700]">ABDULKARIM ALMALKI</h1>
+                    <h3>CHIEF COMMERCIAL OFFICER</h3>
+                </div>
+                <div class="cardTeam w-[300px] h-[400px]  flex flex-col gap-3 items-center justify-center pd">
+                    <div class="w-full h-[80%] overflow-hidden rounded-[14px]">
+                        <img class="w-full h-full object-cover" src="../images/team4.png" alt="team4">
+                    </div>
+
+                    <h1 class="uppercase text-black text-[1.3em] font-[700]">KILIÇASLAN DEVELI</h1>
+                    <h3>EXECUTIVE VICE PRESIDENT</h3>
+                </div>
+                <div class="cardTeam w-[300px] h-[400px]  flex flex-col gap-3 items-center justify-center pd">
+                    <div class="w-full h-[80%] overflow-hidden rounded-[14px]">
+                        <img class="w-full h-full object-cover" src="../images/team5.png" alt="team5">
+                    </div>
+
+                    <h1 class="uppercase text-black text-[1.3em] font-[700]">SARI ALZAIDI</h1>
+                    <h3>CHIEF FINANCIAL OFFICER</h3>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- *************************** Team management END ******************************************** -->
+
+
+
+    <!-- *************************** For further inquiries START ******************************************** -->
+    <section
+        class="w-full h-[300px] md:h-[500px] bg-red-600 pd mr bg-no-repeat bg-center bg-cover overflow-hidden flex flex-col items-center justify-center gap-5"
+        style="background-image: url(../images/picture.png);">
+
+        <h1 class="text-white font-[700] text-[2em] md:text-[3em] capitalize">For further inquiries</h1>
+        <button class="button pd bg-red-600 text-white rounded-[14px]">Contact Us</button>
+
+    </section>
+    <section class="w-full h-[300px] md:h-[500px]  flex flex-col items-center justify-center gap-5">
+
+        <h1 class="text-black font-[700] text-[2em] md:text-[3em] capitalize">Let's Get Started</h1>
+        <p>For further inquiries</p>
+        <div class="w-[90%] md:w-[40%] flex">
+            <input type="email" name="email" id="email" placeholder="Entre your Email"
+                class="w-full pd rounded-l-[14px] border-solid border-2 border-slate-300 border-r-0 focus:border-none  focus:outline-none">
+            <button class="rounded-r-[14px] button bg-red-600 text-white pd">Subscribe</button>
+        </div>
+
+
+    </section>
+    <!-- *************************** For further inquiries END ******************************************** -->
+
+
+
+
+
+
+
+
+
+
+    <!-- *************************** FOOTER START ******************************************** -->
+    <footer class="pd w-full h-[530px] bg-black text-white flex flex-col justify-evenly items-center gap-5">
+        <!-- *****LOGO****** -->
+        <div class="logoMobile  text-red-600 text-[2em] ">
+            Logo
+        </div>
+
+        <!-- ********QUICKLY LINKS********** -->
+        <div class="quicklyLinks w-full h-full flex flex-wrap justify-start  items-center md:justify-evenly gap-5">
+            <div class="linksOne capitalize w-[145px] h-[150px]  flex flex-col items-start gap-5 ">
+                <h1 class="text-xl font-[500]">Showrome</h1>
+                <a href="#" class="text-[14px] font-[300]">Rent and sell car</a>
+                <a href="#" class="text-[14px] font-[300]">Brand cars</a>
+                <a href="#" class="text-[14px] font-[300]">Login as Dealer</a>
+            </div>
+            <div class="linksTwo capitalize w-[145px] h-[150px]  flex flex-col items-start gap-5">
+                <h1 class="text-xl font-[500]">Support</h1>
+                <a href="#" class="text-[14px] font-[300]">Buying and selling</a>
+                <a href="#" class="text-[14px] font-[300]">services</a>
+                <a href="#" class="text-[14px] font-[300]">Used car</a>
+            </div>
+            <div class="linksThree capitalize w-[145px] h-[150px]  flex flex-col items-start gap-5">
+                <h1 class="text-xl font-[500]">why us?</h1>
+                <a href="#" class="text-[14px] font-[300]">Our features</a>
+                <a href="#" class="text-[14px] font-[300]">Testimony</a>
+            </div>
+            <div class="linksFour capitalize w-[145px] h-[150px]  flex flex-col items-start gap-5">
+                <h1 class="text-xl font-[500]">Contact us</h1>
+                <a href="#" class="text-[14px] font-[300]">Brand us</a>
+                <a href="#" class="text-[14px] font-[300]">Event</a>
+            </div>
+            <div class="socialLinks hidden md:hidden lg:flex flex-col">
+
+                <p>Contact us Social media</p>
+
+
+
+                <div class="icons hidden md:flex  gap-5 items-center justify-center">
+                    <span><i class="fa-brands fa-instagram"></i></span>
+                    <span><i class="fa-brands fa-facebook"></i></span>
+                    <span><i class="fa-brands fa-x"></i></span>
+                </div>
+            </div>
+        </div>
+
+
+        <span class="w-[80%] h-[2px] bg-white md:w-screen "></span>
+        <div class="icons flex gap-5 items-center justify-center md:hidden ">
+
+            <span><i class="fa-brands fa-instagram"></i></span>
+            <span><i class="fa-brands fa-facebook"></i></span>
+            <span><i class="fa-brands fa-x"></i></span>
+        </div>
+
+        <div class="bottomFooter w-full flex items-center justify-center md:justify-between">
+            <p class="text-[14px] font-[300] flex "><span class="hidden md:flex">Copyright</span> &nbsp; 2023 Karen
+                Rally Club</p>
+            <div class="  hidden text-[14px] font-[300] md:flex gap-4">
+                <a href="">Privacy Policy</a>
+                <a href="">Terms Of Services</a>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,617 @@
+<!doctype html>
+<html class="p-0 m-0 box-border">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ************CDN GOOGLE FONTS************** -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <!-- ************CDN AWESOME ICON************** -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <!-- ************FILE CSS************* -->
+    <link href="output.css" rel="stylesheet">
+    <!-- ************FILE JAVASCRIPT************* -->
+    <script src="./main.js" defer></script>
+    <style>
+        * {
+            padding: 0 !important;
+            margin: 0 !important;
+            box-sizing: border-box !important;
+            font-family: "Poppins", sans-serif;
+        }
+
+        .shadowHeader {
+            position: sticky;
+            transition: 0.5s;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .showPage {
+            display: flex;
+        }
+
+        .shadow {
+            box-shadow: 0px 6px 20px 0px rgba(000000, 6%);
+        }
+
+        #header {
+            z-index: 100000;
+        }
+
+        .logoMobile {
+            font-family: "Oleo Script Swash Caps", system-ui !important;
+        }
+
+        .group a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #ffffff;
+            transition: width 0.3s ease;
+        }
+
+        .group:hover a::before {
+            width: 100%;
+        }
+
+        #mainPage {
+
+            padding: 2% !important;
+            margin: 0 auto 0 auto !important;
+        }
+
+        #searchCars {
+            padding: 2% !important;
+        }
+
+        .mr {
+            margin: 10px 0 !important;
+        }
+
+        .pd {
+            padding: 2% !important;
+        }
+
+        .wrapper {
+            width: 80%;
+            background: #fff;
+            border-radius: 10px;
+            padding: 20px 25px 40px;
+        }
+
+
+
+        .price-input {
+            width: 100%;
+            display: flex;
+            margin: 30px 0 35px;
+
+        }
+
+        .price-input .field {
+            display: flex;
+            width: 100%;
+            height: 45px;
+            align-items: center;
+
+        }
+
+        .field input {
+            width: 100%;
+            height: 100%;
+            outline: none;
+            font-size: 19px;
+            margin-left: 12px;
+            border-radius: 5px;
+            text-align: center;
+            border: none;
+            -moz-appearance: textfield;
+            color: red;
+        }
+
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+
+
+
+        .slider {
+            height: 5px;
+            position: relative;
+            background: #ddd;
+            border-radius: 5px;
+        }
+
+        .slider .progress {
+            height: 100%;
+            left: 25%;
+            right: 25%;
+            position: absolute;
+            border-radius: 5px;
+            background: red;
+        }
+
+        .range-input {
+            position: relative;
+        }
+
+        .range-input input {
+            position: absolute;
+            width: 100%;
+            height: 5px;
+            top: -5px;
+            background: none;
+            pointer-events: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            height: 17px;
+            width: 17px;
+            border-radius: 50%;
+            background: red;
+            pointer-events: auto;
+            -webkit-appearance: none;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            height: 17px;
+            width: 17px;
+            border: none;
+            border-radius: 50%;
+            background: #000;
+            pointer-events: auto;
+            -moz-appearance: none;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+        }
+
+        .button {
+            padding: 10px 30px !important;
+
+        }
+
+        .titlePrimary {
+            padding-right: 10px !important;
+        }
+
+        .custom-span {
+            margin-bottom: 15px !important;
+        }
+
+        .letter {
+            padding: 3px 20px !important;
+        }
+
+        .bottomCard {
+            margin-top: 15px !important;
+        }
+
+        #searchCars {
+            margin-bottom: 40px !important;
+        }
+
+        #cardsReviews {
+            padding: 2% 0 !important;
+        }
+    </style>
+    <title>Product Page</title>
+
+
+</head>
+
+<body class="min-h-screen relative w-full  bg-[#F4F4F4] overflow-x-hidden">
+
+
+    <!-- *************************** HEADER + HERO SECTION START ******************************************** -->
+    <!-- ************MOBILE************ -->
+    <section class="w-[100%] h-[400px]  relative z-[1] overflow-hidden">
+
+        <div class="w-full h-full absolute top-0 left-0 -z-1">
+            <img class="w-full h-full  object-cover bg-center bg-cover" src="../images/img.png" alt="img">
+        </div>
+
+
+
+        <div
+            class="bg-bl bg-[url('../images/bg-bla.png')]  bg-no-repeat bg-center bg-cover w-full h-[100%]  absolute  top-0 left-0 z-1">
+        </div>
+        <header class=" w-full h-[70px] fixed top-0 " id="header">
+            <!-- ***********MOBILE SCREEN********* -->
+            <div class="mobile w-full h-[70px] flex items-center justify-around px-3 cursor-pointer md:hidden"
+                style="background-color: rgba(0, 0, 0, 0.2) ;">
+                <!-- *****Search ICON****** -->
+                <i class="fa-solid fa-magnifying-glass text-xl text-slate-50 searchIcon rotate-90  md:hidden "></i>
+
+                <!-- *****LOGO****** -->
+                <div class="logoMobile  text-red-600 text-[2em] md:hidden">
+                    Logo
+                </div>
+                <!-- *****BARS ICON****** -->
+                <div class="icons md:hidden">
+
+
+                    <i class="openNav fa-solid fa-bars-staggered text-xl text-slate-50 cursor-pointer  "></i>
+
+                    <i class="closeNav fa-solid fa-xmark text-xl text-slate-50 cursor-pointer hidden "></i>
+                </div>
+
+            </div>
+
+            <nav
+                class="navbarLinks w-full h-[200px] bg-slate-50 absolute  left-0  z-10  flex items-center justify-center translate-x-[-100%] transition-all md:hidden">
+                <ul class="flex flex-col items-start gap-3 capitalize font-semibold ml-[20px]">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#aboutus">about us</a></li>
+                    <li><a href="#search">search</a></li>
+                    <li><a href="#contactus">contact us</a></li>
+                </ul>
+            </nav>
+
+            <!-- ***********DESKTOP NAVBAR************ -->
+            <div class="desktopHeader h-full hidden md:flex md:items-center md:justify-around  "
+                style="background-color: rgba(0, 0, 0, 0.2); ">
+
+                <div class="logoDesktop  md:flex md:items-center md:justify-center gap-7 ">
+                    <img src="../images/logo.png" alt="logoDesktop" class="object-cover">
+                    <nav>
+                        <ul class="flex items-center justify-center gap-10 capitalize text-slate-100">
+                            <li class="relative group">
+                                <a class="hover:border-none transition-all" href="/">Home</a>
+                            </li>
+                            <li class="relative group">
+                                <a class="hover:border-none transition-all" href="#aboutus">about
+                                    us</a>
+                            </li>
+                            <li class="relative group">
+                                <a class="hover:border-none transition-all" href="#search">search</a>
+                            </li>
+                            <li class="relative group">
+                                <a class="hover:border-none transition-all" href="#contactus">contact us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <a href="#button"
+                    class=" bg-slate-100 text-red-500 rounded-[50px] w-[150px] h-[30px] flex items-center justify-center gap-2 font-semibold">
+                    <i class="fa-solid fa-phone mr-2"></i> Contact Us
+                </a>
+
+            </div>
+
+        </header>
+
+    </section>
+    <!-- *************************** HEADER + HERO SECTION END ******************************************** -->
+
+
+    <!-- *************************** PRODUCT START ******************************************** -->
+    <section class="w-[100%] h-full flex flex-col gap-10 relative  pd ">
+        <h1 class="text-slate-400 font-[400]">Home &nbsp; / &nbsp; Search &nbsp; / &nbsp;<span
+                class="text-black font-[500]">Product</span></h1>
+
+        <div class="topProduct mr w-full flex flex-col items-center justify-between gap-5 md:flex-row">
+
+            <div
+                class="leftProduct pd bg-slate-50 rounded-[12px] shadow-custom h-full md:h-full w-full md:w-[50%]   flex flex-col items-center justify-center gap-5 overflow-hidden">
+
+                <div class="w-full flex items-center justify-end md:hidden">
+                    <i class="fa-regular fa-heart text-xl text-black cursor-pointer "></i>
+                    &nbsp; &nbsp;
+                    <i class="fa-solid fa-share-nodes text-xl text-black cursor-pointer"></i>
+                </div>
+
+
+                <div
+                    class="w-full  flex items-center justify-center bg-[#E8E7E6] border-solid border-slate-200 border-2 rounded-[10px] pd ">
+                    <img class=" object-cover" src="../images/mercedes1.png" alt="mercedes1">
+                </div>
+
+                <div class="w-full h-[200px]  flex items-center justify-center gap-5 pd ">
+                    <div
+                        class="overflow-hidden w-[32%] md:w-[50%]  h-[125px] md:h-[130px] lg:h-[200px] flex items-center justify-center bg-[#E8E7E6] border-solid border-slate-200 border-2 rounded-[10px]">
+                        <img class="object-cover" src="../images/mercedes2.png" alt="mercedes2">
+                    </div>
+                    <div
+                        class="overflow-hidden w-[32%] md:w-[50%] h-[125px] md:h-[130px] lg:h-[200px] flex items-center justify-center bg-[#E8E7E6] border-solid border-slate-200 border-2 rounded-[10px]">
+                        <img class="object-cover" src="../images/mercedes3.png" alt="mercedes3">
+                    </div>
+                    <div
+                        class="overflow-hidden w-[32%] h-[125px] flex items-center justify-center md:hidden bg-[#E8E7E6] border-solid border-slate-200 border-2 rounded-[10px]">
+                        <img class="object-cover" src="../images/mercedes1.png" alt="mercedes1">
+                    </div>
+                </div>
+
+                <div class="w-full hidden md:flex flex-wrap items-center justify-between gap-5">
+                    <div class="flex items-center gap-5 text-red-600">
+                        <h1 class="text-black capitalize">Share the car</h1>
+                        <a href=""><i class="cursor-pointer fa-regular fa-copy"></i></a>
+                        <a href=""><i class="cursor-pointer fa-brands fa-facebook"></i></a>
+                        <a href=""><i class="cursor-pointer fa-brands fa-x"></i></a>
+                    </div>
+
+                    <div class="flex items-center gap-5">
+                        <h1 class="text-black capitalize">Add to favourites</h1>
+                        <a href=""><i class="cursor-pointer fa-regular fa-heart"></i></a>
+                    </div>
+                </div>
+
+            </div>
+            <div
+                class="rightProduct pd  bg-slate-50 h-[600px] md:h-full w-full md:w-[50%] rounded-[12px] shadow-custom flex flex-col items-start justify-between gap-5">
+                <h1 class="text-black text-xl font-[600]">Toyota Camry New</h1>
+
+                <span class="mr w-[100%] h-[2px] bg-slate-300 mt-10"></span>
+
+                <div class="flex flex-col gap-5">
+                    <h1><span class="text-black font-[600]">Interne Nummer : </span>3443</h1>
+                    <h1><span class="text-black font-[600]">Aufbau : </span>Cabrio /Roadster</h1>
+                    <h1><span class="text-black font-[600]">Hubraum :</span>5204 ccm</h1>
+                    <h1><span class="text-black font-[600]">Erstzulassung :</span>04.2018</h1>
+                    <h1><span class="text-black font-[600]">Hubraum :</span>5204 ccm</h1>
+                </div>
+
+                <span class="mr w-[100%] h-[2px] bg-slate-300 mt-10"></span>
+
+                <div class="">
+                    <ul class="flex flex-col  items-start gap-5">
+                        <li class="flex gap-2 items-center justify-center"><span><i
+                                    class="fa-solid fa-circle text-[5px]"></i> UVP : </span>225010,00 €</li>
+                        <li><span><i class="fa-solid fa-circle text-[5px]"></i> Ersparnis : </span>83110,00 €</li>
+                        <li><span><i class="fa-solid fa-circle text-[5px]"></i> Ersparnis : </span>36,94 %</li>
+                    </ul>
+                </div>
+
+                <h1 class="text-red-600 line-through">145.900,00 € inkl. 19% Mwst.</h1>
+                <h1 class="text-[1em]"><span class="text-black font-[600] text-[1.2em]">141.900,00 € </span>inkl. 19%
+                    Mwst.</h1>
+
+            </div>
+        </div>
+    </section>
+    <!-- *************************** PRODUCT END ******************************************** -->
+
+
+    <!-- *************************** basicInformation START ******************************************** -->
+    <section id="basicInfomations" class="mr pd w-full h-full  flex flex-col items-center justify-center">
+
+
+        <div
+            class="pd w-[100%] h-full  flex flex-col  md:justify-start gap-2 text-base font-semibold  capitalize  rounded-[12px]  shadow-custom bg-white  ">
+            <!-- **********DESKTOP BASIC INFORMATION START************** -->
+            <div
+                class="hidden md:w-full lg:w-[50%] h-[50px] md:flex items-center justify-center gap-5 bg-slate-100 shadow-custom rounded-[12px]">
+                <h1 class="text-red-600 capitalize border-r-[1px] border-solid border-slate-200 "
+                    style="padding-right: 1% !important;">Basic informations</h1>
+                <h1 class="text-black capitalize border-r-[1px] border-solid border-slate-200 "
+                    style="padding-right: 1% !important;">Extras</h1>
+                <h1 class="text-black capitalize " style="padding-right: 1% !important;">Beschreibung</h1>
+            </div>
+            <!-- **********DESKTOP BASIC INFORMATION END************** -->
+
+            <!-- **********MOBILE BASIC INFORMATION START************** -->
+            <div class="w-full flex items-center justify-center gap-5 md:hidden pd ">
+                <button class="text-[10px] pd bg-red-600 rounded-[12px] text-white">Basic informations</button>
+                <button class="text-[10px] pd bg-slate-200 rounded-[12px] text-black">Extras</button>
+                <button class="text-[10px] pd bg-slate-200 rounded-[12px] text-black">Beschreibung</button>
+            </div>
+            <!-- **********MOBILE BASIC INFORMATION END************** -->
+            <div class="pd w-full h-full flex flex-col md:flex-row">
+                <div class="leftInfo w-full md:w-[50%] flex flex-col items-start gap-3 pd">
+                    <h1 class="text-black capitalize font-[700]">Informations</h1>
+                    <span class="mr w-[100%] h-[2px] bg-slate-300 mt-10 md:hidden flex"></span>
+                    <h1 class="font-[300]"><span class="font-[500]">Interne Nummer : </span>3443</h1>
+                    <h1 class="font-[300]"><span class="font-[500]">Aufbau : </span>Cabrio /Roadste</h1>
+                    <h1 class="font-[300]"><span class="font-[500]">Erstzulassung : </span>04.2018</h1>
+                    <h1 class="font-[300]"><span class="font-[500]">Leistung : </span>397 kW( 540 PS )</h1>
+                    <h1 class="font-[300]"><span class="font-[500]">Hubraum : </span>5204 ccm</h1>
+                    <h1 class="font-[300]"><span class="font-[500]">Hubraum : </span>5204 ccm</h1>
+                </div>
+                <div class="rightInfo w-full md:w-[50%] flex flex-col items-start gap-3 pd">
+
+                    <h1 class="text-black capitalize font-[700]">Informations</h1>
+                    <span class="mr w-[100%] h-[2px] bg-slate-300 mt-10 md:hidden flex"></span>
+
+
+                    <ul class="flex flex-col  items-start gap-5">
+                        <li class="font-[300]"><span class="font-[500]"><i class="fa-solid fa-circle text-[5px]"></i>
+                                UVP : </span>225010,00 €</li>
+                        <li class="font-[300]"><span class="font-[500]"><i class="fa-solid fa-circle text-[5px]"></i>
+                                Ersparnis : </span>83110,00 €</li>
+                        <li class="font-[300]"><span class="font-[500]"><i class="fa-solid fa-circle text-[5px]"></i>
+                                UVP : </span>225010,00 €</li>
+                        <li class="font-[300]"><span class="font-[500]"><i class="fa-solid fa-circle text-[5px]"></i>
+                                Ersparnis : </span>83110,00 €</li>
+                        <li class="font-[300]"><span class="font-[500]"><i class="fa-solid fa-circle text-[5px]"></i>
+                                Ersparnis : </span>83110,00 €</li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- *************************** Customer Reviews start ******************************************** -->
+
+    <section id="mainPage" class="w-full h-full pd md:mr">
+        <div
+            class="pd w-full h-full  flex flex-col  md:justify-start gap-2 text-base font-semibold  capitalize  md:bg-white md:shadow-custom md:rounded-[12px] ">
+
+            <div class="topCustomers  w-full h-full flex flex-col items-start justify-around gap-3 ">
+
+                <h1
+                    class="text-black text-[2em] font-[600] md:hidden block text-center w-full bg-white rounded-[12px] pd">
+                    Customer Reviews</h1>
+                <h1 class="text-black text-[2em] font-[600] hidden md:block">Reviews</h1>
+                <div class="arrows md:flex items-center justify-center gap-2 hidden ">
+                    <i
+                        class="fa-solid fa-arrow-left w-[50px] h-[50px] cursor-pointer bg-red-200 text-white rounded-[50%] flex items-center justify-center"></i>
+                    <i
+                        class="fa-solid fa-arrow-right w-[50px] h-[50px] cursor-pointer bg-red-600 text-white rounded-[50%] flex items-center justify-center"></i>
+                </div>
+            </div>
+
+
+            <div class=" w-full h-full  flex flex-wrap items-center justify-around gap-6  ">
+
+
+
+
+
+
+                <div
+                    class="cardReview pd card w-[350px] h-[400px] bg-[#F9F9FA] flex flex-col items-center justify-evenly rounded-[15px] gap-5 shadow-custom">
+                    <div class="stars flex gap-3 items-center justify-center">
+                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300 ml-4"></i></span>
+                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                    </div>
+                    <p class="text-start text-[14px]">A great little app that some of the big guns have clearly been
+                        taking their cue from. Looks
+                        like Incomee might actually be cleaner and simpler to use than competitors.</p>
+                    <div class="flex gap-[20px] items-center justify-center">
+                        <img src="../images/avatar.png" class="w-[80px] h-[80px] object-cover rounded-[50%]"
+                            alt="avatar">
+
+                        <p class="text-[14px]">Craig Vaccaro <br>
+                            Founder and co-CEO</p>
+                    </div>
+                </div>
+                <div
+                    class="cardReview pd hidden card w-[350px] h-[400px] bg-[#F9F9FA] md:flex flex-col items-start justify-evenly rounded-[15px] gap-5 shadow-custom">
+                    <div class="stars flex gap-3 items-center justify-center">
+                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300 ml-4"></i></span>
+                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                    </div>
+                    <p class="text-start text-[14px]">A great little app that some of the big guns have clearly been
+                        taking their cue from. Looks
+                        like Incomee might actually be cleaner and simpler to use than competitors.</p>
+                    <div class="flex gap-[20px]">
+                        <img src="../images/avatar.png" class="w-[80px] h-[80px] object-cover rounded-[50%]"
+                            alt="avatar">
+
+                        <p class="text-[14px]">Craig Vaccaro <br>
+                            Founder and co-CEO</p>
+                    </div>
+                </div>
+                <div
+                    class="cardReview pd hidden card w-[350px] h-[400px] bg-[#F9F9FA] md:flex flex-col items-start justify-evenly rounded-[15px] gap-5 shadow-custom">
+                    <div class="stars flex gap-3 items-center justify-center">
+                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300 ml-4"></i></span>
+                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                    </div>
+                    <p class="text-start text-[14px]">A great little app that some of the big guns have clearly been
+                        taking their cue from. Looks
+                        like Incomee might actually be cleaner and simpler to use than competitors.</p>
+                    <div class="flex gap-[20px]">
+                        <img src="../images/avatar.png" class="w-[80px] h-[80px] object-cover rounded-[50%]"
+                            alt="avatar">
+
+                        <p class="text-[14px]">Craig Vaccaro <br>
+                            Founder and co-CEO</p>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </section>
+    <!-- *************************** Customer Reviews END ******************************************** -->
+
+
+
+
+    <!-- *************************** FOOTER START ******************************************** -->
+    <footer class="pd w-full h-[530px] bg-black text-white flex flex-col justify-evenly items-center gap-5">
+        <!-- *****LOGO****** -->
+        <div class="logoMobile  text-red-600 text-[2em] ">
+            Logo
+        </div>
+
+        <!-- ********QUICKLY LINKS********** -->
+        <div class="quicklyLinks w-full h-full flex flex-wrap justify-start  items-center md:justify-evenly gap-5">
+            <div class="linksOne capitalize w-[145px] h-[150px]  flex flex-col items-start gap-5 ">
+                <h1 class="text-xl font-[500]">Showrome</h1>
+                <a href="#" class="text-[14px] font-[300]">Rent and sell car</a>
+                <a href="#" class="text-[14px] font-[300]">Brand cars</a>
+                <a href="#" class="text-[14px] font-[300]">Login as Dealer</a>
+            </div>
+            <div class="linksTwo capitalize w-[145px] h-[150px]  flex flex-col items-start gap-5">
+                <h1 class="text-xl font-[500]">Support</h1>
+                <a href="#" class="text-[14px] font-[300]">Buying and selling</a>
+                <a href="#" class="text-[14px] font-[300]">services</a>
+                <a href="#" class="text-[14px] font-[300]">Used car</a>
+            </div>
+            <div class="linksThree capitalize w-[145px] h-[150px]  flex flex-col items-start gap-5">
+                <h1 class="text-xl font-[500]">why us?</h1>
+                <a href="#" class="text-[14px] font-[300]">Our features</a>
+                <a href="#" class="text-[14px] font-[300]">Testimony</a>
+            </div>
+            <div class="linksFour capitalize w-[145px] h-[150px]  flex flex-col items-start gap-5">
+                <h1 class="text-xl font-[500]">Contact us</h1>
+                <a href="#" class="text-[14px] font-[300]">Brand us</a>
+                <a href="#" class="text-[14px] font-[300]">Event</a>
+            </div>
+            <div class="socialLinks hidden md:hidden lg:flex flex-col">
+
+                <p>Contact us Social media</p>
+
+
+
+                <div class="icons hidden md:flex  gap-5 items-center justify-center">
+                    <span><i class="fa-brands fa-instagram"></i></span>
+                    <span><i class="fa-brands fa-facebook"></i></span>
+                    <span><i class="fa-brands fa-x"></i></span>
+                </div>
+            </div>
+        </div>
+
+
+        <span class="w-[80%] h-[2px] bg-white md:w-screen "></span>
+        <div class="icons flex gap-5 items-center justify-center md:hidden ">
+
+            <span><i class="fa-brands fa-instagram"></i></span>
+            <span><i class="fa-brands fa-facebook"></i></span>
+            <span><i class="fa-brands fa-x"></i></span>
+        </div>
+
+        <div class="bottomFooter w-full flex items-center justify-center md:justify-between">
+            <p class="text-[14px] font-[300] flex "><span class="hidden md:flex">Copyright</span> &nbsp; 2023 Karen
+                Rally Club</p>
+            <div class="  hidden text-[14px] font-[300] md:flex gap-4">
+                <a href="">Privacy Policy</a>
+                <a href="">Terms Of Services</a>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+
+
+</body>
+
+</html>
