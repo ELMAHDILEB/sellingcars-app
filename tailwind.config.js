@@ -34,9 +34,14 @@ module.exports = {
         'hero-pattern' : "url('../images/road.png')",
         'bg-bla' : "url('../khamsat/images/bg-bla.png')",
       },
+      transitionProperty: {
+        'width': 'width',
+
+      },
       boxShadow: {
         'custom': '0px 0px 6px 0px rgba(0, 0, 0, 0.1)',
-      }
+      },
+   
       
     },
   },

@@ -42,9 +42,6 @@
             z-index: 100000;
         }
 
-        .logoMobile {
-            font-family: "Oleo Script Swash Caps", system-ui !important;
-        }
 
         .group a::before {
             content: '';
@@ -59,149 +56,6 @@
 
         .group:hover a::before {
             width: 100%;
-        }
-
-        #mainPage {
-
-            padding: 2% !important;
-            margin: 0 auto 0 auto !important;
-        }
-
-        #searchCars {
-            padding: 2% !important;
-        }
-
-        .mr {
-            margin: 10px 0 !important;
-        }
-
-        .pd {
-            padding: 2% !important;
-        }
-
-        .wrapper {
-            width: 80%;
-            background: #fff;
-            border-radius: 10px;
-            padding: 20px 25px 40px;
-        }
-
-
-
-        .price-input {
-            width: 100%;
-            display: flex;
-            margin: 30px 0 35px;
-
-        }
-
-        .price-input .field {
-            display: flex;
-            width: 100%;
-            height: 45px;
-            align-items: center;
-
-        }
-
-        .field input {
-            width: 100%;
-            height: 100%;
-            outline: none;
-            font-size: 19px;
-            margin-left: 12px;
-            border-radius: 5px;
-            text-align: center;
-            border: none;
-            -moz-appearance: textfield;
-            color: red;
-        }
-
-        input[type="number"]::-webkit-outer-spin-button,
-        input[type="number"]::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-        }
-
-
-
-        .slider {
-            height: 5px;
-            position: relative;
-            background: #ddd;
-            border-radius: 5px;
-        }
-
-        .slider .progress {
-            height: 100%;
-            left: 25%;
-            right: 25%;
-            position: absolute;
-            border-radius: 5px;
-            background: red;
-        }
-
-        .range-input {
-            position: relative;
-        }
-
-        .range-input input {
-            position: absolute;
-            width: 100%;
-            height: 5px;
-            top: -5px;
-            background: none;
-            pointer-events: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-        }
-
-        input[type="range"]::-webkit-slider-thumb {
-            height: 17px;
-            width: 17px;
-            border-radius: 50%;
-            background: red;
-            pointer-events: auto;
-            -webkit-appearance: none;
-            box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
-        }
-
-        input[type="range"]::-moz-range-thumb {
-            height: 17px;
-            width: 17px;
-            border: none;
-            border-radius: 50%;
-            background: #000;
-            pointer-events: auto;
-            -moz-appearance: none;
-            box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
-        }
-
-        .button {
-            padding: 10px 30px !important;
-
-        }
-
-        .titlePrimary {
-            padding-right: 10px !important;
-        }
-
-        .custom-span {
-            margin-bottom: 15px !important;
-        }
-
-        .letter {
-            padding: 3px 20px !important;
-        }
-
-        .bottomCard {
-            margin-top: 15px !important;
-        }
-
-        #searchCars {
-            margin-bottom: 40px !important;
-        }
-
-        #cardsReviews {
-            padding: 2% 0 !important;
         }
     </style>
     <title>Product Page</title>
@@ -233,7 +87,8 @@
                 <i class="fa-solid fa-magnifying-glass text-xl text-slate-50 searchIcon rotate-90  md:hidden "></i>
 
                 <!-- *****LOGO****** -->
-                <div class="logoMobile  text-red-600 text-[2em] md:hidden">
+                <div class="logoMobile  text-red-600 text-[2em] md:hidden"
+                    style="font-family: 'Oleo Script Swash Caps', system-ui !important;">
                     Logo
                 </div>
                 <!-- *****BARS ICON****** -->
@@ -296,14 +151,15 @@
 
 
     <!-- *************************** PRODUCT START ******************************************** -->
-    <section class="w-[100%] h-full flex flex-col gap-10 relative  pd ">
+    <section class="w-[100%] h-full flex flex-col gap-10 relative" style="padding: 2% !important;">
         <h1 class="text-slate-400 font-[400]">Home &nbsp; / &nbsp; Search &nbsp; / &nbsp;<span
                 class="text-black font-[500]">Product</span></h1>
 
-        <div class="topProduct mr w-full flex flex-col items-center justify-between gap-5 md:flex-row">
+        <div class="topProduct w-full flex flex-col items-center justify-between gap-5 md:flex-row"
+            style=" margin: 10px 0 !important;">
 
-            <div
-                class="leftProduct pd bg-slate-50 rounded-[12px] shadow-custom h-full md:h-full w-full md:w-[50%]   flex flex-col items-center justify-center gap-5 overflow-hidden">
+            <div class="leftProduct bg-slate-50 rounded-[12px] shadow-custom h-full md:h-full w-full md:w-[50%]   flex flex-col items-center justify-center gap-5 overflow-hidden"
+                style="padding: 2% !important;">
 
                 <div class="w-full flex items-center justify-end md:hidden">
                     <i class="fa-regular fa-heart text-xl text-black cursor-pointer "></i>
@@ -312,22 +168,22 @@
                 </div>
 
 
-                <div
-                    class="w-full  flex items-center justify-center bg-[#E8E7E6] border-solid border-slate-200 border-2 rounded-[10px] pd ">
+                <div class="imageSlides w-full h-[500px] flex items-center justify-center bg-[#E8E7E6] border-solid border-slate-200 border-2 rounded-[10px] cursor-pointer"
+                    style="padding: 2% !important;">
                     <img class=" object-cover" src="../images/mercedes1.png" alt="mercedes1">
                 </div>
 
-                <div class="w-full h-[200px]  flex items-center justify-center gap-5 pd ">
-                    <div
-                        class="overflow-hidden w-[32%] md:w-[50%]  h-[125px] md:h-[130px] lg:h-[200px] flex items-center justify-center bg-[#E8E7E6] border-solid border-slate-200 border-2 rounded-[10px]">
+                <div class="w-full h-[200px]  flex items-center justify-center gap-5 " style="padding: 2% !important;">
+                    <div class="imageSlides overflow-hidden w-[32%] md:w-[50%]  h-[125px] md:h-[130px] lg:h-[200px] flex items-center justify-center bg-[#E8E7E6] border-solid border-slate-200 border-2 rounded-[10px] cursor-pointer"
+                        onclick="changeImg('mercedes2.png')">
                         <img class="object-cover" src="../images/mercedes2.png" alt="mercedes2">
                     </div>
-                    <div
-                        class="overflow-hidden w-[32%] md:w-[50%] h-[125px] md:h-[130px] lg:h-[200px] flex items-center justify-center bg-[#E8E7E6] border-solid border-slate-200 border-2 rounded-[10px]">
+                    <div class="imageSlides overflow-hidden w-[32%] md:w-[50%] h-[125px] md:h-[130px] lg:h-[200px] flex items-center justify-center bg-[#E8E7E6] border-solid border-slate-200 border-2 rounded-[10px] cursor-pointer"
+                        onclick="changeImg('mercedes3.png')">
                         <img class="object-cover" src="../images/mercedes3.png" alt="mercedes3">
                     </div>
-                    <div
-                        class="overflow-hidden w-[32%] h-[125px] flex items-center justify-center md:hidden bg-[#E8E7E6] border-solid border-slate-200 border-2 rounded-[10px]">
+                    <div class="imageSlides overflow-hidden w-[32%] md:w-[50%] h-[125px] md:h-[130px] lg:h-[200px]  flex items-center justify-center  bg-[#E8E7E6] border-solid border-slate-200 border-2 rounded-[10px] cursor-pointer"
+                        onclick="changeImg('mercedes1.png') ">
                         <img class="object-cover" src="../images/mercedes1.png" alt="mercedes1">
                     </div>
                 </div>
@@ -347,11 +203,11 @@
                 </div>
 
             </div>
-            <div
-                class="rightProduct pd  bg-slate-50 h-[600px] md:h-full w-full md:w-[50%] rounded-[12px] shadow-custom flex flex-col items-start justify-between gap-5">
+            <div class="rightProduct  bg-slate-50 h-[600px] md:h-full w-full md:w-[50%] rounded-[12px] shadow-custom flex flex-col items-start justify-between gap-5"
+                style="padding: 2% !important;">
                 <h1 class="text-black text-xl font-[600]">Toyota Camry New</h1>
 
-                <span class="mr w-[100%] h-[2px] bg-slate-300 mt-10"></span>
+                <span class="w-[100%] h-[2px] bg-slate-300 mt-10" style=" margin: 10px 0 !important;"></span>
 
                 <div class="flex flex-col gap-5">
                     <h1><span class="text-black font-[600]">Interne Nummer : </span>3443</h1>
@@ -361,7 +217,7 @@
                     <h1><span class="text-black font-[600]">Hubraum :</span>5204 ccm</h1>
                 </div>
 
-                <span class="mr w-[100%] h-[2px] bg-slate-300 mt-10"></span>
+                <span class="w-[100%] h-[2px] bg-slate-300 mt-10" style=" margin: 10px 0 !important;"></span>
 
                 <div class="">
                     <ul class="flex flex-col  items-start gap-5">
@@ -383,151 +239,270 @@
 
 
     <!-- *************************** basicInformation START ******************************************** -->
-    <section id="basicInfomations" class="mr pd w-full h-full  flex flex-col items-center justify-center">
+    <section id="basicInfomations" class="w-full h-full  flex flex-col items-center justify-center"
+        style=" margin: 10px 0 !important;padding: 2% !important;">
 
 
-        <div
-            class="pd w-[100%] h-full  flex flex-col  md:justify-start gap-2 text-base font-semibold  capitalize  rounded-[12px]  shadow-custom bg-white  ">
-            <!-- **********DESKTOP BASIC INFORMATION START************** -->
-            <div
-                class="hidden md:w-full lg:w-[50%] h-[50px] md:flex items-center justify-center gap-5 bg-slate-100 shadow-custom rounded-[12px]">
-                <h1 class="text-red-600 capitalize border-r-[1px] border-solid border-slate-200 "
-                    style="padding-right: 1% !important;">Basic informations</h1>
-                <h1 class="text-black capitalize border-r-[1px] border-solid border-slate-200 "
-                    style="padding-right: 1% !important;">Extras</h1>
-                <h1 class="text-black capitalize " style="padding-right: 1% !important;">Beschreibung</h1>
-            </div>
-            <!-- **********DESKTOP BASIC INFORMATION END************** -->
+        <div class="w-[100%] h-full  flex flex-col  md:justify-start gap-2 text-base font-semibold  capitalize  rounded-[12px]  shadow-custom bg-white  "
+            style="padding: 2% !important;">
+
+
+
 
             <!-- **********MOBILE BASIC INFORMATION START************** -->
-            <div class="w-full flex items-center justify-center gap-5 md:hidden pd ">
-                <button class="text-[10px] pd bg-red-600 rounded-[12px] text-white">Basic informations</button>
-                <button class="text-[10px] pd bg-slate-200 rounded-[12px] text-black">Extras</button>
-                <button class="text-[10px] pd bg-slate-200 rounded-[12px] text-black">Beschreibung</button>
-            </div>
+            <!-- Tab Contents -->
+            
             <!-- **********MOBILE BASIC INFORMATION END************** -->
-            <div class="pd w-full h-full flex flex-col md:flex-row">
-                <div class="leftInfo w-full md:w-[50%] flex flex-col items-start gap-3 pd">
-                    <h1 class="text-black capitalize font-[700]">Informations</h1>
-                    <span class="mr w-[100%] h-[2px] bg-slate-300 mt-10 md:hidden flex"></span>
-                    <h1 class="font-[300]"><span class="font-[500]">Interne Nummer : </span>3443</h1>
-                    <h1 class="font-[300]"><span class="font-[500]">Aufbau : </span>Cabrio /Roadste</h1>
-                    <h1 class="font-[300]"><span class="font-[500]">Erstzulassung : </span>04.2018</h1>
-                    <h1 class="font-[300]"><span class="font-[500]">Leistung : </span>397 kW( 540 PS )</h1>
-                    <h1 class="font-[300]"><span class="font-[500]">Hubraum : </span>5204 ccm</h1>
-                    <h1 class="font-[300]"><span class="font-[500]">Hubraum : </span>5204 ccm</h1>
+            <div class="w-[100%] h-full flex flex-col md:justify-start gap-2 text-base font-semibold capitalize rounded-[12px] shadow-custom bg-white">
+                <!-- Tab Buttons -->
+                <div class="md:w-full lg:w-[50%] h-[50px] flex items-center justify-center gap-5 bg-slate-100 shadow-custom rounded-[12px]">
+                    <h1 class="tab-button text-red-600 capitalize border-r-[1px] border-solid border-slate-200 cursor-pointer" style="padding-right: 1% !important;" data-tab="info">Basic informations</h1>
+                    <h1 class="tab-button text-black capitalize border-r-[1px] border-solid border-slate-200 cursor-pointer" style="padding-right: 1% !important;" data-tab="extras">Extras</h1>
+                    <h1 class="tab-button text-black capitalize cursor-pointer" style="padding-right: 1% !important;" data-tab="beschreibung">Beschreibung</h1>
                 </div>
-                <div class="rightInfo w-full md:w-[50%] flex flex-col items-start gap-3 pd">
-
-                    <h1 class="text-black capitalize font-[700]">Informations</h1>
-                    <span class="mr w-[100%] h-[2px] bg-slate-300 mt-10 md:hidden flex"></span>
-
-
-                    <ul class="flex flex-col  items-start gap-5">
-                        <li class="font-[300]"><span class="font-[500]"><i class="fa-solid fa-circle text-[5px]"></i>
-                                UVP : </span>225010,00 €</li>
-                        <li class="font-[300]"><span class="font-[500]"><i class="fa-solid fa-circle text-[5px]"></i>
-                                Ersparnis : </span>83110,00 €</li>
-                        <li class="font-[300]"><span class="font-[500]"><i class="fa-solid fa-circle text-[5px]"></i>
-                                UVP : </span>225010,00 €</li>
-                        <li class="font-[300]"><span class="font-[500]"><i class="fa-solid fa-circle text-[5px]"></i>
-                                Ersparnis : </span>83110,00 €</li>
-                        <li class="font-[300]"><span class="font-[500]"><i class="fa-solid fa-circle text-[5px]"></i>
-                                Ersparnis : </span>83110,00 €</li>
-                    </ul>
-
+            
+                <!-- Tab Contents -->
+                <div class="tab-content w-full h-full flex flex-col md:flex-row hidden" id="info">
+                    <div class="leftInfo w-full md:w-[50%] flex flex-col items-start gap-3" style="padding: 2% !important;">
+                        <h1 class="text-black capitalize font-[700]">Informations</h1>
+                        <span class="w-[100%] h-[2px] bg-slate-300 mt-10 md:hidden flex" style="margin: 10px 0 !important;"></span>
+                        <h1 class="font-[300]"><span class="font-[500]">Interne Nummer : </span>3443</h1>
+                        <h1 class="font-[300]"><span class="font-[500]">Aufbau : </span>Cabrio /Roadste</h1>
+                        <h1 class="font-[300]"><span class="font-[500]">Erstzulassung : </span>04.2018</h1>
+                        <h1 class="font-[300]"><span class="font-[500]">Leistung : </span>397 kW( 540 PS )</h1>
+                        <h1 class="font-[300]"><span class="font-[500]">Hubraum : </span>5204 ccm</h1>
+                    </div>
+                    <div class="rightInfo w-full md:w-[50%] flex flex-col items-start gap-3" style="padding: 2% !important;">
+                        <h1 class="text-black capitalize font-[700]">Informations</h1>
+                        <span class="w-[100%] h-[2px] bg-slate-300 mt-10 md:hidden flex" style="margin: 10px 0 !important;"></span>
+                        <ul class="flex flex-col items-start gap-5">
+                            <li class="font-[300]"><span class="font-[500]"><i class="fa-solid fa-circle text-[5px]"></i> UVP : </span>225010,00 €</li>
+                            <li class="font-[300]"><span class="font-[500]"><i class="fa-solid fa-circle text-[5px]"></i> Ersparnis : </span>83110,00 €</li>
+                            <!-- More list items -->
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tab-content w-full h-full flex flex-col md:flex-row hidden" id="extras">
+                    <div class="leftInfo w-full md:w-[50%] flex flex-col items-start gap-3" style="padding: 2% !important;">
+                        <h1 class="text-black capitalize font-[700]">Extras</h1>
+                        <span class="w-[100%] h-[2px] bg-slate-300 mt-10 md:hidden flex" style="margin: 10px 0 !important;"></span>
+                        <h1 class="font-[300]"><span class="font-[500]">Interne Nummer : </span>3443</h1>
+                        <h1 class="font-[300]"><span class="font-[500]">Aufbau : </span>Cabrio /Roadste</h1>
+                        <h1 class="font-[300]"><span class="font-[500]">Erstzulassung : </span>04.2018</h1>
+                        <h1 class="font-[300]"><span class="font-[500]">Leistung : </span>397 kW( 540 PS )</h1>
+                        <h1 class="font-[300]"><span class="font-[500]">Hubraum : </span>5204 ccm</h1>
+                    </div>
+                    <div class="rightInfo w-full md:w-[50%] flex flex-col items-start gap-3" style="padding: 2% !important;">
+                        <h1 class="text-black capitalize font-[700]">Extras</h1>
+                        <span class="w-[100%] h-[2px] bg-slate-300 mt-10 md:hidden flex" style="margin: 10px 0 !important;"></span>
+                        <ul class="flex flex-col items-start gap-5">
+                            <li class="font-[300]"><span class="font-[500]"><i class="fa-solid fa-circle text-[5px]"></i> UVP : </span>225010,00 €</li>
+                            <li class="font-[300]"><span class="font-[500]"><i class="fa-solid fa-circle text-[5px]"></i> Ersparnis : </span>83110,00 €</li>
+                            <!-- More list items -->
+                        </ul>
+                    </div>
+                </div>
+            
+                <div class="tab-content w-full h-full flex flex-col md:flex-row hidden" id="beschreibung">
+                    <div class="leftInfo w-full md:w-[50%] flex flex-col items-start gap-3" style="padding: 2% !important;">
+                        <h1 class="text-black capitalize font-[700]">Beschreibung</h1>
+                        <span class="w-[100%] h-[2px] bg-slate-300 mt-10 md:hidden flex" style="margin: 10px 0 !important;"></span>
+                        <h1 class="font-[300]"><span class="font-[500]">Interne Nummer : </span>3443</h1>
+                        <h1 class="font-[300]"><span class="font-[500]">Aufbau : </span>Cabrio /Roadste</h1>
+                        <h1 class="font-[300]"><span class="font-[500]">Erstzulassung : </span>04.2018</h1>
+                        <h1 class="font-[300]"><span class="font-[500]">Leistung : </span>397 kW( 540 PS )</h1>
+                        <h1 class="font-[300]"><span class="font-[500]">Hubraum : </span>5204 ccm</h1>
+                    </div>
+                    <div class="rightInfo w-full md:w-[50%] flex flex-col items-start gap-3" style="padding: 2% !important;">
+                        <h1 class="text-black capitalize font-[700]">Beschreibung</h1>
+                        <span class="w-[100%] h-[2px] bg-slate-300 mt-10 md:hidden flex" style="margin: 10px 0 !important;"></span>
+                        <ul class="flex flex-col items-start gap-5">
+                            <li class="font-[300]"><span class="font-[500]"><i class="fa-solid fa-circle text-[5px]"></i> UVP : </span>225010,00 €</li>
+                            <li class="font-[300]"><span class="font-[500]"><i class="fa-solid fa-circle text-[5px]"></i> Ersparnis : </span>83110,00 €</li>
+                            <!-- More list items -->
+                        </ul>
+                    </div>
                 </div>
             </div>
+            
+           
         </div>
 
     </section>
 
     <!-- *************************** Customer Reviews start ******************************************** -->
 
-    <section id="mainPage" class="w-full h-full pd md:mr">
-        <div
-            class="pd w-full h-full  flex flex-col  md:justify-start gap-2 text-base font-semibold  capitalize  md:bg-white md:shadow-custom md:rounded-[12px] ">
+    <section id="mainPage" class="w-full h-full " style="padding: 2% !important;margin: 0 auto 0 auto !important;">
+        <div class="w-full h-full  flex flex-col  md:justify-start gap-2 text-base font-semibold  capitalize  md:bg-white md:shadow-custom md:rounded-[12px] "
+            style="padding: 2% !important;">
 
             <div class="topCustomers  w-full h-full flex flex-col items-start justify-around gap-3 ">
 
-                <h1
-                    class="text-black text-[2em] font-[600] md:hidden block text-center w-full bg-white rounded-[12px] pd">
+                <h1 class="text-black text-[2em] font-[600] md:hidden block text-center w-full bg-white rounded-[12px] "
+                    style="padding: 2% !important;">
                     Customer Reviews</h1>
                 <h1 class="text-black text-[2em] font-[600] hidden md:block">Reviews</h1>
                 <div class="arrows md:flex items-center justify-center gap-2 hidden ">
-                    <i
-                        class="fa-solid fa-arrow-left w-[50px] h-[50px] cursor-pointer bg-red-200 text-white rounded-[50%] flex items-center justify-center"></i>
-                    <i
-                        class="fa-solid fa-arrow-right w-[50px] h-[50px] cursor-pointer bg-red-600 text-white rounded-[50%] flex items-center justify-center"></i>
+                    <div
+                        class="swiper-button-nextt w-[50px] h-[50px] cursor-pointer bg-red-600 text-white rounded-[50%] flex items-center justify-center">
+                        <i class="fa-solid fa-arrow-left "></i>
+                    </div>
+                    <div
+                        class="swiper-button-prevv w-[50px] h-[50px] cursor-pointer bg-red-600 text-white rounded-[50%] flex items-center justify-center">
+                        <i class="fa-solid fa-arrow-right "></i>
+                    </div>
                 </div>
             </div>
 
 
-            <div class=" w-full h-full  flex flex-wrap items-center justify-around gap-6  ">
+            <div class="swiper meSwiper w-full h-full  flex  items-center justify-around gap-6  overflow-hidden"
+                style="padding: 2%!important;">
 
 
 
 
 
+                <div class="swiper-wrapper flex gap-5">
+                    <div class="swiper-slide cardReview card w-[350px] h-[400px] bg-[#F9F9FA] flex flex-col items-center justify-evenly rounded-[15px] gap-5 shadow-custom"
+                        style="padding: 2% !important;">
+                        <div class="stars flex gap-3 items-center justify-center">
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300 ml-4"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                        </div>
+                        <p class="text-start text-[14px]">A great little app that some of the big guns have clearly been
+                            taking their cue from. Looks
+                            like Incomee might actually be cleaner and simpler to use than competitors.</p>
+                        <div class="flex gap-[20px] items-center justify-center">
+                            <img src="../images/avatar.png" class="w-[80px] h-[80px] object-cover rounded-[50%]"
+                                alt="avatar">
 
-                <div
-                    class="cardReview pd card w-[350px] h-[400px] bg-[#F9F9FA] flex flex-col items-center justify-evenly rounded-[15px] gap-5 shadow-custom">
-                    <div class="stars flex gap-3 items-center justify-center">
-                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300 ml-4"></i></span>
-                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
-                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
-                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
-                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <p class="text-[14px]">Craig Vaccaro <br>
+                                Founder and co-CEO</p>
+                        </div>
                     </div>
-                    <p class="text-start text-[14px]">A great little app that some of the big guns have clearly been
-                        taking their cue from. Looks
-                        like Incomee might actually be cleaner and simpler to use than competitors.</p>
-                    <div class="flex gap-[20px] items-center justify-center">
-                        <img src="../images/avatar.png" class="w-[80px] h-[80px] object-cover rounded-[50%]"
-                            alt="avatar">
+                    <div class="swiper-slide cardReview  card w-[350px] h-[400px] bg-[#F9F9FA] flex flex-col items-start justify-evenly rounded-[15px] gap-5 shadow-custom"
+                        style="padding: 2% !important;">
+                        <div class="stars flex gap-3 items-center justify-center">
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300 ml-4"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                        </div>
+                        <p class="text-start text-[14px]">A great little app that some of the big guns have clearly been
+                            taking their cue from. Looks
+                            like Incomee might actually be cleaner and simpler to use than competitors.</p>
+                        <div class="flex gap-[20px]">
+                            <img src="../images/avatar.png" class="w-[80px] h-[80px] object-cover rounded-[50%]"
+                                alt="avatar">
 
-                        <p class="text-[14px]">Craig Vaccaro <br>
-                            Founder and co-CEO</p>
+                            <p class="text-[14px]">Craig Vaccaro <br>
+                                Founder and co-CEO</p>
+                        </div>
                     </div>
-                </div>
-                <div
-                    class="cardReview pd hidden card w-[350px] h-[400px] bg-[#F9F9FA] md:flex flex-col items-start justify-evenly rounded-[15px] gap-5 shadow-custom">
-                    <div class="stars flex gap-3 items-center justify-center">
-                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300 ml-4"></i></span>
-                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
-                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
-                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
-                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
-                    </div>
-                    <p class="text-start text-[14px]">A great little app that some of the big guns have clearly been
-                        taking their cue from. Looks
-                        like Incomee might actually be cleaner and simpler to use than competitors.</p>
-                    <div class="flex gap-[20px]">
-                        <img src="../images/avatar.png" class="w-[80px] h-[80px] object-cover rounded-[50%]"
-                            alt="avatar">
+                    <div class="swiper-slide cardReview  card w-[350px] h-[400px] bg-[#F9F9FA] flex flex-col items-start justify-evenly rounded-[15px] gap-5 shadow-custom"
+                        style="padding: 2% !important;">
+                        <div class="stars flex gap-3 items-center justify-center">
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300 ml-4"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                        </div>
+                        <p class="text-start text-[14px]">A great little app that some of the big guns have clearly been
+                            taking their cue from. Looks
+                            like Incomee might actually be cleaner and simpler to use than competitors.</p>
+                        <div class="flex gap-[20px]">
+                            <img src="../images/avatar.png" class="w-[80px] h-[80px] object-cover rounded-[50%]"
+                                alt="avatar">
 
-                        <p class="text-[14px]">Craig Vaccaro <br>
-                            Founder and co-CEO</p>
+                            <p class="text-[14px]">Craig Vaccaro <br>
+                                Founder and co-CEO</p>
+                        </div>
                     </div>
-                </div>
-                <div
-                    class="cardReview pd hidden card w-[350px] h-[400px] bg-[#F9F9FA] md:flex flex-col items-start justify-evenly rounded-[15px] gap-5 shadow-custom">
-                    <div class="stars flex gap-3 items-center justify-center">
-                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300 ml-4"></i></span>
-                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
-                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
-                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
-                        <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
-                    </div>
-                    <p class="text-start text-[14px]">A great little app that some of the big guns have clearly been
-                        taking their cue from. Looks
-                        like Incomee might actually be cleaner and simpler to use than competitors.</p>
-                    <div class="flex gap-[20px]">
-                        <img src="../images/avatar.png" class="w-[80px] h-[80px] object-cover rounded-[50%]"
-                            alt="avatar">
+                    <div class="swiper-slide cardReview  card w-[350px] h-[400px] bg-[#F9F9FA] flex flex-col items-start justify-evenly rounded-[15px] gap-5 shadow-custom"
+                        style="padding: 2% !important;">
+                        <div class="stars flex gap-3 items-center justify-center">
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300 ml-4"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                        </div>
+                        <p class="text-start text-[14px]">A great little app that some of the big guns have clearly been
+                            taking their cue from. Looks
+                            like Incomee might actually be cleaner and simpler to use than competitors.</p>
+                        <div class="flex gap-[20px]">
+                            <img src="../images/avatar.png" class="w-[80px] h-[80px] object-cover rounded-[50%]"
+                                alt="avatar">
 
-                        <p class="text-[14px]">Craig Vaccaro <br>
-                            Founder and co-CEO</p>
+                            <p class="text-[14px]">Craig Vaccaro <br>
+                                Founder and co-CEO</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide cardReview  card w-[350px] h-[400px] bg-[#F9F9FA] flex flex-col items-start justify-evenly rounded-[15px] gap-5 shadow-custom"
+                        style="padding: 2% !important;">
+                        <div class="stars flex gap-3 items-center justify-center">
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300 ml-4"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                        </div>
+                        <p class="text-start text-[14px]">A great little app that some of the big guns have clearly been
+                            taking their cue from. Looks
+                            like Incomee might actually be cleaner and simpler to use than competitors.</p>
+                        <div class="flex gap-[20px]">
+                            <img src="../images/avatar.png" class="w-[80px] h-[80px] object-cover rounded-[50%]"
+                                alt="avatar">
+
+                            <p class="text-[14px]">Craig Vaccaro <br>
+                                Founder and co-CEO</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide cardReview  card w-[350px] h-[400px] bg-[#F9F9FA] flex flex-col items-start justify-evenly rounded-[15px] gap-5 shadow-custom"
+                        style="padding: 2% !important;">
+                        <div class="stars flex gap-3 items-center justify-center">
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300 ml-4"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                        </div>
+                        <p class="text-start text-[14px]">A great little app that some of the big guns have clearly been
+                            taking their cue from. Looks
+                            like Incomee might actually be cleaner and simpler to use than competitors.</p>
+                        <div class="flex gap-[20px]">
+                            <img src="../images/avatar.png" class="w-[80px] h-[80px] object-cover rounded-[50%]"
+                                alt="avatar">
+
+                            <p class="text-[14px]">Craig Vaccaro <br>
+                                Founder and co-CEO</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide cardReview  card w-[350px] h-[400px] bg-[#F9F9FA] flex flex-col items-start justify-evenly rounded-[15px] gap-5 shadow-custom"
+                        style="padding: 2% !important;">
+                        <div class="stars flex gap-3 items-center justify-center">
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300 ml-4"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                            <span><i class="fa-solid fa-star text-[12px] text-yellow-300"></i></span>
+                        </div>
+                        <p class="text-start text-[14px]">A great little app that some of the big guns have clearly been
+                            taking their cue from. Looks
+                            like Incomee might actually be cleaner and simpler to use than competitors.</p>
+                        <div class="flex gap-[20px]">
+                            <img src="../images/avatar.png" class="w-[80px] h-[80px] object-cover rounded-[50%]"
+                                alt="avatar">
+
+                            <p class="text-[14px]">Craig Vaccaro <br>
+                                Founder and co-CEO</p>
+                        </div>
                     </div>
                 </div>
 
@@ -543,9 +518,11 @@
 
 
     <!-- *************************** FOOTER START ******************************************** -->
-    <footer class="pd w-full h-[530px] bg-black text-white flex flex-col justify-evenly items-center gap-5">
+    <footer class="w-full h-[530px] bg-black text-white flex flex-col justify-evenly items-center gap-5"
+        style="padding: 2% !important;">
         <!-- *****LOGO****** -->
-        <div class="logoMobile  text-red-600 text-[2em] ">
+        <div class="logoMobile  text-red-600 text-[2em] "
+            style="font-family: 'Oleo Script Swash Caps', system-ui !important;">
             Logo
         </div>
 
@@ -608,9 +585,38 @@
     </footer>
 
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <script>
+        var swp = new Swiper(".meSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 5,
 
+            navigation: {
+                nextEl: ".swiper-button-nextt",
+                prevEl: ".swiper-button-prevv",
+            },
+            breakpoints: {
 
+                640: {
+                    slidesPerView: 1,
+                    spaceBetween: 5,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 10,
+                },
+
+                1250: {
+                    slidesPerView: 3,
+                    spaceBetween: 15,
+                },
+
+            },
+        });
+
+    </script>
 
 </body>
 

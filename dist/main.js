@@ -27,62 +27,86 @@ window.onscroll = () => {
 
 
 
-// Slider
-const cards = document.querySelector(".cards"); // Container
-const firstCard = document.querySelector(".card"); // card
-const arrowsIcon = document.querySelectorAll(".arrowsIcon"); // icons
+const images = [
+    {
+        src: "../images/road1.jpg",
+        title: "Explore the World of Cars",
+        description: "Discover the latest models and specifications, compare offers, and get the best deal.",
+        carImage: "../images/car5.png"
+    },
+    {
+        src: "../images/road2.jpg",
+        title: "Experience the Thrill",
+        description: "Unleash the power of the latest models and feel the excitement.",
+        carImage: "../images/car6.png"
+    },
+    {
+        src: "../images/road.png",
+        title: "Find Your Dream Car",
+        description: "Explore our wide range of vehicles and choose the one that's perfect for you.",
+        carImage: "../images/car7.png"
+    }
+];
 
-let isDragStart = false, prevPageX, prevScrollLeft;
+let currentIndex = 0;
 
-// Handle arrow icon clicks for scrolling
-arrowsIcon.forEach(icon => {
-    icon.addEventListener("click", () => {
-        const firstCardWidth = firstCard.clientWidth;
-        cards.scrollLeft += icon.id === "left" ? -firstCardWidth : firstCardWidth;
+function changeSlide() {
+    currentIndex = (currentIndex + 1) % images.length;
+
+    document.getElementById('sliderImage').src = images[currentIndex].src;
+    document.getElementById('sliderTitle').innerHTML = images[currentIndex].title;
+    document.getElementById('sliderDescription').innerHTML = images[currentIndex].description;
+   
+}
+
+setInterval(changeSlide, 5000); // Change slide every 5 seconds
+
+
+const mainImage = document.querySelector(".imageSlides img");
+
+// Function to change the src of the main image
+function changeImg(imageSrc) {
+    mainImage.src = `../images/${imageSrc}`;
+}
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    function handleTabSwitch(event) {
+        const targetTab = event.target.getAttribute('data-tab');
+        
+        // Hide all tab contents
+        document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.add('hidden');
+        });
+
+        // Show the selected tab content
+        const selectedContent = document.getElementById(targetTab);
+        if (selectedContent) {
+            selectedContent.classList.remove('hidden');
+        }
+
+        // Update the active tab button style
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.classList.add('text-black');
+            button.classList.remove('text-red-600');
+        });
+        event.target.classList.add('text-red-600');
+        event.target.classList.remove('text-black');
+    }
+
+    // Add event listeners to tab buttons
+    document.querySelectorAll('.tab-button').forEach(button => {
+        button.addEventListener('click', handleTabSwitch);
     });
+
+    // Optionally, activate the first tab by default
+    const firstTab = document.querySelector('.tab-button');
+    if (firstTab) {
+        firstTab.click(); // Simulates a click to activate the first tab
+    }
 });
 
-// Handle dragging functionality
-const dragStart = (e) => {
-    isDragStart = true;
-    prevPageX = e.pageX;
-    prevScrollLeft = cards.scrollLeft; 
-}
 
-const dragStop = () => {
-    isDragStart = false;
-}
-
-const dragging = (e) => {
-    if (!isDragStart) return;
-    e.preventDefault();
-    const positionDiff = e.pageX - prevPageX;
-    cards.scrollLeft = prevScrollLeft - positionDiff; 
-}
-
-// Add event listeners for dragging
-cards.addEventListener("mouseup", dragStop);
-cards.addEventListener("mousedown", dragStart);
-cards.addEventListener("mousemove", dragging);
-
-
-
-const filterIcon = document.querySelector(".filterIcon"),
-filterSection = document.querySelector(".filterSection"),
-cars = document.querySelector(".cars");
-
-filterIcon.addEventListener("click", ()=>{
-    if(filterSection.classList.contains("hidden")){
-           filterSection.classList.remove("hidden");
-           cars.classList.add("hidden");
-           filterSection.classList.add("showPage");
-    } else{
-        filterSection.classList.add("hidden");
-        cars.classList.remove("hidden");
-        filterSection.classList.remove("showPage");
-    }
-    
-})
 
 
 

@@ -23,29 +23,17 @@
             box-sizing: border-box !important;
             font-family: "Poppins", sans-serif;
         }
-
         .shadowHeader {
             position: sticky;
             transition: 0.5s;
             background-color: rgba(0, 0, 0, 0.2);
         }
-
         .showPage {
             display: flex;
         }
-
         .shadow {
             box-shadow: 0px 6px 20px 0px rgba(000000, 6%);
         }
-
-        #header {
-            z-index: 100000;
-        }
-
-        .logoMobile {
-            font-family: "Oleo Script Swash Caps", system-ui !important;
-        }
-
         .group a::before {
             content: '';
             position: absolute;
@@ -56,153 +44,10 @@
             background-color: #ffffff;
             transition: width 0.3s ease;
         }
-
         .group:hover a::before {
             width: 100%;
         }
 
-        #mainPage {
-
-            padding: 2% !important;
-            margin: 0 auto 0 auto !important;
-        }
-
-        #searchCars {
-            padding: 2% !important;
-        }
-
-        .mr {
-            margin: 10px 0 !important;
-        }
-
-        .pd {
-            padding: 2% !important;
-        }
-
-        .wrapper {
-            width: 80%;
-            background: #fff;
-            border-radius: 10px;
-            padding: 20px 25px 40px;
-        }
-
-
-
-        .price-input {
-            width: 100%;
-            display: flex;
-            margin: 30px 0 35px;
-
-        }
-
-        .price-input .field {
-            display: flex;
-            width: 100%;
-            height: 45px;
-            align-items: center;
-
-        }
-
-        .field input {
-            width: 100%;
-            height: 100%;
-            outline: none;
-            font-size: 19px;
-            margin-left: 12px;
-            border-radius: 5px;
-            text-align: center;
-            border: none;
-            -moz-appearance: textfield;
-            color: red;
-        }
-
-        input[type="number"]::-webkit-outer-spin-button,
-        input[type="number"]::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-        }
-
-
-
-        .slider {
-            height: 5px;
-            position: relative;
-            background: #ddd;
-            border-radius: 5px;
-        }
-
-        .slider .progress {
-            height: 100%;
-            left: 25%;
-            right: 25%;
-            position: absolute;
-            border-radius: 5px;
-            background: red;
-        }
-
-        .range-input {
-            position: relative;
-        }
-
-        .range-input input {
-            position: absolute;
-            width: 100%;
-            height: 5px;
-            top: -5px;
-            background: none;
-            pointer-events: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-        }
-
-        input[type="range"]::-webkit-slider-thumb {
-            height: 17px;
-            width: 17px;
-            border-radius: 50%;
-            background: red;
-            pointer-events: auto;
-            -webkit-appearance: none;
-            box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
-        }
-
-        input[type="range"]::-moz-range-thumb {
-            height: 17px;
-            width: 17px;
-            border: none;
-            border-radius: 50%;
-            background: #000;
-            pointer-events: auto;
-            -moz-appearance: none;
-            box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
-        }
-
-        .button {
-            padding: 10px 30px !important;
-
-        }
-
-        .titlePrimary {
-            padding-right: 10px !important;
-        }
-
-        .custom-span {
-            margin-bottom: 15px !important;
-        }
-
-        .letter {
-            padding: 3px 20px !important;
-        }
-
-        .bottomCard {
-            margin-top: 15px !important;
-        }
-
-        #searchCars {
-            margin-bottom: 40px !important;
-        }
-
-        #cardsReviews {
-            padding: 2% 0 !important;
-        }
     </style>
     <title>Product Page</title>
 
@@ -240,7 +85,7 @@
                 <i class="fa-solid fa-magnifying-glass text-xl text-slate-50 searchIcon rotate-90  md:hidden "></i>
 
                 <!-- *****LOGO****** -->
-                <div class="logoMobile  text-red-600 text-[2em] md:hidden">
+                <div class="logoMobile  text-red-600 text-[2em] md:hidden" style="font-family: 'Oleo Script Swash Caps', system-ui !important;">
                     Logo
                 </div>
                 <!-- *****BARS ICON****** -->
@@ -303,24 +148,24 @@
 
 
     <!-- *************************** TOP SECTION START ******************************************** -->
-    <section class="w-[100%] h-full flex flex-col gap-10 relative  pd ">
+    <section class="w-[100%] h-full flex flex-col gap-10 relative " style="padding: 2% !important;">
         <h1 class="text-slate-400 font-[400]">Home &nbsp; / &nbsp;<span class="text-black font-[500]"> Contact Us</span>
         </h1>
 
 
         <div
-            class="topProduct mr pd w-full flex flex-col items-center justify-between gap-5 md:flex-row bg-slate-50 rounded-[14px]">
+            class="topProduct w-full flex flex-col items-center justify-between gap-5 md:flex-row bg-slate-50 rounded-[14px]"  style=" margin: 10px 0 !important;padding: 2% !important;">
 
             <div
-                class="leftProduct pd   h-[400px] w-full md:w-[50%]   flex flex-col items-center justify-center gap-5 overflow-hidden">
+                class="leftProduct h-[400px] w-full md:w-[50%]   flex flex-col items-center justify-center gap-5 overflow-hidden" style="padding: 2% !important;">
                 <h1 class="text-black font-[500] capitalize text-[2em] md:hidden">Contact Us</h1>
-                <p class="pd leading-10	 text-[15px] tracking-[.10em]">Thank you for your interest in [Your Website
+                <p class="leading-10	 text-[15px] tracking-[.10em]" style="padding: 2% !important;">Thank you for your interest in [Your Website
                     Name] We are here to help you with all things automotive
                     Do you have questions about the vehicles on display, would like additional information, or need
                     assistance with your purchase? Our team is ready to assist you</p>
 
             </div>
-            <div class="rightProduct pd  h-[400px] w-full  flex  items-center justify-center ">
+            <div class="rightProduct h-[400px] w-full  flex  items-center justify-center " style="padding: 2% !important;">
                 <div class="overflow-hidden w-full h-[400px] flex items-center justify-center  ">
                     <img class="object-cover rounded-[12px]" src="../images/personne.png" alt="personne">
                 </div>
@@ -331,23 +176,21 @@
 
 
    <!-- *************************** CONTACT SECTION START ******************************************** -->
-    <section class="w-[100%] h-full flex flex-col gap-10 relative  pd ">
+    <section class="w-[100%] h-full flex flex-col gap-10 relative" style="padding: 2% !important;">
         <div
-            class="mr pd w-full flex flex-col items-center justify-between gap-5 md:flex-row bg-slate-50 rounded-[14px] ">
+            class="w-full flex flex-col items-center justify-between gap-5 md:flex-row bg-slate-50 rounded-[14px] "  style=" margin: 10px 0 !important;padding: 2% !important;">
 
             <div
-                class="leftContact w-full h-full  md:w-[50%] flex flex-col items-center justify-center gap-5 relative pd">
+                class="leftContact w-full h-full  md:w-[50%] flex flex-col items-center justify-center gap-5 relative" style="padding: 2% !important;">
 
                 <input type="text" value=""
-                    class="w-full rounded-[12px] border-solid border-2 border-slate-200  focus:outline-none text-start pd "
-                    placeholder="Your Name *">
+                    class="w-full rounded-[12px] border-solid border-2 border-slate-200  focus:outline-none text-start " placeholder="Your Name *" style="padding: 2% !important;">
 
                 <input type="email" value=""
-                    class="w-full rounded-[12px] border-solid border-2 border-slate-200  focus:outline-none text-start pd "
-                    placeholder="Your Email *">
+                    class="w-full rounded-[12px] border-solid border-2 border-slate-200  focus:outline-none text-start " placeholder="Your Email *" style="padding: 2% !important;">
                 <div class="w-full flex gap-5">
                     <select name=""
-                        class="pd rounded-[12px] border-solid border-2 border-slate-200  focus:outline-none text-start  ">
+                        class="rounded-[12px] border-solid border-2 border-slate-200  focus:outline-none text-start  " style="padding: 2% !important;">
                         <option value="">+009</option>
                         <option value="">+212</option>
                         <option value="">+213</option>
@@ -355,11 +198,11 @@
                         <option value="">+1</option>
                     </select>
                     <input type="text" name=""
-                        class="w-full rounded-[12px] border-solid border-2 border-slate-200  focus:outline-none text-start pd "
-                        placeholder="Your Phone *">
+                        class="w-full rounded-[12px] border-solid border-2 border-slate-200  focus:outline-none text-start "
+                        placeholder="Your Phone *" style="padding: 2% !important;">
                 </div>
                 <div class="info w-full hidden  md:flex flex-wrap items-center justify-between gap-5">
-                    <div class="flex gap-5 items-center pd bg-slate-100 rounded-[12px] shadow-custom">
+                    <div class="flex gap-5 items-center bg-slate-100 rounded-[12px] shadow-custom" style="padding: 2% !important;">
                         <i
                             class="fa-solid fa-phone bg-red-600 w-[50px] h-[50px] rounded-[50%] flex items-center justify-center text-white"></i>
                         <div class="flex flex-col gap-3">
@@ -368,7 +211,7 @@
                             <h1>+ 1 634 7638 654</h1>
                         </div>
                     </div>
-                    <div class="flex  gap-5 items-center pd bg-slate-100 rounded-[12px] shadow-custom">
+                    <div class="flex  gap-5 items-center  bg-slate-100 rounded-[12px] shadow-custom" style="padding: 2% !important;">
                         <i
                             class="fa-solid fa-comment-dots bg-red-600 w-[50px] h-[50px] rounded-[50%] flex items-center justify-center text-white"></i>
                         <div class="flex flex-col gap-3">
@@ -383,12 +226,12 @@
             <div class="rightContact w-full md:w-[50%] flex flex-col items-center justify-center gap-5">
 
                 <textarea cols="30" rows="10"
-                    class="w-[80%] rounded-[12px] border-solid border-2 border-slate-200  focus:outline-none text-start pd"
-                    placeholder="Your Message"></textarea>
-                <button class="button bg-red-600 rounded-[12px] capitalize text-white">send message</button>
+                    class="w-[80%] rounded-[12px] border-solid border-2 border-slate-200  focus:outline-none text-start resize-none"
+                    placeholder="Your Message" style="padding: 2% !important;"></textarea>
+                <button class=" bg-red-600 rounded-[12px] capitalize text-white" style="padding: 10px 30px !important;">send message</button>
 
                 <div class="info w-full flex  md:hidden flex-wrap items-center justify-around gap-5">
-                    <div class="flex gap-5 items-center pd bg-slate-100 rounded-[12px] shadow-custom">
+                    <div class="flex gap-5 items-center  bg-slate-100 rounded-[12px] shadow-custom" style="padding: 2% !important;">
                         <i
                             class="fa-solid fa-phone bg-red-600 w-[50px] h-[50px] rounded-[50%] flex items-center justify-center text-white"></i>
                         <div class="flex flex-col gap-3">
@@ -397,7 +240,7 @@
                             <h1>+ 1 634 7638 654</h1>
                         </div>
                     </div>
-                    <div class="flex  gap-5 items-center pd bg-slate-100 rounded-[12px] shadow-custom">
+                    <div class="flex  gap-5 items-center  bg-slate-100 rounded-[12px] shadow-custom" style="padding: 2% !important;">
                         <i
                             class="fa-solid fa-comment-dots bg-red-600 w-[50px] h-[50px] rounded-[50%] flex items-center justify-center text-white"></i>
                         <div class="flex flex-col gap-3">
@@ -423,68 +266,68 @@
 
 
    <!-- *************************** commonQuestions SECTION START ******************************************** -->
-    <section id="commonQuestions" class="w-[100%] h-screen flex flex-col gap-10 relative  pd ">
-        <div class="mr pd w-full h-full flex flex-col items-center justify-between gap-5  bg-slate-50 rounded-[14px] ">
+    <section id="commonQuestions" class="w-[100%] h-screen flex flex-col gap-10 relative  " style="padding: 2% !important;">
+        <div class="w-full h-full flex flex-col items-center justify-between gap-5  bg-slate-50 rounded-[14px] "  style=" margin: 10px 0 !important;padding: 2% !important;">
             <h1 class="text-black font-[600] text-[2em]">Common questions</h1>
 
             <div
                 class="w-full lg:w-[50%] flex flex-col items-center justify-center gap-5 text-[15px] md:text-[1em] text-[700]">
-                <div class="pd w-full flex items-center justify-between ">
+                <div style="padding: 2% !important;" class=" w-full flex items-center justify-between ">
                     <h1>01</h1>
                     <h1>Can I negotiate the price?</h1>
                     <i class="hideAccordion fa-solid fa-arrow-right  cursor-pointer"></i>
                 </div>
-                <div class="pd w-full hidden  flex-col items-center justify-center gap-5 show">
+                <div style="padding: 2% !important;" class=" w-full hidden  flex-col items-center justify-center gap-5 show">
                     <p>Yes, we welcome price negotiations. You can contact our sales team to discuss a suitable price
                     </p>
                     <div>
-                        <img src="/images/accordion.png" alt="accordion">
+                        <img src="../images/accordion.png" alt="accordion">
                     </div>
                 </div>
             </div>
             <div
                 class="w-full lg:w-[50%] flex flex-col items-center justify-center gap-5 text-[15px] md:text-[1em] text-[700]">
-                <div class="pd w-full flex items-center justify-between ">
+                <div style="padding: 2% !important;" class=" w-full flex items-center justify-between ">
                     <h1>02</h1>
                     <h1>What warranties are provided for used cars?</h1>
                     <i class="hideAccordion fa-solid fa-arrow-right cursor-pointer"></i>
                 </div>
-                <div class="pd w-full hidden  flex-col items-center justify-center gap-5 show">
+                <div style="padding: 2% !important;" class=" w-full hidden  flex-col items-center justify-center gap-5 show">
                     <p>Yes, we welcome price negotiations. You can contact our sales team to discuss a suitable price
                     </p>
                     <div>
-                        <img src="/images/accordion.png" alt="accordion">
+                        <img src="../images/accordion.png" alt="accordion">
                     </div>
                 </div>
             </div>
             <div
                 class="w-full lg:w-[50%] flex flex-col items-center justify-center gap-5 text-[15px] md:text-[1em] text-[700]">
-                <div class="pd w-full flex items-center justify-between ">
+                <div style="padding: 2% !important;" class="w-full flex items-center justify-between ">
                     <h1>03</h1>
                     <h1>Can I test drive a car before purchasing?</h1>
                     <i class="hideAccordion fa-solid fa-arrow-right cursor-pointer"></i>
                 </div>
-                <div class="pd w-full hidden  flex-col items-center justify-center gap-5 show">
+                <div style="padding: 2% !important;" class="w-full hidden  flex-col items-center justify-center gap-5 show">
                     <p>Yes, we welcome price negotiations. You can contact our sales team to discuss a suitable price
                     </p>
                     <div>
-                        <img src="/images/accordion.png" alt="accordion">
+                        <img src="../images/accordion.png" alt="accordion">
                     </div>
                 </div>
 
             </div>
             <div
                 class="w-full lg:w-[50%] flex flex-col items-center justify-center gap-5 text-[15px] md:text-[1em] text-[700]">
-                <div class="pd w-full flex items-center justify-between  ">
+                <div style="padding: 2% !important;" class="w-full flex items-center justify-between  ">
                     <h1>04</h1>
                     <h1>What makes and models do you have available?</h1>
                     <i class="hideAccordion fa-solid fa-arrow-right cursor-pointer"></i>
                 </div>
-                <div class="pd w-full hidden  flex-col items-center justify-center gap-5 show">
+                <div style="padding: 2% !important;" class="w-full hidden  flex-col items-center justify-center gap-5 show">
                     <p>Yes, we welcome price negotiations. You can contact our sales team to discuss a suitable price
                     </p>
                     <div>
-                        <img src="/images/accordion.png" alt="accordion">
+                        <img src="../images/accordion.png" alt="accordion">
                     </div>
                 </div>
 
@@ -510,9 +353,10 @@
 
 
     <!-- *************************** FOOTER START ******************************************** -->
-    <footer class="pd w-full h-[530px] bg-black text-white flex flex-col justify-evenly items-center gap-5">
+    <footer class="w-full h-[530px] bg-black text-white flex flex-col justify-evenly items-center gap-5" style="padding: 2% !important;"
+    >
         <!-- *****LOGO****** -->
-        <div class="logoMobile  text-red-600 text-[2em] ">
+        <div class="logoMobile  text-red-600 text-[2em] " style="font-family: 'Oleo Script Swash Caps', system-ui !important;">
             Logo
         </div>
 

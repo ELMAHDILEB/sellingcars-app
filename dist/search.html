@@ -29,19 +29,9 @@
             transition: 0.5s;
             background-color: rgba(0, 0, 0, 0.2);
         }
-        .showPage{
+
+        .showPage {
             display: flex;
-        }
-        .shadow {
-            box-shadow: 0px 6px 20px 0px rgba(000000, 6%);
-        }
-
-        #header {
-            z-index: 100000;
-        }
-
-        .logoMobile {
-            font-family: "Oleo Script Swash Caps", system-ui !important;
         }
 
         .group a::before {
@@ -59,67 +49,10 @@
             width: 100%;
         }
 
-        #mainPage {
-
-            padding: 2% !important;
-            margin: 0 auto 0 auto !important;
-        }
-
-        #searchCars {
-            padding: 2% !important;
-        }
-
-        .mr {
-            margin: 10px 0 !important;
-        }
-
-        .pd {
-            padding: 2% !important;
-        }
-
-        .wrapper {
-            width: 80%;
-            background: #fff;
-            border-radius: 10px;
-            padding: 20px 25px 40px;
-        }
-
-
-
-        .price-input {
-            width: 100%;
-            display: flex;
-            margin: 30px 0 35px;
-
-        }
-
-        .price-input .field {
-            display: flex;
-            width: 100%;
-            height: 45px;
-            align-items: center;
-
-        }
-
-        .field input {
-            width: 100%;
-            height: 100%;
-            outline: none;
-            font-size: 19px;
-            margin-left: 12px;
-            border-radius: 5px;
-            text-align: center;
-            border: none;
-            -moz-appearance: textfield;
-            color: red;
-        }
-
         input[type="number"]::-webkit-outer-spin-button,
         input[type="number"]::-webkit-inner-spin-button {
             -webkit-appearance: none;
         }
-
-
 
         .slider {
             height: 5px;
@@ -173,29 +106,17 @@
             box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
         }
 
-        .button {
-            padding: 10px 30px !important;
-
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
         }
 
-        .titlePrimary {
-            padding-right: 10px !important;
+        .accordion-open .accordion-content {
+            max-height: 1000px;
         }
 
-        .custom-span {
-            margin-bottom: 15px !important;
-        }
-
-        .letter {
-            padding: 3px 20px !important;
-        }
-
-        .bottomCard {
-            margin-top: 15px !important;
-        }
-
-        #searchCars {
-            margin-bottom: 40px !important;
+        .accordion-open .fa-chevron-up {
+            transform: rotate(180deg);
         }
     </style>
     <title>Search Page</title>
@@ -208,26 +129,28 @@
 
     <!-- *************************** HEADER + HERO SECTION START ******************************************** -->
     <!-- ************MOBILE************ -->
-    <section class="w-[100%] h-[400px]  relative z-[1] overflow-hidden">
+    <section class=" w-full  bg-red-200  flex flex-col items-stretch gap-[80px] relative ">
+        <div class="w-full h-full absolute top-0 left-0 z-1 flex">
 
-        <div class="w-full h-full absolute top-0 left-0 -z-1">
-            <img class="w-full h-full  object-cover bg-center bg-cover" src="../images/img.png" alt="img">
+            <!-- <img class="w-full h-full object-cover" src="../images/road.png" alt="road"> -->
+            <!-- <img class="w-full h-full object-cover" src="../images/road1.jpg" alt="road1"> -->
+            <img id="sliderImage" class="w-full h-full object-cover" src="../images/road2.jpg" alt="road2">
         </div>
 
-
-
-        <div
-            class="bg-bl bg-[url('../images/bg-bla.png')]  bg-no-repeat bg-center bg-cover w-full h-[100%]  absolute  top-0 left-0 z-1">
+        <div class="w-full h-full absolute top-0 left-0 z-2">
+            <img id="sliderImage" class="w-full h-full" src="../images/bg-bla.png" alt="">
         </div>
-        <header class=" w-full h-[70px] fixed top-0 " id="header">
+
+        <header class=" w-full h-[70px] fixed top-0 " style="z-index: 100000;" id="header">
             <!-- ***********MOBILE SCREEN********* -->
-            <div class="mobile w-full h-[70px] flex items-center justify-around px-3 cursor-pointer md:hidden"
-                style="background-color: rgba(0, 0, 0, 0.2) ;">
+            <div class="mobile w-full h-[70px] flex items-center justify-around px-3 cursor-pointer md:hidden "
+                style="background-color: rgba(0, 0, 0, 0.2)">
                 <!-- *****Search ICON****** -->
                 <i class="fa-solid fa-magnifying-glass text-xl text-slate-50 searchIcon rotate-90  md:hidden "></i>
 
                 <!-- *****LOGO****** -->
-                <div class="logoMobile  text-red-600 text-[2em] md:hidden">
+                <div class="logoMobile  text-red-600 text-[2em] md:hidden"
+                    style="font-family: 'Oleo Script Swash Caps', system-ui !important;">
                     Logo
                 </div>
                 <!-- *****BARS ICON****** -->
@@ -252,7 +175,7 @@
             </nav>
 
             <!-- ***********DESKTOP NAVBAR************ -->
-            <div class="desktopHeader h-full hidden md:flex md:items-center md:justify-around  "
+            <div class="desktopHeader  h-full hidden md:flex md:items-center md:justify-around  "
                 style="background-color: rgba(0, 0, 0, 0.2); ">
 
                 <div class="logoDesktop  md:flex md:items-center md:justify-center gap-7 ">
@@ -260,7 +183,8 @@
                     <nav>
                         <ul class="flex items-center justify-center gap-10 capitalize text-slate-100">
                             <li class="relative group">
-                                <a class="hover:border-none transition-all" href="index.html">Home</a>
+                                <a class="hover:border-none transition-all before:content-none"
+                                    href="index.html">Home</a>
                             </li>
                             <li class="relative group">
                                 <a class="hover:border-none transition-all" href="aboutus.html">about
@@ -285,25 +209,40 @@
 
         </header>
 
+        <div class="w-full md:w-[80%] h-screen flex items-center justify-center relative"
+            style="padding: 2%!important;margin:0 auto!important;">
+            <div
+                class="w-full h-full md:h-full overflow-hidden  absolute  top-[0] flex flex-col items-center justify-center sm:flex-col md:flex-col lg:flex-row lg:flex-wrap">
+                <div
+                    class="contentText w-full md:w-[50%]    flex flex-col items-center justify-center  lg:items-start lg:justify-center relative">
+                    <h1 id="sliderTitle" class="w-full  font-semibold  text-slate-50 text-center   lg:text-start "
+                        style="font-size: clamp(2em, 4vw + 1em, 4em);">
+                        Explore the <br> World of Cars
+                    </h1>
+                    <p id="sliderDescription" class="w-full  leading-8 text-slate-50 text-center lg:text-start">
+                        Discover the latest models and <br> specifications, compare offers, <br> and get the best deal.
+                    </p>
+                </div>
+
+                <div class="w-[400px] md:w-[50%] lg:w-[60%] ">
+                    <img src="../images/car5.png" alt="car5" class="w-full h-full object-cover ">
+                </div>
+            </div>
+        </div>
     </section>
     <!-- *************************** HEADER + HERO SECTION END ******************************************** -->
 
     <!-- *************************** SEARCH CARS AND CARS SECTION START ******************************************** -->
-    <section id="searchCars" class="w-[100%] flex flex-col gap-10 relative clear-both">
+    <section id="searchCars" class="max-h-[1000px] w-[100%] flex flex-col gap-10 relative clear-both"
+        style="margin-bottom: 40px !important;padding: 2% !important;">
 
         <div class="w-full flex flex-col items-center justify-between gap-5 relative ">
             <h1 class="text-slate-400 hidden md:block">Home / <span class="text-black">Search</span></h1>
 
-            <!-- *************Search Input*************** -->
-            <label class="searchInput  w-[300px]   relative shadow-custom">
-                <span><i class="fa-solid fa-magnifying-glass absolute top-3 left-2 text-slate-400"></i></span>
-                <input
-                    class="placeholder:italic placeholder:text-slate-400 block bg-white w-full h-10 text-center border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
-                    placeholder="Search for Cars..." type="text" name="search" />
-            </label>
 
-            <div
-                class="mr pd w-[300px] flex items-center justify-between md:hidden shadow-custom bg-white rounded-[12px]">
+
+            <div class="  w-[300px] flex items-center justify-between md:hidden shadow-custom bg-white rounded-[12px]"
+                style="margin: 10px 0 !important;padding: 2% !important;">
                 <h1>Filter</h1>
                 <i class="filterIcon fa-solid fa-filter cursor-pointer text-slate-400"></i>
             </div>
@@ -311,41 +250,60 @@
 
 
         <div class="content flex items-center justify-center gap-10">
-            <div
-                class="pd filterSection hidden  md:w-[30%] w-[80%]  bg-[#FFFFFF]  overflow-hidden relative z-[5px] md:flex flex-col  items-center rounded-[12px] transition-all duration-1000">
+            <div class=" filterSection hidden   lg:w-[30%] w-[80%]  bg-[#FFFFFF]  overflow-hidden relative z-[5px] md:flex flex-col  items-center rounded-[12px] transition-all duration-1000"
+                style="padding: 2% !important;">
 
-                <div class=" mr w-full flex items-center justify-between">
+                <!-- *************Search Input Start*************** -->
+                <label class="searchInput  w-[90%]   relative shadow-custom" style="margin: 10px 0 !important;">
+                    <span><i class="fa-solid fa-magnifying-glass absolute top-3 left-2 text-slate-400"></i></span>
+                    <input
+                        class="placeholder:italic placeholder:text-slate-400 block bg-white w-full h-10 text-center border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
+                        placeholder="Search for Cars..." type="text" name="search" />
+                </label>
+                <!-- *************Search Input END*************** -->
+
+                <div class="  w-full  items-center justify-between hidden md:flex" style="margin: 10px 0 !important;">
                     <h1>Filter</h1>
-                    <i class="fa-solid fa-filter cursor-pointer text-slate-400  "></i>
+                    <i class=" fa-solid fa-filter cursor-pointer text-slate-400  "></i>
                 </div>
 
-                <span class="mr w-[100%] h-[2px] bg-slate-300 mt-10"></span>
+                <span class=" w-[100%] h-[2px] bg-slate-300 mt-10" style="margin: 10px 0 !important;"></span>
 
-                <!-- *************Budget************* -->
 
-                <div class="mr w-full flex items-center justify-around">
+
+
+                <!-- *************CAR BRAND************* -->
+
+
+
+                <div class=" w-full flex items-center justify-between" style="margin: 10px 0 !important;">
                     <h1>Budget</h1>
-                    <i class="fa-solid fa-chevron-up cursor-pointer text-slate-400"></i>
+                    <i class="hideAccordion fa-solid fa-chevron-up cursor-pointer text-slate-400"></i>
                 </div>
 
-                <div class="mr wrapper">
+                <div class="show w-[100%] bg-[#fff] rounded-[10px]"
+                    style="margin: 10px 0 !important;padding: 20px 25px 40px!important;">
 
-                    <div class="slider">
+                    <div class="slider h-[5px] relative bg-[#ddd] rounded-[5px]">
                         <div class="progress"></div>
                     </div>
-                    <div class="range-input">
+                    <div class="range-input relative">
                         <input type="range" class="range-min" min="0" max="10000" value="2500" step="100">
                         <input type="range" class="range-max" min="0" max="10000" value="7500" step="100">
                     </div>
-                    <div class="price-input">
-                        <div class="field">
-                            <input type="number" class="input-min" value="50" />
+                    <div class="price-input w-full flex" style="margin: 30px 0 35px!important;">
+                        <div class="field w-full h-[45px] flex items-center">
+                            <input type="number"
+                                class="input-min w-full h-full outline-none text-[19px] rounded-[5px] text-center text-red-600 border-0"
+                                value="50" style="margin-left: 12px!important;-moz-appearance: textfield!important;" />
 
                         </div>
 
-                        <div class="field">
+                        <div class="field w-full h-[45px] flex items-center">
 
-                            <input type="number" class="input-max" value="200" />
+                            <input type="number"
+                                class="input-max w-full h-full outline-none text-[19px] rounded-[5px] text-center text-red-600 border-0"
+                                value="200" style="margin-left: 12px!important;-moz-appearance: textfield!important;" />
 
                         </div>
                     </div>
@@ -353,77 +311,89 @@
 
 
                 <!-- *************CAR BRAND************* -->
-                <div class="mr w-full flex items-center justify-between">
+                <div class=" w-full flex items-center justify-between" style="margin: 10px 0 !important;">
                     <h1>Car Brand</h1>
-                    <i class="fa-solid fa-chevron-up cursor-pointer"></i>
+                    <i class="hideAccordion fa-solid fa-chevron-up cursor-pointer"></i>
                 </div>
-                <div class="logoBrand mr w-full flex-col flex items-center justify-around gap-7">
-                    <div class="w-full flex items-center justify-center gap-7">
-                        <img class="pd w-[50px] h-[50px] object-cover border-solid border-[1px] border-gray-300 rounded-[12px]"
+                <div class="show logoBrand  w-full  flex items-center justify-around flex-col gap-7"
+                    style="margin: 10px 0 !important;">
+                    <div class="w-full flex items-center flex-wrap justify-center gap-7">
+                        <img style="padding: 2% !important;"
+                            class=" w-[50px] h-[50px] object-cover border-solid border-[1px] border-gray-300 rounded-[12px]"
                             src="../images/mercedes.png" alt="mercedes">
-                        <img class="pd w-[50px] h-[50px] object-cover border-solid border-[1px] border-gray-300 rounded-[12px]"
+                        <img style="padding: 2% !important;"
+                            class=" w-[50px] h-[50px] object-cover border-solid border-[1px] border-gray-300 rounded-[12px]"
                             src="../images/fiat.png" alt="fiat">
-                        <img class="pd w-[50px] h-[50px] object-cover border-solid border-[1px] border-gray-300 rounded-[12px]"
+                        <img style="padding: 2% !important;"
+                            class=" w-[50px] h-[50px] object-cover border-solid border-[1px] border-gray-300 rounded-[12px]"
                             src="../images/nissan.png" alt="nissan">
-                    </div>
-                    <div class="w-full flex items-center justify-center gap-7">
-                        <img class="pd w-[50px] h-[50px] object-cover border-solid border-[1px] border-gray-300 rounded-[12px]"
+                        <img style="padding: 2% !important;"
+                            class=" w-[50px] h-[50px] object-cover border-solid border-[1px] border-gray-300 rounded-[12px]"
                             src="../images/mitsubishi.png" alt="mitsubishi">
-                        <img class="pd w-[50px] h-[50px] object-cover border-solid border-[1px] border-gray-300 rounded-[12px]"
+                        <img style="padding: 2% !important;"
+                            class=" w-[50px] h-[50px] object-cover border-solid border-[1px] border-gray-300 rounded-[12px]"
                             src="../images/BMW.png" alt="BMW">
-                        <img class="pd w-[50px] h-[50px] object-cover border-solid border-[1px] border-gray-300 rounded-[12px]"
+                        <img style="padding: 2% !important;"
+                            class=" w-[50px] h-[50px] object-cover border-solid border-[1px] border-gray-300 rounded-[12px]"
                             src="../images/opel.png" alt="opel">
                     </div>
 
-                    <a class="pd w-full  text-center  border-solid border-[1px] border-gray-300 rounded-[12px]"
-                        href="#seeMore">See more &nbsp; <i class="fa-solid fa-chevron-down cursor-pointer"></i></a>
+
+                    <a class=" w-full  text-center  border-solid border-[1px] border-gray-300 rounded-[12px]"
+                        href="#seeMore" style="padding: 2% !important;">See more &nbsp; <i
+                            class="fa-solid fa-chevron-down cursor-pointer"></i></a>
                 </div>
 
-                <span class="mr w-[100%] h-[2px] bg-slate-300 mt-10"></span>
+                <span class=" w-[100%] h-[2px] bg-slate-300 mt-10" style="margin: 10px 0 !important;"></span>
 
-                <div class="pd w-full flex items-center justify-between text-slate-400 capitalize">
-                    <h1 class=" ">model</h1>
-                    <i class="fa-solid fa-chevron-right cursor-pointer"></i>
+                <div class="w-full flex flex-col items-center justify-center">
+                    <div style="padding: 2% !important;"
+                        class="w-full flex items-center justify-between text-slate-400 capitalize">
+                        <h1 class="">model</h1>
+                        <i class="hideAccordion fa-solid fa-chevron-right cursor-pointer"></i>
+                    </div>
+                    <h1 class="show">Lorem ipsum dolor sit amet.</h1>
                 </div>
-                <div class="pd w-full flex items-center justify-between text-slate-400 capitalize">
-                    <h1>year</h1>
-                    <i class="fa-solid fa-chevron-right cursor-pointer"></i>
+                <div class="w-full flex flex-col items-center justify-center">
+                    <div style="padding: 2% !important;"
+                        class="w-full flex items-center justify-between text-slate-400 capitalize">
+                        <h1 class="">year</h1>
+                        <i class="hideAccordion fa-solid fa-chevron-right cursor-pointer"></i>
+                    </div>
+                    <h1 class="show">Lorem ipsum dolor sit amet.</h1>
                 </div>
-                <div class="pd w-full flex items-center justify-between text-slate-400 capitalize">
-                    <h1>fuel type</h1>
-                    <i class="fa-solid fa-chevron-right cursor-pointer"></i>
+                <div class="w-full flex flex-col items-center justify-center">
+                    <div style="padding: 2% !important;"
+                        class="w-full flex items-center justify-between text-slate-400 capitalize">
+                        <h1 class="">fuel type</h1>
+                        <i class="hideAccordion fa-solid fa-chevron-right cursor-pointer"></i>
+                    </div>
+                    <h1 class="show">Lorem ipsum dolor sit amet.</h1>
                 </div>
-                <div class="pd w-full flex items-center justify-between text-slate-400 capitalize">
-                    <h1>Transmission</h1>
-                    <i class="fa-solid fa-chevron-right cursor-pointer"></i>
-                </div>
-                <div class="pd w-full flex items-center justify-between text-slate-400 capitalize ">
-                    <h1>Mileage</h1>
-                    <i class="fa-solid fa-chevron-right cursor-pointer"></i>
+                <div class="w-full flex flex-col items-center justify-center">
+                    <div style="padding: 2% !important;"
+                        class="w-full flex items-center justify-between text-slate-400 capitalize">
+                        <h1 class="">Mileage</h1>
+                        <i class="hideAccordion fa-solid fa-chevron-right cursor-pointer"></i>
+                    </div>
+                    <h1 class="show">Lorem ipsum dolor sit amet.</h1>
                 </div>
 
 
-                <span class="mr w-[100%] h-[2px] bg-slate-300 mt-10"></span>
+
+                <span class=" w-[100%] h-[2px] bg-slate-300 mt-10" style="margin: 10px 0 !important;"></span>
 
 
-                <div class="mr w-full flex items-center justify-between">
+                <div class=" w-full flex items-center justify-between" style="margin: 10px 0 !important;">
                     <h1>Additional Features</h1>
-                    <i class="fa-solid fa-chevron-up cursor-pointer"></i>
+                    <i class="hideAccordion fa-solid fa-chevron-up cursor-pointer"></i>
                 </div>
 
 
-                <div class="pd w-full flex items-start justify-center gap-10 text-[0.8em]">
-                    <div>
-                        <input type="checkbox" class=" accent-red-600">
-                        <span>Sports rims</span>
-                    </div>
-                    <div>
-                        <input type="checkbox" class=" accent-red-600">
-                        <span class="text-slate-300">sunroof</span>
-                    </div>
-                </div>
 
-                <div class="pd w-full flex items-start justify-center gap-10 text-[0.8em]">
+
+                <div class="show w-full flex items-start justify-center flex-wrap gap-10 text-[0.8em]"
+                    style="padding: 2% !important;">
 
                     <div>
                         <input type="checkbox" class=" accent-red-600">
@@ -433,8 +403,6 @@
                         <input type="checkbox" class=" accent-red-600">
                         <span>Sports rims</span>
                     </div>
-                </div>
-                <div class="pd w-full flex items-start justify-center gap-10 text-[0.8em]">
                     <div>
                         <input type="checkbox" class=" accent-red-600">
                         <span>Sports rims</span>
@@ -447,70 +415,101 @@
 
 
 
-                <span class="mr w-[100%] h-[2px] bg-slate-300 mt-10"></span>
+
+                <span class=" w-[100%] h-[2px] bg-slate-300 mt-10" style="margin: 10px 0 !important;"></span>
 
 
-                <div class="mr w-full flex items-center justify-between">
+                <div class=" w-full flex items-center justify-between" style="margin: 10px 0 !important;">
                     <h1>Color</h1>
-                    <i class="fa-solid fa-chevron-up cursor-pointer"></i>
+                    <i class="hideAccordion fa-solid fa-chevron-up cursor-pointer"></i>
                 </div>
 
-                <div class="colors w-full items-center justify-start flex flex-wrap gap-1 text-white capitalize">
-                    <div class="yellow button bg-yellow-400  text-center rounded-[15px] cursor-pointer">Yellow</div>
-                    <div class="green button bg-green-700  text-center rounded-[15px] cursor-pointer">green</div>
-                    <div class="black button bg-black  text-center rounded-[15px] cursor-pointer">black</div>
-                    <div class="red button bg-red-400  text-center rounded-[15px] cursor-pointer">red</div>
-                    <div class="grey button bg-gray-400  text-center rounded-[15px] cursor-pointer">gray</div>
+                <div class="show colors w-full items-center justify-start flex flex-wrap gap-1 text-white capitalize">
+                    <div class="yellow  bg-yellow-400  text-center rounded-[15px] cursor-pointer"
+                        style="padding: 10px 30px !important;">Yellow</div>
+                    <div class="green  bg-green-700  text-center rounded-[15px] cursor-pointer"
+                        style="padding: 10px 30px !important;">green</div>
+                    <div class="black  bg-black  text-center rounded-[15px] cursor-pointer"
+                        style="padding: 10px 30px !important;">black</div>
+                    <div class="red  bg-red-400  text-center rounded-[15px] cursor-pointer"
+                        style="padding: 10px 30px !important;">red</div>
+                    <div class="grey  bg-gray-400  text-center rounded-[15px] cursor-pointer"
+                        style="padding: 10px 30px !important;">gray</div>
                 </div>
 
 
-                <span class="mr w-[100%] h-[2px] bg-slate-300 mt-10"></span>
+                <span class=" w-[100%] h-[2px] bg-slate-300 mt-10" style="margin: 10px 0 !important;"></span>
 
-                <div class="pd w-full flex items-center justify-between text-slate-400 capitalize">
-                    <h1 class=" ">model</h1>
-                    <i class="fa-solid fa-chevron-right cursor-pointer"></i>
+                <div class="w-full flex flex-col items-center justify-center">
+                    <div style="padding: 2% !important;"
+                        class="w-full flex items-center justify-between text-slate-400 capitalize">
+                        <h1 class="">model</h1>
+                        <i class="hideAccordion fa-solid fa-chevron-right cursor-pointer"></i>
+                    </div>
+                    <h1 class="show">Lorem ipsum dolor sit amet.</h1>
                 </div>
-                <div class="pd w-full flex items-center justify-between text-slate-400 capitalize">
-                    <h1>year</h1>
-                    <i class="fa-solid fa-chevron-right cursor-pointer"></i>
+                <div class="w-full flex flex-col items-center justify-center">
+                    <div style="padding: 2% !important;"
+                        class="w-full flex items-center justify-between text-slate-400 capitalize">
+                        <h1 class="">year</h1>
+                        <i class="hideAccordion fa-solid fa-chevron-right cursor-pointer"></i>
+                    </div>
+                    <h1 class="show">Lorem ipsum dolor sit amet.</h1>
                 </div>
-                <div class="pd w-full flex items-center justify-between text-slate-400 capitalize">
-                    <h1>fuel type</h1>
-                    <i class="fa-solid fa-chevron-right cursor-pointer"></i>
+                <div class="w-full flex flex-col items-center justify-center">
+                    <div style="padding: 2% !important;"
+                        class="w-full flex items-center justify-between text-slate-400 capitalize">
+                        <h1 class="">fuel type</h1>
+                        <i class="hideAccordion fa-solid fa-chevron-right cursor-pointer"></i>
+                    </div>
+                    <h1 class="show">Lorem ipsum dolor sit amet.</h1>
                 </div>
-                <div class="pd w-full flex items-center justify-between text-slate-400 capitalize">
-                    <h1>Transmission</h1>
-                    <i class="fa-solid fa-chevron-right cursor-pointer"></i>
-                </div>
-                <div class="pd w-full flex items-center justify-between text-slate-400 capitalize ">
-                    <h1>Mileage</h1>
-                    <i class="fa-solid fa-chevron-right cursor-pointer"></i>
-                </div>
-
-                <span class="mr w-[100%] h-[2px] bg-slate-300 mt-10"></span>
-
-                <div class="pd w-full flex items-center justify-between text-slate-400 capitalize">
-                    <h1 class=" ">model</h1>
-                    <i class="fa-solid fa-chevron-right cursor-pointer"></i>
-                </div>
-                <div class="pd w-full flex items-center justify-between text-slate-400 capitalize">
-                    <h1>year</h1>
-                    <i class="fa-solid fa-chevron-right cursor-pointer"></i>
-                </div>
-                <div class="pd w-full flex items-center justify-between text-slate-400 capitalize">
-                    <h1>fuel type</h1>
-                    <i class="fa-solid fa-chevron-right cursor-pointer"></i>
-                </div>
-                <div class="pd w-full flex items-center justify-between text-slate-400 capitalize">
-                    <h1>Transmission</h1>
-                    <i class="fa-solid fa-chevron-right cursor-pointer"></i>
-                </div>
-                <div class="pd w-full flex items-center justify-between text-slate-400 capitalize ">
-                    <h1>Mileage</h1>
-                    <i class="fa-solid fa-chevron-right cursor-pointer"></i>
+                <div class="w-full flex flex-col items-center justify-center">
+                    <div style="padding: 2% !important;"
+                        class="w-full flex items-center justify-between text-slate-400 capitalize">
+                        <h1 class="">Mileage</h1>
+                        <i class="hideAccordion fa-solid fa-chevron-right cursor-pointer"></i>
+                    </div>
+                    <h1 class="show">Lorem ipsum dolor sit amet.</h1>
                 </div>
 
-                <button class="pd mr w-[80%]  bg-red-600 rounded-[12px] text-white">Apply Filter</button>
+                <span class=" w-[100%] h-[2px] bg-slate-300 mt-10" style="margin: 10px 0 !important;"></span>
+
+                <div class="w-full flex flex-col items-center justify-center">
+                    <div style="padding: 2% !important;"
+                        class="w-full flex items-center justify-between text-slate-400 capitalize">
+                        <h1 class="">model</h1>
+                        <i class="hideAccordion fa-solid fa-chevron-right cursor-pointer"></i>
+                    </div>
+                    <h1 class="show">Lorem ipsum dolor sit amet.</h1>
+                </div>
+                <div class="w-full flex flex-col items-center justify-center">
+                    <div style="padding: 2% !important;"
+                        class="w-full flex items-center justify-between text-slate-400 capitalize">
+                        <h1 class="">year</h1>
+                        <i class="hideAccordion fa-solid fa-chevron-right cursor-pointer"></i>
+                    </div>
+                    <h1 class="show">Lorem ipsum dolor sit amet.</h1>
+                </div>
+                <div class="w-full flex flex-col items-center justify-center">
+                    <div style="padding: 2% !important;"
+                        class="w-full flex items-center justify-between text-slate-400 capitalize">
+                        <h1 class="">fuel type</h1>
+                        <i class="hideAccordion fa-solid fa-chevron-right cursor-pointer"></i>
+                    </div>
+                    <h1 class="show">Lorem ipsum dolor sit amet.</h1>
+                </div>
+                <div class="w-full flex flex-col items-center justify-center">
+                    <div style="padding: 2% !important;"
+                        class="w-full flex items-center justify-between text-slate-400 capitalize">
+                        <h1 class="">Mileage</h1>
+                        <i class="hideAccordion fa-solid fa-chevron-right cursor-pointer"></i>
+                    </div>
+                    <h1 class="show">Lorem ipsum dolor sit amet.</h1>
+                </div>
+
+                <button class=" w-[80%]  bg-red-600 rounded-[12px] text-white"
+                    style="margin: 10px 0 !important;padding: 2% !important;">Apply Filter</button>
 
 
 
@@ -520,11 +519,14 @@
 
             <!-- ********SECTION CARS START********** -->
 
-            <div class="pd cars   w-[100%] md:w-[70%] h-full  md:bg-[#FFFFFF] rounded-[12px] transition-all duration-1000">
+            <div class=" cars md:flex flex-col  w-[100%] md:w-[70%] h-full  md:bg-[#FFFFFF] rounded-[12px] transition-all duration-1000"
+                style="padding: 2% !important;">
 
-                <div class="bottomSection mr hidden w-full  md:flex items-center justify-between   ">
-                    <div class="flex gap-5  pd bg-slate-100 rounded-[12px] shadow-custom">
-                        <h1 class="titlePrimary font-[600] text-red-600 border-solid border-r-2 border-red-600 ">New
+                <div class="bottomSection hidden w-full  md:flex md:flex-row flex-col items-center justify-between gap-3"
+                    style="margin: 10px 0 !important;">
+                    <div class="flex gap-5  bg-slate-100 rounded-[12px] shadow-custom" style="padding: 2% !important;">
+                        <h1 class=" font-[600] text-red-600 border-solid border-r-2 border-red-600 "
+                            style="padding-right: 10px !important;">New
                             Cars</h1>
                         <h1>Popular cars</h1>
                     </div>
@@ -534,371 +536,493 @@
 
                 <!-- ****MOBILE DESIGN***** -->
 
-                <div class="mr btn flex gap-8 items-center justify-center md:hidden ">
-                    <button class="button bg-red-600 text-white rounded-[20px]">New Cars</button>
-                    <button class="button bg-slate-200 text-black rounded-[20px]">Model</button>
+                <div class=" btn flex gap-8 items-center justify-center md:hidden " style="margin: 10px 0 !important;">
+                    <button class=" bg-red-600 text-white rounded-[20px]" style="padding: 10px 30px !important;">New
+                        Cars</button>
+                    <button class=" bg-slate-200 text-black rounded-[20px]"
+                        style="padding: 10px 30px !important;">Model</button>
                 </div>
 
-                 <!-- ****ALL CARDS START***** -->
-                <div
-                    class="cards pd w-full md:h-[1400px]  flex flex-col md:flex-wrap md:flex-row items-center justify-evenly gap-5 overflow-hidden ">
-                    <h1 class=" mr text-slate-400 md:hidden">( 20 Results ) </h1>
-                    <div class="card  pd w-[300px]  rounded-[12px] shadow-custom m-4 bg-[#FFFFFF]">
+                <!-- ***********ALL CARDS START*********** -->
 
-                        <div class="topCard  flex justify-between items-center">
-                            <span class="year button bg-red-600 text-white rounded-[12px] ">2024</span>
-                            <div>
+                <div class="w-full h-full  flex flex-col  items-center justify-center md:flex-wrap md:flex-row md:items-start md:justify-start gap-3 overflow-hidden "
+                    style="padding: 1% !important;">
+
+
+                    <div class=" card w-[35%]  flex-1 flex-col items-center justify-center gap-5   rounded-[14px] shadow-custom  bg-slate-100 "
+                        style="padding:2% !important;">
+
+                        <div class="topCard w-full flex items-center justify-between">
+                            <span class=" bg-red-600 text-white rounded-[12px] "
+                                style="padding: 6px 25px !important;">2024</span>
+                            <div class="flex gap-5">
                                 <i class="fa-regular fa-heart text-xl text-black cursor-pointer "></i>
-                                &nbsp; &nbsp;
                                 <i class="fa-solid fa-share-nodes text-xl text-black cursor-pointer"></i>
                             </div>
                         </div>
 
-                        <div class="image h-[220px] w-[90%]  overflow-hidden flex items-center justify-center">
-                            <img class="w-[70%] h-[100%] object-contain bg-no-repeat" src="../images/car1.png"
-                                alt="car1">
-                        </div>
-                        <div class="custom-span flex items-center justify-center gap-3 ">
-                            <span class=" flex w-[70px] h-1 bg-red-600 rounded-[20px]"></span>
-                            <span class="flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
-                            <span class=" flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
+                        <div class="picture w-[300px]  flex flex-col gap-10">
+                            <img src="../images/car1.png" class="w-full object-cover" alt="car2">
+
+                            
                         </div>
 
 
-                        <div class="descriptionCard custom-span flex flex-col items-start gap-2">
-                            <h1 class="custom-span text-xl font-bold">Toyota Camry New</h1>
-                            <h4 class="custom-span text-md font-[400] text-gray-400">05.2024 | 10K | 150 KW | 204 PS
-                            </h4>
+                        <div class="descriptionCard  w-full flex flex-col items-start gap-2"
+                        style="margin-bottom: 15px !important;">
+                        <h1 class=" text-xl font-bold" style="margin-bottom: 15px !important;">Toyota Camry New</h1>
+                        <h4 class=" text-md font-[400] text-gray-400" style="margin-bottom: 15px !important;">05.2024 |
+                            10K | 150 KW | 204 PS</h4>
 
-                            <div
-                                class=" detailsOne text-[14px] font-[400] w-full h-[50%]  flex flex-wrap items-start justify-between">
-                                <p>CO2 eff </p>
-                                <span class="letter bg-green-600 text-white rounded-[20px]">A</span>
-                                <p>Schadstoffklasse</p>
-                                <p class="font-[300] text-gray-400">l / 100km</p>
+                        <div class="w-full flex items-center justify-between ">
+                            <div class="flex flex-col items-start justify-center">
+                                <p class="text-[12px] font-[400]">CO2 eff</p>
+                                <p class="text-[12px] font-[400]">Außerorts</p>
+                                <p class="text-[12px] font-[400]">Schadstoffklasse</p>
                             </div>
-                            <div
-                                class="detailsTwo w-full h-[50%] text-[14px] font-[400] flex flex-wrap items-start justify-between">
-                                <p>Außerorts </p>
-                                <p class="font-[300] text-gray-400">l / 100km</p>
-                                <p>Emission</p>
-                                <p class="font-[300] text-gray-400">EURO6</p>
+                            <div class="flex flex-col items-start justify-center">
+                                <span class=" bg-green-600 text-white text-[10px] rounded-[20px]"
+                                    style="padding: 3px 12px !important;">A</span>
+                                <p class="text-[10px] font-[300] text-gray-400">l / 100km</p>
+                                <p class="text-[10px] font-[300] text-gray-400">4 (Grün)</p>
                             </div>
-                            <div
-                                class="detailsThree custom-span w-full h-[50%] text-[12px] font-[400] flex flex-wrap items-start justify-between">
-                                <p>Schadstoff <br> klasse</p>
-                                <p class="font-[300] text-gray-400">4 (Grün)</p>
-                                <p>kombiniert</p>
-                                <p class="font-[300] text-gray-400">l / 100km</p>
+
+                            <div class="flex flex-col items-start justify-center">
+                                <p class="text-[12px] font-[400]">Schadstoffklasse</p>
+                                <p class="text-[12px] font-[400]">Emission</p>
+                                <p class="text-[12px] font-[400]">kombiniert</p>
                             </div>
-                            <button
-                                class="button curstom-span bg-red-600 text-white rounded-[20px] w-full text-center text-[13px]">50990.00
-                                INKL 19% Mwst</button>
+                            <div class="flex flex-col items-start justify-center">
+                                <p class="text-[10px] font-[300] text-gray-400">l / 100km</p>
+                                <p class="text-[10px] font-[300] text-gray-400">EURO6</p>
+                                <p class="text-[10px] font-[300] text-gray-400">l / 100km</p>
+                            </div>
                         </div>
-                        <div
-                            class="bottomCard border-solid border-gray/20 border-t-2 flex items-center justify-between">
-                            <span class="bottomCard text-black font-bold">$40,000</span>
-                            <a href="" class="bottomCard text-[15px] text-red-600">View Details &nbsp; <i
-                                    class="fa-solid fa-arrow-up rotate-[45deg]"></i></a>
-                        </div>
+
+                        <button
+                            class=" curstom-span bg-red-600 text-white rounded-[20px] w-full text-center text-[13px]"
+                            style="padding: 10px 30px !important;">50990.00
+                            INKL 19% Mwst</button>
                     </div>
-                    <div class="card pd w-[300px]  rounded-[12px] shadow-custom m-4 bg-[#FFFFFF]">
+                        <div class=" border-solid border-gray/20 border-t-2 w-full flex items-center justify-between"
+                            style="margin-top: 15px !important;">
+                            <span class=" text-black font-bold" style="margin-top: 15px !important;">$40,000</span>
+                            <a href="" class=" text-[15px] text-red-600" style="margin-top: 15px !important;">View
+                                Details
+                                &nbsp; <i class="fa-solid fa-arrow-up rotate-[45deg]"></i></a>
+                        </div>
 
-                        <div class="topCard  flex justify-between items-center">
-                            <span class="year button bg-red-600 text-white rounded-[12px] ">2024</span>
-                            <div>
+
+
+
+                    </div>
+                    <div class=" card w-[35%]  flex-1 flex-col items-center justify-center gap-5   rounded-[14px] shadow-custom  bg-slate-100 "
+                        style="padding:2% !important;">
+
+                        <div class="topCard w-full flex items-center justify-between">
+                            <span class=" bg-red-600 text-white rounded-[12px] "
+                                style="padding: 6px 25px !important;">2024</span>
+                            <div class="flex gap-5">
                                 <i class="fa-regular fa-heart text-xl text-black cursor-pointer "></i>
-                                &nbsp; &nbsp;
                                 <i class="fa-solid fa-share-nodes text-xl text-black cursor-pointer"></i>
                             </div>
                         </div>
 
-                        <div class="image h-[220px] w-[90%]  overflow-hidden flex items-center justify-center">
-                            <img class="w-[70%] h-[100%] object-contain bg-no-repeat" src="../images/car6.png"
-                                alt="car6">
-                        </div>
-                        <div class="custom-span flex items-center justify-center gap-3 ">
-                            <span class=" flex w-[70px] h-1 bg-red-600 rounded-[20px]"></span>
-                            <span class="flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
-                            <span class=" flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
+                        <div class="picture w-[300px]  flex flex-col gap-10">
+                            <img src="../images/car2.png" class="w-full object-cover" alt="car2">
+
+                            
                         </div>
 
 
-                        <div class="descriptionCard custom-span flex flex-col items-start gap-2">
-                            <h1 class="custom-span text-xl font-bold">Toyota Camry New</h1>
-                            <h4 class="custom-span text-md font-[400] text-gray-400">05.2024 | 10K | 150 KW | 204 PS
-                            </h4>
+                        <div class="descriptionCard  w-full flex flex-col items-start gap-2"
+                        style="margin-bottom: 15px !important;">
+                        <h1 class=" text-xl font-bold" style="margin-bottom: 15px !important;">Toyota Camry New</h1>
+                        <h4 class=" text-md font-[400] text-gray-400" style="margin-bottom: 15px !important;">05.2024 |
+                            10K | 150 KW | 204 PS</h4>
 
-                            <div
-                                class=" detailsOne text-[14px] font-[400] w-full h-[50%]  flex flex-wrap items-start justify-between">
-                                <p>CO2 eff </p>
-                                <span class="letter bg-green-600 text-white rounded-[20px]">A</span>
-                                <p>Schadstoffklasse</p>
-                                <p class="font-[300] text-gray-400">l / 100km</p>
+                        <div class="w-full flex items-center justify-between ">
+                            <div class="flex flex-col items-start justify-center">
+                                <p class="text-[12px] font-[400]">CO2 eff</p>
+                                <p class="text-[12px] font-[400]">Außerorts</p>
+                                <p class="text-[12px] font-[400]">Schadstoffklasse</p>
                             </div>
-                            <div
-                                class="detailsTwo w-full h-[50%] text-[14px] font-[400] flex flex-wrap items-start justify-between">
-                                <p>Außerorts </p>
-                                <p class="font-[300] text-gray-400">l / 100km</p>
-                                <p>Emission</p>
-                                <p class="font-[300] text-gray-400">EURO6</p>
+                            <div class="flex flex-col items-start justify-center">
+                                <span class=" bg-green-600 text-white text-[10px] rounded-[20px]"
+                                    style="padding: 3px 12px !important;">A</span>
+                                <p class="text-[10px] font-[300] text-gray-400">l / 100km</p>
+                                <p class="text-[10px] font-[300] text-gray-400">4 (Grün)</p>
                             </div>
-                            <div
-                                class="detailsThree custom-span w-full h-[50%] text-[12px] font-[400] flex flex-wrap items-start justify-between">
-                                <p>Schadstoff <br> klasse</p>
-                                <p class="font-[300] text-gray-400">4 (Grün)</p>
-                                <p>kombiniert</p>
-                                <p class="font-[300] text-gray-400">l / 100km</p>
+
+                            <div class="flex flex-col items-start justify-center">
+                                <p class="text-[12px] font-[400]">Schadstoffklasse</p>
+                                <p class="text-[12px] font-[400]">Emission</p>
+                                <p class="text-[12px] font-[400]">kombiniert</p>
                             </div>
-                            <button
-                                class="button curstom-span bg-red-600 text-white rounded-[20px] w-full text-center text-[13px]">50990.00
-                                INKL 19% Mwst</button>
+                            <div class="flex flex-col items-start justify-center">
+                                <p class="text-[10px] font-[300] text-gray-400">l / 100km</p>
+                                <p class="text-[10px] font-[300] text-gray-400">EURO6</p>
+                                <p class="text-[10px] font-[300] text-gray-400">l / 100km</p>
+                            </div>
                         </div>
-                        <div
-                            class="bottomCard border-solid border-gray/20 border-t-2 flex items-center justify-between">
-                            <span class="bottomCard text-black font-bold">$40,000</span>
-                            <a href="" class="bottomCard text-[15px] text-red-600">View Details &nbsp; <i
-                                    class="fa-solid fa-arrow-up rotate-[45deg]"></i></a>
-                        </div>
+
+                        <button
+                            class=" curstom-span bg-red-600 text-white rounded-[20px] w-full text-center text-[13px]"
+                            style="padding: 10px 30px !important;">50990.00
+                            INKL 19% Mwst</button>
                     </div>
-                    <div class="card pd w-[300px]  rounded-[12px] shadow-custom m-4 bg-[#FFFFFF]">
+                        <div class=" border-solid border-gray/20 border-t-2 w-full flex items-center justify-between"
+                            style="margin-top: 15px !important;">
+                            <span class=" text-black font-bold" style="margin-top: 15px !important;">$40,000</span>
+                            <a href="" class=" text-[15px] text-red-600" style="margin-top: 15px !important;">View
+                                Details
+                                &nbsp; <i class="fa-solid fa-arrow-up rotate-[45deg]"></i></a>
+                        </div>
 
-                        <div class="topCard  flex justify-between items-center">
-                            <span class="year button bg-red-600 text-white rounded-[12px] ">2024</span>
-                            <div>
+
+
+
+                    </div>
+                    <div class=" card w-[35%]  flex-1 flex-col items-center justify-center gap-5   rounded-[14px] shadow-custom  bg-slate-100 "
+                        style="padding:2% !important;">
+
+                        <div class="topCard w-full flex items-center justify-between">
+                            <span class=" bg-red-600 text-white rounded-[12px] "
+                                style="padding: 6px 25px !important;">2024</span>
+                            <div class="flex gap-5">
                                 <i class="fa-regular fa-heart text-xl text-black cursor-pointer "></i>
-                                &nbsp; &nbsp;
                                 <i class="fa-solid fa-share-nodes text-xl text-black cursor-pointer"></i>
                             </div>
                         </div>
 
-                        <div class="image h-[220px] w-[90%]  overflow-hidden flex items-center justify-center">
-                            <img class="w-[70%] h-[100%] object-contain bg-no-repeat" src="../images/car7.png"
-                                alt="car7">
-                        </div>
-                        <div class="custom-span flex items-center justify-center gap-3 ">
-                            <span class=" flex w-[70px] h-1 bg-red-600 rounded-[20px]"></span>
-                            <span class="flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
-                            <span class=" flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
+                        <div class="picture w-[300px] flex flex-col gap-10">
+                            <img src="../images/car3.png" class="w-full object-cover" alt="car3">
+
+                            
                         </div>
 
 
-                        <div class="descriptionCard custom-span flex flex-col items-start gap-2">
-                            <h1 class="custom-span text-xl font-bold">Toyota Camry New</h1>
-                            <h4 class="custom-span text-md font-[400] text-gray-400">05.2024 | 10K | 150 KW | 204 PS
-                            </h4>
+                        <div class="descriptionCard  w-full flex flex-col items-start gap-2"
+                        style="margin-bottom: 15px !important;">
+                        <h1 class=" text-xl font-bold" style="margin-bottom: 15px !important;">Toyota Camry New</h1>
+                        <h4 class=" text-md font-[400] text-gray-400" style="margin-bottom: 15px !important;">05.2024 |
+                            10K | 150 KW | 204 PS</h4>
 
-                            <div
-                                class=" detailsOne text-[14px] font-[400] w-full h-[50%]  flex flex-wrap items-start justify-between">
-                                <p>CO2 eff </p>
-                                <span class="letter bg-green-600 text-white rounded-[20px]">A</span>
-                                <p>Schadstoffklasse</p>
-                                <p class="font-[300] text-gray-400">l / 100km</p>
+                        <div class="w-full flex items-center justify-between ">
+                            <div class="flex flex-col items-start justify-center">
+                                <p class="text-[12px] font-[400]">CO2 eff</p>
+                                <p class="text-[12px] font-[400]">Außerorts</p>
+                                <p class="text-[12px] font-[400]">Schadstoffklasse</p>
                             </div>
-                            <div
-                                class="detailsTwo w-full h-[50%] text-[14px] font-[400] flex flex-wrap items-start justify-between">
-                                <p>Außerorts </p>
-                                <p class="font-[300] text-gray-400">l / 100km</p>
-                                <p>Emission</p>
-                                <p class="font-[300] text-gray-400">EURO6</p>
+                            <div class="flex flex-col items-start justify-center">
+                                <span class=" bg-green-600 text-white text-[10px] rounded-[20px]"
+                                    style="padding: 3px 12px !important;">A</span>
+                                <p class="text-[10px] font-[300] text-gray-400">l / 100km</p>
+                                <p class="text-[10px] font-[300] text-gray-400">4 (Grün)</p>
                             </div>
-                            <div
-                                class="detailsThree custom-span w-full h-[50%] text-[12px] font-[400] flex flex-wrap items-start justify-between">
-                                <p>Schadstoff <br> klasse</p>
-                                <p class="font-[300] text-gray-400">4 (Grün)</p>
-                                <p>kombiniert</p>
-                                <p class="font-[300] text-gray-400">l / 100km</p>
+
+                            <div class="flex flex-col items-start justify-center">
+                                <p class="text-[12px] font-[400]">Schadstoffklasse</p>
+                                <p class="text-[12px] font-[400]">Emission</p>
+                                <p class="text-[12px] font-[400]">kombiniert</p>
                             </div>
-                            <button
-                                class="button curstom-span bg-red-600 text-white rounded-[20px] w-full text-center text-[13px]">50990.00
-                                INKL 19% Mwst</button>
+                            <div class="flex flex-col items-start justify-center">
+                                <p class="text-[10px] font-[300] text-gray-400">l / 100km</p>
+                                <p class="text-[10px] font-[300] text-gray-400">EURO6</p>
+                                <p class="text-[10px] font-[300] text-gray-400">l / 100km</p>
+                            </div>
                         </div>
-                        <div
-                            class="bottomCard border-solid border-gray/20 border-t-2 flex items-center justify-between">
-                            <span class="bottomCard text-black font-bold">$40,000</span>
-                            <a href="" class="bottomCard text-[15px] text-red-600">View Details &nbsp; <i
-                                    class="fa-solid fa-arrow-up rotate-[45deg]"></i></a>
-                        </div>
+
+                        <button
+                            class=" curstom-span bg-red-600 text-white rounded-[20px] w-full text-center text-[13px]"
+                            style="padding: 10px 30px !important;">50990.00
+                            INKL 19% Mwst</button>
                     </div>
-                    <div class="card pd w-[300px] rounded-[12px] shadow-custom m-4 bg-[#FFFFFF]">
+                        <div class=" border-solid border-gray/20 border-t-2 w-full flex items-center justify-between"
+                            style="margin-top: 15px !important;">
+                            <span class=" text-black font-bold" style="margin-top: 15px !important;">$40,000</span>
+                            <a href="" class=" text-[15px] text-red-600" style="margin-top: 15px !important;">View
+                                Details
+                                &nbsp; <i class="fa-solid fa-arrow-up rotate-[45deg]"></i></a>
+                        </div>
 
-                        <div class="topCard  flex justify-between items-center">
-                            <span class="year button bg-red-600 text-white rounded-[12px] ">2024</span>
-                            <div>
+
+
+
+                    </div>
+                    <div class=" card w-[35%]  flex-1 flex-col items-center justify-center gap-5   rounded-[14px] shadow-custom  bg-slate-100 "
+                        style="padding:2% !important;">
+
+                        <div class="topCard w-full flex items-center justify-between">
+                            <span class=" bg-red-600 text-white rounded-[12px] "
+                                style="padding: 6px 25px !important;">2024</span>
+                            <div class="flex gap-5">
                                 <i class="fa-regular fa-heart text-xl text-black cursor-pointer "></i>
-                                &nbsp; &nbsp;
                                 <i class="fa-solid fa-share-nodes text-xl text-black cursor-pointer"></i>
                             </div>
                         </div>
 
-                        <div class="image h-[220px] w-[90%]  overflow-hidden flex items-center justify-center">
-                            <img class="w-[70%] h-[100%] object-contain bg-no-repeat" src="../images/car3.png"
-                                alt="car3">
-                        </div>
-                        <div class="custom-span flex items-center justify-center gap-3 ">
-                            <span class=" flex w-[70px] h-1 bg-red-600 rounded-[20px]"></span>
-                            <span class="flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
-                            <span class=" flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
+                        <div class="picture w-[300px]  flex flex-col gap-10">
+                            <img src="../images/car4.png" class="w-full object-cover" alt="car4">
+
+                            
                         </div>
 
 
-                        <div class="descriptionCard custom-span flex flex-col items-start gap-2">
-                            <h1 class="custom-span text-xl font-bold">Toyota Camry New</h1>
-                            <h4 class="custom-span text-md font-[400] text-gray-400">05.2024 | 10K | 150 KW | 204 PS
-                            </h4>
+                        <div class="descriptionCard  w-full flex flex-col items-start gap-2"
+                        style="margin-bottom: 15px !important;">
+                        <h1 class=" text-xl font-bold" style="margin-bottom: 15px !important;">Toyota Camry New</h1>
+                        <h4 class=" text-md font-[400] text-gray-400" style="margin-bottom: 15px !important;">05.2024 |
+                            10K | 150 KW | 204 PS</h4>
 
-                            <div
-                                class=" detailsOne text-[14px] font-[400] w-full h-[50%]  flex flex-wrap items-start justify-between">
-                                <p>CO2 eff </p>
-                                <span class="letter bg-green-600 text-white rounded-[20px]">A</span>
-                                <p>Schadstoffklasse</p>
-                                <p class="font-[300] text-gray-400">l / 100km</p>
+                        <div class="w-full flex items-center justify-between ">
+                            <div class="flex flex-col items-start justify-center">
+                                <p class="text-[12px] font-[400]">CO2 eff</p>
+                                <p class="text-[12px] font-[400]">Außerorts</p>
+                                <p class="text-[12px] font-[400]">Schadstoffklasse</p>
                             </div>
-                            <div
-                                class="detailsTwo w-full h-[50%] text-[14px] font-[400] flex flex-wrap items-start justify-between">
-                                <p>Außerorts </p>
-                                <p class="font-[300] text-gray-400">l / 100km</p>
-                                <p>Emission</p>
-                                <p class="font-[300] text-gray-400">EURO6</p>
+                            <div class="flex flex-col items-start justify-center">
+                                <span class=" bg-green-600 text-white text-[10px] rounded-[20px]"
+                                    style="padding: 3px 12px !important;">A</span>
+                                <p class="text-[10px] font-[300] text-gray-400">l / 100km</p>
+                                <p class="text-[10px] font-[300] text-gray-400">4 (Grün)</p>
                             </div>
-                            <div
-                                class="detailsThree custom-span w-full h-[50%] text-[12px] font-[400] flex flex-wrap items-start justify-between">
-                                <p>Schadstoff <br> klasse</p>
-                                <p class="font-[300] text-gray-400">4 (Grün)</p>
-                                <p>kombiniert</p>
-                                <p class="font-[300] text-gray-400">l / 100km</p>
+
+                            <div class="flex flex-col items-start justify-center">
+                                <p class="text-[12px] font-[400]">Schadstoffklasse</p>
+                                <p class="text-[12px] font-[400]">Emission</p>
+                                <p class="text-[12px] font-[400]">kombiniert</p>
                             </div>
-                            <button
-                                class="button curstom-span bg-red-600 text-white rounded-[20px] w-full text-center text-[13px]">50990.00
-                                INKL 19% Mwst</button>
+                            <div class="flex flex-col items-start justify-center">
+                                <p class="text-[10px] font-[300] text-gray-400">l / 100km</p>
+                                <p class="text-[10px] font-[300] text-gray-400">EURO6</p>
+                                <p class="text-[10px] font-[300] text-gray-400">l / 100km</p>
+                            </div>
                         </div>
-                        <div
-                            class="bottomCard border-solid border-gray/20 border-t-2 flex items-center justify-between">
-                            <span class="bottomCard text-black font-bold">$40,000</span>
-                            <a href="" class="bottomCard text-[15px] text-red-600">View Details &nbsp; <i
-                                    class="fa-solid fa-arrow-up rotate-[45deg]"></i></a>
-                        </div>
+
+                        <button
+                            class=" curstom-span bg-red-600 text-white rounded-[20px] w-full text-center text-[13px]"
+                            style="padding: 10px 30px !important;">50990.00
+                            INKL 19% Mwst</button>
                     </div>
-                    <div class="card pd w-[300px]  rounded-[12px] shadow-custom m-4 bg-[#FFFFFF]">
+                        <div class=" border-solid border-gray/20 border-t-2 w-full flex items-center justify-between"
+                            style="margin-top: 15px !important;">
+                            <span class=" text-black font-bold" style="margin-top: 15px !important;">$40,000</span>
+                            <a href="" class=" text-[15px] text-red-600" style="margin-top: 15px !important;">View
+                                Details
+                                &nbsp; <i class="fa-solid fa-arrow-up rotate-[45deg]"></i></a>
+                        </div>
 
-                        <div class="topCard  flex justify-between items-center">
-                            <span class="year button bg-red-600 text-white rounded-[12px] ">2024</span>
-                            <div>
+
+
+
+                    </div>
+
+                    <div class=" card w-[35%] flex-1 flex-col items-center justify-center gap-5   rounded-[14px] shadow-custom  bg-slate-100 "
+                        style="padding:2% !important;">
+
+                        <div class="topCard w-full flex items-center justify-between">
+                            <span class=" bg-red-600 text-white rounded-[12px] "
+                                style="padding: 6px 25px !important;">2024</span>
+                            <div class="flex gap-5">
                                 <i class="fa-regular fa-heart text-xl text-black cursor-pointer "></i>
-                                &nbsp; &nbsp;
                                 <i class="fa-solid fa-share-nodes text-xl text-black cursor-pointer"></i>
                             </div>
                         </div>
 
-                        <div class="image h-[220px] w-[90%]  overflow-hidden flex items-center justify-center">
-                            <img class="w-[70%] h-[100%] object-contain bg-no-repeat" src="../images/car5.png"
-                                alt="car5">
-                        </div>
-                        <div class="custom-span flex items-center justify-center gap-3 ">
-                            <span class=" flex w-[70px] h-1 bg-red-600 rounded-[20px]"></span>
-                            <span class="flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
-                            <span class=" flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
+                        <div class="picture w-[300px]  flex flex-col gap-10">
+                            <img src="../images/car6.png" class="w-full object-cover" alt="car6">
+
+                            
                         </div>
 
 
-                        <div class="descriptionCard custom-span flex flex-col items-start gap-2">
-                            <h1 class="custom-span text-xl font-bold">Toyota Camry New</h1>
-                            <h4 class="custom-span text-md font-[400] text-gray-400">05.2024 | 10K | 150 KW | 204 PS
-                            </h4>
+                        <div class="descriptionCard  w-full flex flex-col items-start gap-2"
+                        style="margin-bottom: 15px !important;">
+                        <h1 class=" text-xl font-bold" style="margin-bottom: 15px !important;">Toyota Camry New</h1>
+                        <h4 class=" text-md font-[400] text-gray-400" style="margin-bottom: 15px !important;">05.2024 |
+                            10K | 150 KW | 204 PS</h4>
 
-                            <div
-                                class=" detailsOne text-[14px] font-[400] w-full h-[50%]  flex flex-wrap items-start justify-between">
-                                <p>CO2 eff </p>
-                                <span class="letter bg-green-600 text-white rounded-[20px]">A</span>
-                                <p>Schadstoffklasse</p>
-                                <p class="font-[300] text-gray-400">l / 100km</p>
+                        <div class="w-full flex items-center justify-between ">
+                            <div class="flex flex-col items-start justify-center">
+                                <p class="text-[12px] font-[400]">CO2 eff</p>
+                                <p class="text-[12px] font-[400]">Außerorts</p>
+                                <p class="text-[12px] font-[400]">Schadstoffklasse</p>
                             </div>
-                            <div
-                                class="detailsTwo w-full h-[50%] text-[14px] font-[400] flex flex-wrap items-start justify-between">
-                                <p>Außerorts </p>
-                                <p class="font-[300] text-gray-400">l / 100km</p>
-                                <p>Emission</p>
-                                <p class="font-[300] text-gray-400">EURO6</p>
+                            <div class="flex flex-col items-start justify-center">
+                                <span class=" bg-green-600 text-white text-[10px] rounded-[20px]"
+                                    style="padding: 3px 12px !important;">A</span>
+                                <p class="text-[10px] font-[300] text-gray-400">l / 100km</p>
+                                <p class="text-[10px] font-[300] text-gray-400">4 (Grün)</p>
                             </div>
-                            <div
-                                class="detailsThree custom-span w-full h-[50%] text-[12px] font-[400] flex flex-wrap items-start justify-between">
-                                <p>Schadstoff <br> klasse</p>
-                                <p class="font-[300] text-gray-400">4 (Grün)</p>
-                                <p>kombiniert</p>
-                                <p class="font-[300] text-gray-400">l / 100km</p>
+
+                            <div class="flex flex-col items-start justify-center">
+                                <p class="text-[12px] font-[400]">Schadstoffklasse</p>
+                                <p class="text-[12px] font-[400]">Emission</p>
+                                <p class="text-[12px] font-[400]">kombiniert</p>
                             </div>
-                            <button
-                                class="button curstom-span bg-red-600 text-white rounded-[20px] w-full text-center text-[13px]">50990.00
-                                INKL 19% Mwst</button>
+                            <div class="flex flex-col items-start justify-center">
+                                <p class="text-[10px] font-[300] text-gray-400">l / 100km</p>
+                                <p class="text-[10px] font-[300] text-gray-400">EURO6</p>
+                                <p class="text-[10px] font-[300] text-gray-400">l / 100km</p>
+                            </div>
                         </div>
-                        <div
-                            class="bottomCard border-solid border-gray/20 border-t-2 flex items-center justify-between">
-                            <span class="bottomCard text-black font-bold">$40,000</span>
-                            <a href="" class="bottomCard text-[15px] text-red-600">View Details &nbsp; <i
-                                    class="fa-solid fa-arrow-up rotate-[45deg]"></i></a>
-                        </div>
+
+                        <button
+                            class=" curstom-span bg-red-600 text-white rounded-[20px] w-full text-center text-[13px]"
+                            style="padding: 10px 30px !important;">50990.00
+                            INKL 19% Mwst</button>
                     </div>
-                    <div class="card pd w-[300px]  rounded-[12px] shadow-custom m-4 bg-[#FFFFFF]">
+                        <div class=" border-solid border-gray/20 border-t-2 w-full flex items-center justify-between"
+                            style="margin-top: 15px !important;">
+                            <span class=" text-black font-bold" style="margin-top: 15px !important;">$40,000</span>
+                            <a href="" class=" text-[15px] text-red-600" style="margin-top: 15px !important;">View
+                                Details
+                                &nbsp; <i class="fa-solid fa-arrow-up rotate-[45deg]"></i></a>
+                        </div>
 
-                        <div class="topCard  flex justify-between items-center">
-                            <span class="year button bg-red-600 text-white rounded-[12px] ">2024</span>
-                            <div>
+
+
+
+                    </div>
+                    <div class=" card w-[35%]  flex-1 flex-col items-center justify-center gap-5   rounded-[14px] shadow-custom  bg-slate-100 "
+                        style="padding:2% !important;">
+
+                        <div class="topCard w-full flex items-center justify-between">
+                            <span class=" bg-red-600 text-white rounded-[12px] "
+                                style="padding: 6px 25px !important;">2024</span>
+                            <div class="flex gap-5">
                                 <i class="fa-regular fa-heart text-xl text-black cursor-pointer "></i>
-                                &nbsp; &nbsp;
                                 <i class="fa-solid fa-share-nodes text-xl text-black cursor-pointer"></i>
                             </div>
                         </div>
 
-                        <div class="image h-[220px] w-[90%]  overflow-hidden flex items-center justify-center">
-                            <img class="w-[70%] h-[100%] object-contain bg-no-repeat" src="../images/car2.png"
-                                alt="car2">
-                        </div>
-                        <div class="custom-span flex items-center justify-center gap-3 ">
-                            <span class=" flex w-[70px] h-1 bg-red-600 rounded-[20px]"></span>
-                            <span class="flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
-                            <span class=" flex w-[70px] h-1 bg-gray-600 rounded-[20px]"></span>
+                        <div class="picture w-[300px]  flex flex-col gap-10">
+                            <img src="../images/car7.png" class="w-full object-cover" alt="car7">
+
+                           
                         </div>
 
 
-                        <div class="descriptionCard custom-span flex flex-col items-start gap-2">
-                            <h1 class="custom-span text-xl font-bold">Toyota Camry New</h1>
-                            <h4 class="custom-span text-md font-[400] text-gray-400">05.2024 | 10K | 150 KW | 204 PS
-                            </h4>
+                        <div class="descriptionCard  w-full flex flex-col items-start gap-2"
+                        style="margin-bottom: 15px !important;">
+                        <h1 class=" text-xl font-bold" style="margin-bottom: 15px !important;">Toyota Camry New</h1>
+                        <h4 class=" text-md font-[400] text-gray-400" style="margin-bottom: 15px !important;">05.2024 |
+                            10K | 150 KW | 204 PS</h4>
 
-                            <div
-                                class=" detailsOne text-[14px] font-[400] w-full h-[50%]  flex flex-wrap items-start justify-between">
-                                <p>CO2 eff </p>
-                                <span class="letter bg-green-600 text-white rounded-[20px]">A</span>
-                                <p>Schadstoffklasse</p>
-                                <p class="font-[300] text-gray-400">l / 100km</p>
+                        <div class="w-full flex items-center justify-between ">
+                            <div class="flex flex-col items-start justify-center">
+                                <p class="text-[12px] font-[400]">CO2 eff</p>
+                                <p class="text-[12px] font-[400]">Außerorts</p>
+                                <p class="text-[12px] font-[400]">Schadstoffklasse</p>
                             </div>
-                            <div
-                                class="detailsTwo w-full h-[50%] text-[14px] font-[400] flex flex-wrap items-start justify-between">
-                                <p>Außerorts </p>
-                                <p class="font-[300] text-gray-400">l / 100km</p>
-                                <p>Emission</p>
-                                <p class="font-[300] text-gray-400">EURO6</p>
+                            <div class="flex flex-col items-start justify-center">
+                                <span class=" bg-green-600 text-white text-[10px] rounded-[20px]"
+                                    style="padding: 3px 12px !important;">A</span>
+                                <p class="text-[10px] font-[300] text-gray-400">l / 100km</p>
+                                <p class="text-[10px] font-[300] text-gray-400">4 (Grün)</p>
                             </div>
-                            <div
-                                class="detailsThree custom-span w-full h-[50%] text-[12px] font-[400] flex flex-wrap items-start justify-between">
-                                <p>Schadstoff <br> klasse</p>
-                                <p class="font-[300] text-gray-400">4 (Grün)</p>
-                                <p>kombiniert</p>
-                                <p class="font-[300] text-gray-400">l / 100km</p>
+
+                            <div class="flex flex-col items-start justify-center">
+                                <p class="text-[12px] font-[400]">Schadstoffklasse</p>
+                                <p class="text-[12px] font-[400]">Emission</p>
+                                <p class="text-[12px] font-[400]">kombiniert</p>
                             </div>
-                            <button
-                                class="button curstom-span bg-red-600 text-white rounded-[20px] w-full text-center text-[13px]">50990.00
-                                INKL 19% Mwst</button>
+                            <div class="flex flex-col items-start justify-center">
+                                <p class="text-[10px] font-[300] text-gray-400">l / 100km</p>
+                                <p class="text-[10px] font-[300] text-gray-400">EURO6</p>
+                                <p class="text-[10px] font-[300] text-gray-400">l / 100km</p>
+                            </div>
                         </div>
-                        <div
-                            class="bottomCard border-solid border-gray/20 border-t-2 flex items-center justify-between">
-                            <span class="bottomCard text-black font-bold">$40,000</span>
-                            <a href="" class="bottomCard text-[15px] text-red-600">View Details &nbsp; <i
-                                    class="fa-solid fa-arrow-up rotate-[45deg]"></i></a>
-                        </div>
+
+                        <button
+                            class=" curstom-span bg-red-600 text-white rounded-[20px] w-full text-center text-[13px]"
+                            style="padding: 10px 30px !important;">50990.00
+                            INKL 19% Mwst</button>
                     </div>
+                        <div class=" border-solid border-gray/20 border-t-2 w-full flex items-center justify-between"
+                            style="margin-top: 15px !important;">
+                            <span class=" text-black font-bold" style="margin-top: 15px !important;">$40,000</span>
+                            <a href="" class=" text-[15px] text-red-600" style="margin-top: 15px !important;">View
+                                Details
+                                &nbsp; <i class="fa-solid fa-arrow-up rotate-[45deg]"></i></a>
+                        </div>
+
+
+
+
+                    </div>
+                    <div class=" card w-[35%]  flex-1 flex-col items-center justify-center gap-5   rounded-[14px] shadow-custom  bg-slate-100 "
+                        style="padding:2% !important;">
+
+                        <div class="topCard w-full flex items-center justify-between">
+                            <span class=" bg-red-600 text-white rounded-[12px] "
+                                style="padding: 6px 25px !important;">2024</span>
+                            <div class="flex gap-5">
+                                <i class="fa-regular fa-heart text-xl text-black cursor-pointer "></i>
+                                <i class="fa-solid fa-share-nodes text-xl text-black cursor-pointer"></i>
+                            </div>
+                        </div>
+
+                        <div class="picture w-[300px]  flex flex-col gap-10">
+                            <img src="../images/car1.png" class="w-full object-cover" alt="car1">
+
+                           
+                        </div>
+
+
+                        <div class="descriptionCard  w-full flex flex-col items-start gap-2"
+                        style="margin-bottom: 15px !important;">
+                        <h1 class=" text-xl font-bold" style="margin-bottom: 15px !important;">Toyota Camry New</h1>
+                        <h4 class=" text-md font-[400] text-gray-400" style="margin-bottom: 15px !important;">05.2024 |
+                            10K | 150 KW | 204 PS</h4>
+
+                        <div class="w-full flex items-center justify-between ">
+                            <div class="flex flex-col items-start justify-center">
+                                <p class="text-[12px] font-[400]">CO2 eff</p>
+                                <p class="text-[12px] font-[400]">Außerorts</p>
+                                <p class="text-[12px] font-[400]">Schadstoffklasse</p>
+                            </div>
+                            <div class="flex flex-col items-start justify-center">
+                                <span class=" bg-green-600 text-white text-[10px] rounded-[20px]"
+                                    style="padding: 3px 12px !important;">A</span>
+                                <p class="text-[10px] font-[300] text-gray-400">l / 100km</p>
+                                <p class="text-[10px] font-[300] text-gray-400">4 (Grün)</p>
+                            </div>
+
+                            <div class="flex flex-col items-start justify-center">
+                                <p class="text-[12px] font-[400]">Schadstoffklasse</p>
+                                <p class="text-[12px] font-[400]">Emission</p>
+                                <p class="text-[12px] font-[400]">kombiniert</p>
+                            </div>
+                            <div class="flex flex-col items-start justify-center">
+                                <p class="text-[10px] font-[300] text-gray-400">l / 100km</p>
+                                <p class="text-[10px] font-[300] text-gray-400">EURO6</p>
+                                <p class="text-[10px] font-[300] text-gray-400">l / 100km</p>
+                            </div>
+                        </div>
+
+                        <button
+                            class=" curstom-span bg-red-600 text-white rounded-[20px] w-full text-center text-[13px]"
+                            style="padding: 10px 30px !important;">50990.00
+                            INKL 19% Mwst</button>
+                    </div>
+                        <div class=" border-solid border-gray/20 border-t-2 w-full flex items-center justify-between"
+                            style="margin-top: 15px !important;">
+                            <span class=" text-black font-bold" style="margin-top: 15px !important;">$40,000</span>
+                            <a href="" class=" text-[15px] text-red-600" style="margin-top: 15px !important;">View
+                                Details
+                                &nbsp; <i class="fa-solid fa-arrow-up rotate-[45deg]"></i></a>
+                        </div>
+
+
+
+
+                    </div>
+
+
                 </div>
-                 <!-- ****ALL CARDS END***** -->
+                <!-- ***********ALL CARDS END*********** -->
             </div>
             <!-- ********SECTION CARS END********** -->
         </div>
@@ -909,69 +1033,72 @@
 
 
 
-  <!-- *************************** FOOTER START ******************************************** -->
-  <footer  class="pd w-full h-[530px] bg-black text-white flex flex-col justify-evenly items-center gap-5">
-    <!-- *****LOGO****** -->
-    <div class="logoMobile  text-red-600 text-[2em] ">
-       Logo
-   </div>
+    <!-- *************************** FOOTER START ******************************************** -->
+    <footer class="w-full max-h-[1000px] bg-black text-white flex flex-col justify-evenly items-center gap-5"
+        style="padding: 2% !important;">
+        <!-- *****LOGO****** -->
+        <div class="logoMobile  text-red-600 text-[2em] "
+            style="font-family: 'Oleo Script Swash Caps', system-ui !important;">
+            Logo
+        </div>
 
-   <!-- ********QUICKLY LINKS********** -->
-   <div class="quicklyLinks w-full h-full flex flex-wrap justify-start  items-center md:justify-evenly gap-5">
-       <div class="linksOne capitalize w-[145px] h-[150px]  flex flex-col items-start gap-5 ">
-           <h1 class="text-xl font-[500]">Showrome</h1>
-           <a href="#" class="text-[14px] font-[300]">Rent and sell car</a>
-           <a href="#" class="text-[14px] font-[300]">Brand cars</a>
-           <a href="#" class="text-[14px] font-[300]">Login as Dealer</a>
-       </div>
-       <div class="linksTwo capitalize w-[145px] h-[150px]  flex flex-col items-start gap-5">
-           <h1 class="text-xl font-[500]">Support</h1>
-           <a href="#" class="text-[14px] font-[300]">Buying and selling</a>
-           <a href="#" class="text-[14px] font-[300]">services</a>
-           <a href="#" class="text-[14px] font-[300]">Used car</a>
-       </div>
-       <div class="linksThree capitalize w-[145px] h-[150px]  flex flex-col items-start gap-5">
-           <h1 class="text-xl font-[500]">why us?</h1>
-           <a href="#" class="text-[14px] font-[300]">Our features</a>
-           <a href="#" class="text-[14px] font-[300]">Testimony</a>
-       </div>
-       <div class="linksFour capitalize w-[145px] h-[150px]  flex flex-col items-start gap-5">
-           <h1 class="text-xl font-[500]">Contact us</h1>
-           <a href="#" class="text-[14px] font-[300]">Brand us</a>
-           <a href="#" class="text-[14px] font-[300]">Event</a>
-       </div>
-       <div class="socialLinks hidden md:hidden lg:flex flex-col">
-           
-                   <p>Contact us Social media</p>
-                   
-            
+        <!-- ********QUICKLY LINKS********** -->
+        <div class="quicklyLinks w-full h-full flex flex-wrap justify-start  items-center md:justify-evenly gap-5">
+            <div class="linksOne capitalize w-[145px] h-[150px]  flex flex-col items-start gap-5 ">
+                <h1 class="text-xl font-[500]">Showrome</h1>
+                <a href="#" class="text-[14px] font-[300]">Rent and sell car</a>
+                <a href="#" class="text-[14px] font-[300]">Brand cars</a>
+                <a href="#" class="text-[14px] font-[300]">Login as Dealer</a>
+            </div>
+            <div class="linksTwo capitalize w-[145px] h-[150px]  flex flex-col items-start gap-5">
+                <h1 class="text-xl font-[500]">Support</h1>
+                <a href="#" class="text-[14px] font-[300]">Buying and selling</a>
+                <a href="#" class="text-[14px] font-[300]">services</a>
+                <a href="#" class="text-[14px] font-[300]">Used car</a>
+            </div>
+            <div class="linksThree capitalize w-[145px] h-[150px]  flex flex-col items-start gap-5">
+                <h1 class="text-xl font-[500]">why us?</h1>
+                <a href="#" class="text-[14px] font-[300]">Our features</a>
+                <a href="#" class="text-[14px] font-[300]">Testimony</a>
+            </div>
+            <div class="linksFour capitalize w-[145px] h-[150px]  flex flex-col items-start gap-5">
+                <h1 class="text-xl font-[500]">Contact us</h1>
+                <a href="#" class="text-[14px] font-[300]">Brand us</a>
+                <a href="#" class="text-[14px] font-[300]">Event</a>
+            </div>
+            <div class="socialLinks hidden md:hidden lg:flex flex-col">
+
+                <p>Contact us Social media</p>
+
+
 
                 <div class="icons hidden md:flex  gap-5 items-center justify-center">
-                   <span><i class="fa-brands fa-instagram"></i></span>
-                   <span><i class="fa-brands fa-facebook"></i></span>
-                   <span><i class="fa-brands fa-x"></i></span>
+                    <span><i class="fa-brands fa-instagram"></i></span>
+                    <span><i class="fa-brands fa-facebook"></i></span>
+                    <span><i class="fa-brands fa-x"></i></span>
                 </div>
-       </div>
-   </div>
+            </div>
+        </div>
 
-   
-   <span class="w-[80%] h-[2px] bg-white md:w-screen "></span>
-   <div class="icons flex gap-5 items-center justify-center md:hidden ">
-       
-       <span><i class="fa-brands fa-instagram"></i></span>
-       <span><i class="fa-brands fa-facebook"></i></span>
-       <span><i class="fa-brands fa-x"></i></span>
-    </div>
-   
-    <div class="bottomFooter w-full flex items-center justify-center md:justify-between">
-       <p class="text-[14px] font-[300] flex "><span class="hidden md:flex">Copyright</span> &nbsp; 2023 Karen Rally Club</p>
-   <div class="  hidden text-[14px] font-[300] md:flex gap-4">
-       <a href="">Privacy Policy</a>
-       <a href="">Terms Of Services</a>
-   </div>
-    </div>
-  
-</footer>
+
+        <span class="w-[80%] h-[2px] bg-white md:w-screen "></span>
+        <div class="icons flex gap-5 items-center justify-center md:hidden ">
+
+            <span><i class="fa-brands fa-instagram"></i></span>
+            <span><i class="fa-brands fa-facebook"></i></span>
+            <span><i class="fa-brands fa-x"></i></span>
+        </div>
+
+        <div class="bottomFooter w-full flex items-center justify-center md:justify-between">
+            <p class="text-[14px] font-[300] flex "><span class="hidden md:flex">Copyright</span> &nbsp; 2023 Karen
+                Rally Club</p>
+            <div class="  hidden text-[14px] font-[300] md:flex gap-4">
+                <a href="">Privacy Policy</a>
+                <a href="">Terms Of Services</a>
+            </div>
+        </div>
+
+    </footer>
 
 
 
@@ -1020,7 +1147,42 @@
             });
         });
 
-        
+        // hide and show filter section
+        const filterIcon = document.querySelector(".filterIcon"),
+            filterSection = document.querySelector(".filterSection"),
+            cars = document.querySelector(".cars");
+
+
+        filterIcon.addEventListener("click", () => {
+            if (filterSection.classList.contains("hidden")) {
+                filterSection.classList.remove("hidden");
+                cars.classList.add("hidden");
+                filterSection.classList.add("showPage");
+            } else {
+                filterSection.classList.add("hidden");
+                cars.classList.remove("hidden");
+                filterSection.classList.remove("showPage");
+            }
+
+        })
+
+
+
+        const hideAccordion = document.querySelectorAll(".hideAccordion");
+
+        hideAccordion.forEach(arrow => {
+            arrow.addEventListener("click", () => {
+                const showContent = arrow.parentElement.nextElementSibling;
+
+                // Toggle the visibility of the current content
+                showContent.classList.toggle("hidden");
+
+                // Toggle the rotation of the arrow
+                arrow.classList.toggle("rotate-90");
+            });
+        });
+
+
     </script>
 </body>
 

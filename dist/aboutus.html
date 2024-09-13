@@ -38,13 +38,7 @@
             box-shadow: 0px 6px 20px 0px rgba(000000, 6%);
         }
 
-        #header {
-            z-index: 100000;
-        }
-
-        .logoMobile {
-            font-family: "Oleo Script Swash Caps", system-ui !important;
-        }
+     
 
         .group a::before {
             content: '';
@@ -61,148 +55,8 @@
             width: 100%;
         }
 
-        #mainPage {
+      
 
-            padding: 2% !important;
-            margin: 0 auto 0 auto !important;
-        }
-
-        #searchCars {
-            padding: 2% !important;
-        }
-
-        .mr {
-            margin: 10px 0 !important;
-        }
-
-        .pd {
-            padding: 2% !important;
-        }
-
-        .wrapper {
-            width: 80%;
-            background: #fff;
-            border-radius: 10px;
-            padding: 20px 25px 40px;
-        }
-
-
-
-        .price-input {
-            width: 100%;
-            display: flex;
-            margin: 30px 0 35px;
-
-        }
-
-        .price-input .field {
-            display: flex;
-            width: 100%;
-            height: 45px;
-            align-items: center;
-
-        }
-
-        .field input {
-            width: 100%;
-            height: 100%;
-            outline: none;
-            font-size: 19px;
-            margin-left: 12px;
-            border-radius: 5px;
-            text-align: center;
-            border: none;
-            -moz-appearance: textfield;
-            color: red;
-        }
-
-        input[type="number"]::-webkit-outer-spin-button,
-        input[type="number"]::-webkit-inner-spin-button {
-            -webkit-appearance: none;
-        }
-
-
-
-        .slider {
-            height: 5px;
-            position: relative;
-            background: #ddd;
-            border-radius: 5px;
-        }
-
-        .slider .progress {
-            height: 100%;
-            left: 25%;
-            right: 25%;
-            position: absolute;
-            border-radius: 5px;
-            background: red;
-        }
-
-        .range-input {
-            position: relative;
-        }
-
-        .range-input input {
-            position: absolute;
-            width: 100%;
-            height: 5px;
-            top: -5px;
-            background: none;
-            pointer-events: none;
-            -webkit-appearance: none;
-            -moz-appearance: none;
-        }
-
-        input[type="range"]::-webkit-slider-thumb {
-            height: 17px;
-            width: 17px;
-            border-radius: 50%;
-            background: red;
-            pointer-events: auto;
-            -webkit-appearance: none;
-            box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
-        }
-
-        input[type="range"]::-moz-range-thumb {
-            height: 17px;
-            width: 17px;
-            border: none;
-            border-radius: 50%;
-            background: #000;
-            pointer-events: auto;
-            -moz-appearance: none;
-            box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
-        }
-
-        .button {
-            padding: 10px 30px !important;
-
-        }
-
-        .titlePrimary {
-            padding-right: 10px !important;
-        }
-
-        .custom-span {
-            margin-bottom: 15px !important;
-        }
-
-        .letter {
-            padding: 3px 20px !important;
-        }
-
-        .bottomCard {
-            margin-top: 15px !important;
-        }
-
-        #searchCars {
-            margin-bottom: 40px !important;
-        }
-
-        #cardsReviews {
-            padding: 2% 0 !important;
-        }
     </style>
     <title>Product Page</title>
 
@@ -240,7 +94,7 @@
                 <i class="fa-solid fa-magnifying-glass text-xl text-slate-50 searchIcon rotate-90  md:hidden "></i>
 
                 <!-- *****LOGO****** -->
-                <div class="logoMobile  text-red-600 text-[2em] md:hidden">
+                <div class="logoMobile  text-red-600 text-[2em] md:hidden" style="font-family: 'Oleo Script Swash Caps', system-ui !important;">
                     Logo
                 </div>
                 <!-- *****BARS ICON****** -->
@@ -304,17 +158,17 @@
 
 
     <!-- *************************** TOP SECTION START ******************************************** -->
-    <section class="w-[100%] h-full flex flex-col gap-10 relative  pd ">
+    <section class="w-[100%] h-full flex flex-col gap-10 relative   " style="padding: 2% !important;">
         <h1 class="text-slate-400 font-[400]">Home &nbsp; / &nbsp;<span class="text-black font-[500]"> About us</span>
         </h1>
 
 
         <div
-            class="topProduct mr pd w-full flex flex-col items-center justify-between gap-8  bg-slate-50 rounded-[14px]">
+            class="topProduct   w-full flex flex-col items-center justify-between gap-8  bg-slate-50 rounded-[14px]" style="margin: 10px 0 !important;padding: 2% !important;">
 
             <h1 class="md:hidden w-full block text-center text-black text-2xl font-[700]">About Us</h1>
 
-            <div class="paragraph w-full md:w-[80%] mr">
+            <div class="paragraph w-full md:w-[80%] " style="margin: 10px 0 !important;">
                 <p>We are an authorized dealer for the leading new car brands. We offer a wide range of the latest
                     models, designed with the latest technology and featuring high quality and performance. Enjoy an
                     unparalleled driving experience with the manufacturer's We are an authorized dealer for the leading
@@ -324,9 +178,9 @@
                 </p>
             </div>
 
-            <div class="cards mr flex flex-col md:flex-row items-center justify-between gap-3 w-full md:w-[80%]">
+            <div class="cards flex flex-col md:flex-row items-center justify-between gap-3 w-full md:w-[80%]" style="margin: 10px 0 !important;">
 
-                <div class="card w-[300px] h-[550px]  flex flex-col gap-3 items-center justify-end pd">
+                <div class="card w-[300px] h-[550px]  flex flex-col gap-3 items-center justify-end " style="padding: 2% !important;">
                     <h1 class="text-red-600 text-2xl capitalize font-[500]">What makes us different?</h1>
 
                     <div>
@@ -338,14 +192,14 @@
 
                 </div>
 
-                <div class="card w-[300px] h-[550px]  flex flex-col gap-3 items-center justify-center pd">
+                <div class="card w-[300px] h-[550px]  flex flex-col gap-3 items-center justify-center " style="padding: 2% !important;">
                     <h1 class="text-red-600 text-md capitalize font-[500] text-start w-full">Vision</h1>
 
                     <div>
                         <img src="../images/02.png" alt="02">
                     </div>
 
-                    <div class="bottomCard w-full flex justify-center items-center gap-3">
+                    <div class=" w-full flex justify-center items-center gap-3" style="margin-top: 15px !important;">
                         <span class="text-red-600 text-2xl font-[700]">01</span>
                         <p class="text-black text-sm">Our vision is to strive to be the first destination for anyone
                             looking for a suitable car.</p>
@@ -354,14 +208,14 @@
                 </div>
 
 
-                <div class="card w-[300px] h-[550px]  flex flex-col gap-3 items-center justify-center pd">
+                <div class="card w-[300px] h-[550px]  flex flex-col gap-3 items-center justify-center" style="padding: 2% !important;">
                     <h1 class="text-red-600 text-md capitalize font-[500] text-start w-full">Message</h1>
 
                     <div>
                         <img src="../images/03.png" alt="03">
                     </div>
 
-                    <div class="bottomCard w-full flex justify-center items-center gap-3">
+                    <div class=" w-full flex justify-center items-center gap-3" style="margin-top: 15px !important;">
                         <span class="text-red-600 text-2xl font-[700]">02</span>
                         <p class="text-black text-sm">Our mission is to provide the best cars at the best prices, with
                             high quality assurance and excellent customer service.</p>
@@ -379,17 +233,17 @@
 
 
     <!-- *************************** Team management START ******************************************** -->
-    <section class="teamManagement w-[100%] h-full  flex flex-col gap-10 relative  pd ">
+    <section class="teamManagement w-[100%] h-full  flex flex-col gap-10 relative  " style="padding: 2% !important;">
 
         <div
-            class="topteamManagement mr pd w-full h-full flex flex-col items-center justify-between gap-8 bg-slate-50 md:bg-none rounded-[14px] overflow-hidden">
+            class="topteamManagement  pw-full h-full flex flex-col items-center justify-between gap-8 bg-slate-50 md:bg-none rounded-[14px] overflow-hidden" style="margin: 10px 0 !important;padding: 2% !important;">
 
             <h1 class=" w-full  md:text-start text-center text-black text-2xl font-[700]">Team management</h1>
 
             <div
-                class="cardsTeam mr flex flex-col md:flex-wrap md:flex-row items-center justify-start gap-3 w-full md:w-[80%] h-full">
+                class="cardsTeam  flex flex-col md:flex-wrap md:flex-row items-center justify-start gap-3 w-full md:w-[80%] h-full" style="margin: 10px 0 !important;">
 
-                <div class="cardTeam w-[300px] h-[400px]  flex flex-col gap-3 items-center justify-center pd ">
+                <div class="cardTeam w-[300px] h-[400px]  flex flex-col gap-3 items-center justify-center " style="padding: 2% !important;">
                     <div class="w-full h-[80%] overflow-hidden rounded-[14px] ">
                         <img class="w-full h-full object-cover" src="../images/team1.png" alt="team1">
                     </div>
@@ -397,7 +251,7 @@
                     <h1 class="uppercase text-black text-[1.3em] font-[700]">ALI ALQARNI</h1>
                     <h3>FOUNDER & CEO</h3>
                 </div>
-                <div class="cardTeam w-[300px] h-[400px]  flex flex-col gap-3 items-center justify-center pd">
+                <div class="cardTeam w-[300px] h-[400px]  flex flex-col gap-3 items-center justify-center" style="padding: 2% !important;">
                     <div class="w-full h-[80%]  overflow-hidden rounded-[14px]">
                         <img class="w-full h-full object-cover" src="../images/team2.png" alt="team2">
                     </div>
@@ -405,7 +259,7 @@
                     <h1 class="uppercase text-black text-[1.3em] font-[700]">ZIYAD ATEEQ</h1>
                     <h3>EXECUTIVE VICE PRESIDENT, GENERAL COUNSEL</h3>
                 </div>
-                <div class="cardTeam w-[300px] h-[400px]  flex flex-col gap-3 items-center justify-center pd">
+                <div class="cardTeam w-[300px] h-[400px]  flex flex-col gap-3 items-center justify-center " style="padding: 2% !important;">
                     <div class="w-full h-[80%] overflow-hidden rounded-[14px]">
                         <img class="w-full h-full object-cover" src="../images/team3.png" alt="team3">
                     </div>
@@ -413,7 +267,7 @@
                     <h1 class="uppercase text-black text-[1.3em] font-[700]">ABDULKARIM ALMALKI</h1>
                     <h3>CHIEF COMMERCIAL OFFICER</h3>
                 </div>
-                <div class="cardTeam w-[300px] h-[400px]  flex flex-col gap-3 items-center justify-center pd">
+                <div class="cardTeam w-[300px] h-[400px]  flex flex-col gap-3 items-center justify-center " style="padding: 2% !important;">
                     <div class="w-full h-[80%] overflow-hidden rounded-[14px]">
                         <img class="w-full h-full object-cover" src="../images/team4.png" alt="team4">
                     </div>
@@ -421,7 +275,7 @@
                     <h1 class="uppercase text-black text-[1.3em] font-[700]">KILIÇASLAN DEVELI</h1>
                     <h3>EXECUTIVE VICE PRESIDENT</h3>
                 </div>
-                <div class="cardTeam w-[300px] h-[400px]  flex flex-col gap-3 items-center justify-center pd">
+                <div class="cardTeam w-[300px] h-[400px]  flex flex-col gap-3 items-center justify-center " style="padding: 2% !important;">
                     <div class="w-full h-[80%] overflow-hidden rounded-[14px]">
                         <img class="w-full h-full object-cover" src="../images/team5.png" alt="team5">
                     </div>
@@ -441,11 +295,11 @@
 
     <!-- *************************** For further inquiries START ******************************************** -->
     <section
-        class="w-full h-[300px] md:h-[500px] bg-red-600 pd mr bg-no-repeat bg-center bg-cover overflow-hidden flex flex-col items-center justify-center gap-5"
-        style="background-image: url(../images/picture.png);">
+        class="w-full h-[300px] md:h-[500px] bg-red-600 bg-no-repeat bg-center bg-cover overflow-hidden flex flex-col items-center justify-center gap-5"
+        style="background-image: url(../images/picture.png);margin: 10px 0 !important;padding: 2% !important;">
 
         <h1 class="text-white font-[700] text-[2em] md:text-[3em] capitalize">For further inquiries</h1>
-        <button class="button pd bg-red-600 text-white rounded-[14px]">Contact Us</button>
+        <button class=" bg-red-600 text-white rounded-[14px]" style="padding: 10px 30px !important;">Contact Us</button>
 
     </section>
     <section class="w-full h-[300px] md:h-[500px]  flex flex-col items-center justify-center gap-5">
@@ -454,8 +308,8 @@
         <p>For further inquiries</p>
         <div class="w-[90%] md:w-[40%] flex">
             <input type="email" name="email" id="email" placeholder="Entre your Email"
-                class="w-full pd rounded-l-[14px] border-solid border-2 border-slate-300 border-r-0 focus:border-none  focus:outline-none">
-            <button class="rounded-r-[14px] button bg-red-600 text-white pd">Subscribe</button>
+                class="w-full  rounded-l-[14px] border-solid border-2 border-slate-300 border-r-0 focus:border-none  focus:outline-none" style="padding-left: 1% !important;">
+            <button class="rounded-r-[14px]  bg-red-600 text-white " style="padding: 10px 30px !important;">Subscribe</button>
         </div>
 
 
@@ -472,9 +326,9 @@
 
 
     <!-- *************************** FOOTER START ******************************************** -->
-    <footer class="pd w-full h-[530px] bg-black text-white flex flex-col justify-evenly items-center gap-5">
+    <footer class="w-full h-[530px] bg-black text-white flex flex-col justify-evenly items-center gap-5" style="padding: 2% !important;">
         <!-- *****LOGO****** -->
-        <div class="logoMobile  text-red-600 text-[2em] ">
+        <div class="logoMobile  text-red-600 text-[2em] " style="font-family: 'Oleo Script Swash Caps', system-ui !important;">
             Logo
         </div>
 
